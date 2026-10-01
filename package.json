@@ -1,0 +1,8 @@
+{
+  "name": "truebark-ceylon-cinnamon",
+  "version": "1.0.0",
+  "description": "True Bark Authentic Ceylon Cinnamon e-commerce store",
+  "scripts": {
+    "start": "serve ."
+  }
+}
