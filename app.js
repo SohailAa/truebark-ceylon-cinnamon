@@ -1,0 +1,900 @@
+/**
+ * True Bark Ceylon Cinnamon - E-Commerce Store Application
+ * Hand-crafted with modern web standards and responsive reactivity.
+ */
+
+// =============================================================================
+// Product Catalog
+// =============================================================================
+const PRODUCTS = [
+  {
+    id: "true-bark-sugar-mix",
+    name: "True Bark Ceylon Cinnamon Sugar Mix",
+    subtitle: "5g Single-Serve Barista Sticks | Premium & Authentic Hand-Harvested",
+    category: "sticks",
+    categoryName: "Single-Serve Sticks",
+    badge: "Barista Favorite",
+    rating: 4.98,
+    reviewsCount: 184,
+    description: "Formulated for specialty coffee lovers. Micro-milled pure Ceylon cinnamon blended with unrefined golden cane crystals in airtight 5g single-serve packets. Melts into espresso crema, lattes, or oatmeal without astringent sediment.",
+    weight: "5g per stick (Net Wt 125g / 250g)",
+    coumarin: "< 0.004% (Lab Certified)",
+    origin: "Southern Coast, Sri Lanka",
+    image: "assets/images/sugar-sticks-detail.jpg",
+    gallery: ["assets/images/sugar-sticks-detail.jpg", "assets/images/sugar-mix-sachets.jpg", "assets/images/cappuccino-serve.jpg"],
+    variants: [
+      { id: "box-25", name: "Barista Box (25 Sticks)", price: 22.00, subPrice: 18.70 },
+      { id: "box-50", name: "Cafe Bulk Box (50 Sticks)", price: 38.00, subPrice: 32.30 },
+      { id: "sample-10", name: "Tasting Pocket Pack (10 Sticks)", price: 9.50, subPrice: 8.08 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
+    id: "true-bark-powder-gold-tin",
+    name: "True Bark Ceylon Cinnamon Powder",
+    subtitle: "Standard Gold & Dark Espresso Heirloom Tin | Pure & Unadulterated",
+    category: "tins",
+    categoryName: "Keepsake Tins",
+    badge: "Flagship Keepsake",
+    rating: 4.97,
+    reviewsCount: 219,
+    description: "100% pure Alba & C5 grade Ceylon cinnamon stone-milled into a velvety powder. Packaged in a collector's dark espresso metal tin with polished gold lid and base, featuring embossed vintage Sri Lankan harvest lithography.",
+    weight: "Net Wt 140g (5oz)",
+    coumarin: "< 0.003% (Negligible)",
+    origin: "Matara Estate, Sri Lanka",
+    image: "assets/images/gold-espresso-tin.jpg",
+    gallery: ["assets/images/gold-espresso-tin.jpg", "assets/images/cinnamon-powder-tins.jpg"],
+    variants: [
+      { id: "gold-tin-single", name: "Collector Gold Tin (140g)", price: 28.00, subPrice: 23.80 },
+      { id: "gold-tin-duo", name: "Duo Reserve (2x 140g Tins)", price: 52.00, subPrice: 44.20 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
+    id: "true-bark-powder-brown-tin",
+    name: "True Bark Ceylon Cinnamon Powder",
+    subtitle: "Artisan Kraft Sample Tin | Rustic Twine Seal Edition",
+    category: "tins",
+    categoryName: "Keepsake Tins",
+    badge: "Artisan Limited",
+    rating: 4.93,
+    reviewsCount: 112,
+    description: "Earth-toned caramel tin with cream botanical engravings and a hand-tied artisan sample tag. The exact same stone-milled pure Ceylon cinnamon powder in a lightweight eco-matte pantry tin.",
+    weight: "Net Wt 140g (5oz)",
+    coumarin: "< 0.003% (Negligible)",
+    origin: "Galle Region, Sri Lanka",
+    image: "assets/images/sample-brown-tin.jpg",
+    gallery: ["assets/images/sample-brown-tin.jpg", "assets/images/cinnamon-powder-tins.jpg"],
+    variants: [
+      { id: "brown-tin-single", name: "Sample Kraft Tin (140g)", price: 24.00, subPrice: 20.40 },
+      { id: "brown-tin-refill", name: "Kraft Tin + Pouch Refill", price: 42.00, subPrice: 35.70 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
+    id: "true-bark-alba-quills",
+    name: "Hand-Rolled Alba Grade Ceylon Quills",
+    subtitle: "Apothecary Jar of Slender Cigar-Rolled Inner Bark",
+    category: "quills",
+    categoryName: "Whole Alba Quills",
+    badge: "Rare Grade",
+    rating: 4.99,
+    reviewsCount: 95,
+    description: "Alba is the most prized grade of true Ceylon cinnamon. Hand-peeled into whisper-thin layers and tightly rolled like cigars. Steep into espresso portafilters, French press coffee, or mulled ciders for delicate citrus floral notes.",
+    weight: "Net Wt 100g (Approx. 20-25 Quills)",
+    coumarin: "< 0.002% (Undetectable)",
+    origin: "Southern Coast, Sri Lanka",
+    image: "assets/images/sugar-mix-sachets.jpg",
+    gallery: ["assets/images/sugar-mix-sachets.jpg"],
+    variants: [
+      { id: "quills-100g", name: "Apothecary Jar (100g)", price: 26.00, subPrice: 22.10 },
+      { id: "quills-250g", name: "Connoisseur Jar (250g)", price: 58.00, subPrice: 49.30 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
+    id: "true-bark-connoisseur-gift-set",
+    name: "The Barista & Connoisseur Tasting Set",
+    subtitle: "Gold Tin + Sugar Mix Sticks + Hammered Copper Dish & Brass Spoon",
+    category: "gift",
+    categoryName: "Connoisseur Sets",
+    badge: "Holiday Edition",
+    rating: 5.00,
+    reviewsCount: 78,
+    description: "The definitive collector's experience for coffee and culinary aficionados. Includes the Heirloom Gold & Espresso Tin (140g), a 25-pack box of Ceylon Sugar Mix Sticks, a solid hand-hammered copper tasting bowl, and a vintage engraved brass spice spoon.",
+    weight: "Deluxe Gift Box (850g Total)",
+    coumarin: "Laboratory Certified Coumarin-Safe",
+    origin: "Curated Estate Sri Lanka",
+    image: "assets/images/sugar-mix-sachets.jpg",
+    gallery: ["assets/images/sugar-mix-sachets.jpg", "assets/images/cinnamon-powder-tins.jpg"],
+    variants: [
+      { id: "gift-set-full", name: "Complete Connoisseur Set", price: 68.00, subPrice: 59.50 }
+    ],
+    defaultVariantIndex: 0
+  }
+];
+
+// =============================================================================
+// Currencies & Exchange Rates
+// =============================================================================
+const CURRENCIES = {
+  USD: { symbol: "$", rate: 1.0, threshold: 45.0 },
+  EUR: { symbol: "€", rate: 0.92, threshold: 42.0 },
+  GBP: { symbol: "£", rate: 0.78, threshold: 38.0 },
+  CAD: { symbol: "CA$", rate: 1.36, threshold: 60.0 }
+};
+
+let currentCurrency = "USD";
+
+// =============================================================================
+// Application State
+// =============================================================================
+let cart = [];
+let appliedPromo = null; // { code: 'TRUEBARK15', discountRate: 0.15, freeShip: false }
+let activeFilter = "all";
+let currentModalProduct = null;
+let currentModalVariantIndex = 0;
+let currentModalPurchasePlan = "onetime"; // 'onetime' | 'subscribe'
+let selectedShippingSpeed = "standard";
+
+// =============================================================================
+// Initialization
+// =============================================================================
+document.addEventListener("DOMContentLoaded", () => {
+  loadCartFromStorage();
+  initCurrencySelector();
+  renderProductGrid();
+  updateCartUI();
+  setupDialogPolyfillFallbacks();
+  setupEventListeners();
+});
+
+// =============================================================================
+// Modern Web Guidance: Setup Dialog Polyfill Fallbacks for closedby="any"
+// =============================================================================
+function setupDialogPolyfillFallbacks() {
+  const dialogs = document.querySelectorAll("dialog");
+
+  dialogs.forEach((dialog) => {
+    // If browser doesn't natively support closedBy, apply click bounds fallback
+    if (!("closedBy" in HTMLDialogElement.prototype)) {
+      dialog.addEventListener("click", (event) => {
+        // If clicking the dialog element directly (the backdrop)
+        if (event.target !== dialog) return;
+
+        const rect = dialog.getBoundingClientRect();
+        const isDialogContent =
+          rect.top <= event.clientY &&
+          event.clientY <= rect.top + rect.height &&
+          rect.left <= event.clientX &&
+          event.clientX <= rect.left + rect.width;
+
+        if (!isDialogContent) {
+          dialog.close();
+        }
+      });
+    }
+
+    // Cancel event to sync custom close handlers if needed
+    dialog.addEventListener("cancel", () => {
+      // Browser handles Esc closing natively
+    });
+  });
+}
+
+// =============================================================================
+// Currency Formatting
+// =============================================================================
+function formatPrice(amountUSD) {
+  const curr = CURRENCIES[currentCurrency] || CURRENCIES.USD;
+  const converted = amountUSD * curr.rate;
+  return `${curr.symbol}${converted.toFixed(2)}`;
+}
+
+function initCurrencySelector() {
+  const select = document.getElementById("currency-select");
+  if (!select) return;
+
+  select.addEventListener("change", (e) => {
+    currentCurrency = e.target.value;
+    const curr = CURRENCIES[currentCurrency];
+    const thresholdElem = document.getElementById("bar-free-ship-threshold");
+    if (thresholdElem) {
+      thresholdElem.textContent = `${curr.symbol}${curr.threshold.toFixed(0)}`;
+    }
+    renderProductGrid();
+    updateCartUI();
+    updateSpotlightPrices();
+    showToast(`Currency switched to ${currentCurrency}`);
+  });
+}
+
+function updateSpotlightPrices() {
+  const stickPrice = document.getElementById("spotlight-stick-price");
+  if (stickPrice) stickPrice.textContent = formatPrice(9.50);
+  const tinPrice = document.getElementById("spotlight-tin-price");
+  if (tinPrice) tinPrice.textContent = formatPrice(28.00);
+}
+
+// =============================================================================
+// Product Catalog Rendering
+// =============================================================================
+function renderProductGrid() {
+  const grid = document.getElementById("product-grid");
+  if (!grid) return;
+
+  const filtered = activeFilter === "all"
+    ? PRODUCTS
+    : PRODUCTS.filter((p) => p.category === activeFilter);
+
+  grid.innerHTML = filtered.map((product) => {
+    const defaultVariant = product.variants[product.defaultVariantIndex];
+    return `
+      <article class="product-card" data-product-id="${product.id}">
+        <div class="card-media-wrap" onclick="openProductModal('${product.id}')" role="button" aria-label="Quick view ${product.name}">
+          <img 
+            src="${product.image}" 
+            alt="${product.name}" 
+            class="card-img" 
+            loading="lazy" 
+            width="400" 
+            height="400">
+          <span class="card-badge">${product.badge}</span>
+          <button class="quick-view-overlay-btn" type="button">Quick View</button>
+        </div>
+        <div class="card-body">
+          <span class="card-category">${product.categoryName}</span>
+          <h3 class="card-title">${product.name}</h3>
+          <div class="card-meta-row">
+            <span class="card-rating">&#9733; ${product.rating.toFixed(2)}</span>
+            <span>&bull;</span>
+            <span>${product.reviewsCount} reviews</span>
+          </div>
+          <p class="card-desc">${product.description}</p>
+          <div class="card-footer">
+            <div class="price-container">
+              <span class="card-price">${formatPrice(defaultVariant.price)}</span>
+              <span class="card-sub-price">Sub: ${formatPrice(defaultVariant.subPrice)} (-15%)</span>
+            </div>
+            <button class="btn btn-gold btn-card-add" onclick="quickAddToCart('${product.id}', 1)">
+              Add to Bag
+            </button>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+// =============================================================================
+// Quick View Modal Controller
+// =============================================================================
+function openProductModal(productId) {
+  const product = PRODUCTS.find((p) => p.id === productId);
+  if (!product) return;
+
+  currentModalProduct = product;
+  currentModalVariantIndex = 0;
+  currentModalPurchasePlan = "onetime";
+
+  const dialog = document.getElementById("product-quick-view-dialog");
+  const imgElem = document.getElementById("modal-product-img");
+  const badgeElem = document.getElementById("modal-product-badge");
+  const catElem = document.getElementById("modal-product-category");
+  const titleElem = document.getElementById("modal-product-title");
+  const ratingElem = document.getElementById("modal-product-rating");
+  const descElem = document.getElementById("modal-product-desc");
+  const chipsContainer = document.getElementById("modal-variant-chips");
+  const qtyInput = document.getElementById("modal-qty-input");
+
+  imgElem.src = product.image;
+  imgElem.alt = product.name;
+  badgeElem.textContent = product.badge;
+  catElem.textContent = product.categoryName;
+  titleElem.textContent = product.name;
+  ratingElem.textContent = `${product.rating} (${product.reviewsCount} verified reviews)`;
+  descElem.textContent = product.description;
+  if (qtyInput) qtyInput.value = 1;
+
+  // Render variant chips
+  chipsContainer.innerHTML = product.variants.map((v, idx) => `
+    <button type="button" class="variant-chip ${idx === 0 ? 'active' : ''}" onclick="selectModalVariant(${idx})">
+      ${v.name}
+    </button>
+  `).join("");
+
+  updateModalPriceDisplays();
+
+  // Reset purchase plan radio
+  const onetimeRadio = document.querySelector('input[name="purchase_plan"][value="onetime"]');
+  if (onetimeRadio) onetimeRadio.checked = true;
+  document.getElementById("plan-onetime").classList.add("selected");
+  document.getElementById("plan-sub").classList.remove("selected");
+
+  // Show Modal using native API
+  dialog.showModal();
+}
+
+function closeProductModal() {
+  const dialog = document.getElementById("product-quick-view-dialog");
+  if (dialog) dialog.close();
+}
+
+function selectModalVariant(index) {
+  currentModalVariantIndex = index;
+  const chips = document.querySelectorAll("#modal-variant-chips .variant-chip");
+  chips.forEach((c, idx) => {
+    if (idx === index) c.classList.add("active");
+    else c.classList.remove("active");
+  });
+  updateModalPriceDisplays();
+}
+
+function handlePlanChange(plan) {
+  currentModalPurchasePlan = plan;
+  const onetimeWrap = document.getElementById("plan-onetime");
+  const subWrap = document.getElementById("plan-sub");
+
+  if (plan === "onetime") {
+    onetimeWrap.classList.add("selected");
+    subWrap.classList.remove("selected");
+  } else {
+    onetimeWrap.classList.remove("selected");
+    subWrap.classList.add("selected");
+  }
+  updateModalPriceDisplays();
+}
+
+function updateModalPriceDisplays() {
+  if (!currentModalProduct) return;
+  const variant = currentModalProduct.variants[currentModalVariantIndex];
+  const onetimePriceElem = document.getElementById("plan-onetime-price");
+  const subPriceElem = document.getElementById("plan-sub-price");
+  const mainPriceElem = document.getElementById("modal-product-price");
+  const btnPriceElem = document.getElementById("modal-btn-price");
+
+  onetimePriceElem.textContent = formatPrice(variant.price);
+  subPriceElem.textContent = formatPrice(variant.subPrice);
+
+  const activePrice = currentModalPurchasePlan === "subscribe" ? variant.subPrice : variant.price;
+  mainPriceElem.textContent = formatPrice(activePrice);
+  btnPriceElem.textContent = formatPrice(activePrice);
+}
+
+function incrementModalQty() {
+  const input = document.getElementById("modal-qty-input");
+  input.value = parseInt(input.value || 1) + 1;
+}
+
+function decrementModalQty() {
+  const input = document.getElementById("modal-qty-input");
+  const val = parseInt(input.value || 1);
+  if (val > 1) input.value = val - 1;
+}
+
+function addToCartFromModal() {
+  if (!currentModalProduct) return;
+  const qty = parseInt(document.getElementById("modal-qty-input").value || 1);
+  const variant = currentModalProduct.variants[currentModalVariantIndex];
+  const isSubscription = currentModalPurchasePlan === "subscribe";
+
+  addToCart({
+    productId: currentModalProduct.id,
+    name: currentModalProduct.name,
+    variantId: variant.id,
+    variantName: variant.name,
+    image: currentModalProduct.image,
+    price: isSubscription ? variant.subPrice : variant.price,
+    isSubscription: isSubscription,
+    quantity: qty
+  });
+
+  closeProductModal();
+  openCartDrawer();
+}
+
+// =============================================================================
+// Cart Logic & Persistence
+// =============================================================================
+function loadCartFromStorage() {
+  try {
+    const saved = localStorage.getItem("truebark_cart");
+    if (saved) cart = JSON.parse(saved);
+  } catch (e) {
+    cart = [];
+  }
+}
+
+function saveCartToStorage() {
+  try {
+    localStorage.setItem("truebark_cart", JSON.stringify(cart));
+  } catch (e) {}
+}
+
+function quickAddToCart(productId, qty = 1) {
+  const product = PRODUCTS.find((p) => p.id === productId);
+  if (!product) return;
+  const variant = product.variants[product.defaultVariantIndex];
+
+  addToCart({
+    productId: product.id,
+    name: product.name,
+    variantId: variant.id,
+    variantName: variant.name,
+    image: product.image,
+    price: variant.price,
+    isSubscription: false,
+    quantity: qty
+  });
+
+  openCartDrawer();
+}
+
+function addToCart(item) {
+  const existingIndex = cart.findIndex(
+    (ci) => ci.productId === item.productId && ci.variantId === item.variantId && ci.isSubscription === item.isSubscription
+  );
+
+  if (existingIndex > -1) {
+    cart[existingIndex].quantity += item.quantity;
+  } else {
+    cart.push(item);
+  }
+
+  saveCartToStorage();
+  updateCartUI();
+  bumpCartIcon();
+  showToast(`Added ${item.quantity}x ${item.name} to bag`);
+}
+
+function updateCartItemQty(index, change) {
+  if (!cart[index]) return;
+  cart[index].quantity += change;
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+  saveCartToStorage();
+  updateCartUI();
+}
+
+function removeCartItem(index) {
+  if (!cart[index]) return;
+  const removed = cart.splice(index, 1)[0];
+  saveCartToStorage();
+  updateCartUI();
+  showToast(`Removed ${removed.name} from bag`);
+}
+
+function updateCartUI() {
+  const counter = document.getElementById("cart-counter");
+  const drawerCount = document.getElementById("drawer-item-count");
+  const itemsContainer = document.getElementById("cart-items-container");
+  const emptyState = document.getElementById("cart-empty-state");
+  const subtotalElem = document.getElementById("cart-subtotal");
+  const totalElem = document.getElementById("cart-total");
+  const freeShipText = document.getElementById("shipping-status-text");
+  const freeShipFill = document.getElementById("shipping-bar-fill");
+  const discountRow = document.getElementById("discount-row");
+  const discountVal = document.getElementById("cart-discount");
+  const discountLabel = document.getElementById("discount-code-label");
+
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+  if (counter) counter.textContent = totalItems;
+  if (drawerCount) drawerCount.textContent = `(${totalItems} item${totalItems === 1 ? '' : 's'})`;
+
+  if (cart.length === 0) {
+    if (emptyState) emptyState.style.display = "block";
+    if (itemsContainer) {
+      itemsContainer.innerHTML = `
+        <div class="cart-empty-state">
+          <div class="empty-icon">&#128722;</div>
+          <p>Your bag is currently empty.</p>
+          <a href="#products-section" class="btn btn-gold btn-sm" onclick="closeCartDrawer()">Shop True Bark Collection</a>
+        </div>
+      `;
+    }
+    if (subtotalElem) subtotalElem.textContent = formatPrice(0);
+    if (totalElem) totalElem.textContent = formatPrice(0);
+    if (freeShipFill) freeShipFill.style.width = "0%";
+    if (discountRow) discountRow.style.display = "none";
+    return;
+  }
+
+  // Render cart items
+  if (itemsContainer) {
+    itemsContainer.innerHTML = cart.map((item, idx) => `
+      <div class="cart-item-row">
+        <img src="${item.image}" alt="${item.name}" class="cart-item-thumb">
+        <div class="cart-item-info">
+          <h4 class="cart-item-title">${item.name}</h4>
+          <span class="cart-item-variant">${item.variantName} ${item.isSubscription ? '• Fresh Monthly (-15%)' : ''}</span>
+          <span class="cart-item-price">${formatPrice(item.price)}</span>
+          <div class="cart-item-actions">
+            <div class="qty-stepper-sm">
+              <button onclick="updateCartItemQty(${idx}, -1)" aria-label="Decrease quantity">-</button>
+              <span>${item.quantity}</span>
+              <button onclick="updateCartItemQty(${idx}, 1)" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="cart-item-remove-btn" onclick="removeCartItem(${idx})">Remove</button>
+          </div>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  // Calculate totals
+  const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+  const curr = CURRENCIES[currentCurrency] || CURRENCIES.USD;
+  const threshold = curr.threshold;
+  const convertedSubtotal = subtotal * curr.rate;
+
+  // Free shipping meter
+  const progressPercent = Math.min(100, (convertedSubtotal / threshold) * 100);
+  if (freeShipFill) freeShipFill.style.width = `${progressPercent}%`;
+
+  if (convertedSubtotal >= threshold) {
+    if (freeShipText) {
+      freeShipText.innerHTML = `<strong>Unlocked!</strong> You qualify for <strong>Complimentary Priority Shipping</strong>!`;
+    }
+  } else {
+    const diff = threshold - convertedSubtotal;
+    if (freeShipText) {
+      freeShipText.innerHTML = `Add <strong>${curr.symbol}${diff.toFixed(2)}</strong> more to unlock <strong>Complimentary Shipping</strong>!`;
+    }
+  }
+
+  // Discount calculations
+  let discountAmount = 0;
+  if (appliedPromo) {
+    if (appliedPromo.discountRate) {
+      discountAmount = subtotal * appliedPromo.discountRate;
+    }
+    if (discountRow) {
+      discountRow.style.display = "flex";
+      discountLabel.textContent = appliedPromo.code;
+      discountVal.textContent = `-${formatPrice(discountAmount)}`;
+    }
+  } else {
+    if (discountRow) discountRow.style.display = "none";
+  }
+
+  const finalTotal = Math.max(0, subtotal - discountAmount);
+  if (subtotalElem) subtotalElem.textContent = formatPrice(subtotal);
+  if (totalElem) totalElem.textContent = formatPrice(finalTotal);
+}
+
+function bumpCartIcon() {
+  const counter = document.getElementById("cart-counter");
+  if (counter) {
+    counter.classList.add("bump");
+    setTimeout(() => counter.classList.remove("bump"), 250);
+  }
+}
+
+// =============================================================================
+// Cart Drawer Overlay Controls
+// =============================================================================
+function openCartDrawer() {
+  const overlay = document.getElementById("cart-drawer-overlay");
+  if (overlay) {
+    overlay.classList.add("open");
+    overlay.setAttribute("aria-hidden", "false");
+  }
+}
+
+function closeCartDrawer() {
+  const overlay = document.getElementById("cart-drawer-overlay");
+  if (overlay) {
+    overlay.classList.remove("open");
+    overlay.setAttribute("aria-hidden", "true");
+  }
+}
+
+// =============================================================================
+// Promo Code System
+// =============================================================================
+function applyPromoCode() {
+  const input = document.getElementById("promo-code-input");
+  const msg = document.getElementById("promo-message");
+  if (!input || !msg) return;
+
+  const code = input.value.trim().toUpperCase();
+
+  if (code === "TRUEBARK15") {
+    appliedPromo = { code: "TRUEBARK15", discountRate: 0.15, freeShip: false };
+    msg.className = "promo-message success";
+    msg.textContent = "15% off applied to your harvest order!";
+  } else if (code === "FREESHIP") {
+    appliedPromo = { code: "FREESHIP", discountRate: 0.0, freeShip: true };
+    msg.className = "promo-message success";
+    msg.textContent = "Complimentary shipping unlocked!";
+  } else if (code === "BARISTA20") {
+    appliedPromo = { code: "BARISTA20", discountRate: 0.20, freeShip: false };
+    msg.className = "promo-message success";
+    msg.textContent = "20% Barista Guild VIP discount applied!";
+  } else {
+    msg.className = "promo-message error";
+    msg.textContent = "Invalid discount code. Try TRUEBARK15.";
+    return;
+  }
+
+  updateCartUI();
+  showToast(`Coupon ${code} applied successfully!`);
+}
+
+// =============================================================================
+// Checkout Simulation
+// =============================================================================
+function openCheckoutModal() {
+  if (cart.length === 0) {
+    showToast("Please add items to your bag before checking out.");
+    return;
+  }
+  closeCartDrawer();
+
+  const dialog = document.getElementById("checkout-dialog");
+  renderCheckoutSummary();
+  dialog.showModal();
+}
+
+function closeCheckoutModal() {
+  const dialog = document.getElementById("checkout-dialog");
+  if (dialog) dialog.close();
+}
+
+function updateShippingMethod(speed) {
+  selectedShippingSpeed = speed;
+  renderCheckoutSummary();
+}
+
+function renderCheckoutSummary() {
+  const itemsList = document.getElementById("checkout-items-list");
+  const subtotalElem = document.getElementById("checkout-subtotal-val");
+  const discountRow = document.getElementById("checkout-discount-row");
+  const discountElem = document.getElementById("checkout-discount-val");
+  const shippingElem = document.getElementById("checkout-shipping-val");
+  const taxElem = document.getElementById("checkout-tax-val");
+  const finalTotalElem = document.getElementById("checkout-final-total");
+  const submitBtnTotal = document.getElementById("checkout-submit-total");
+
+  if (!itemsList) return;
+
+  itemsList.innerHTML = cart.map((item) => `
+    <div class="checkout-item-preview">
+      <img src="${item.image}" alt="${item.name}">
+      <div class="c-title">
+        ${item.name}
+        <small style="display:block; color:#888;">${item.variantName} x ${item.quantity}</small>
+      </div>
+      <strong>${formatPrice(item.price * item.quantity)}</strong>
+    </div>
+  `).join("");
+
+  const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+  let discountAmount = 0;
+  if (appliedPromo && appliedPromo.discountRate) {
+    discountAmount = subtotal * appliedPromo.discountRate;
+    discountRow.style.display = "flex";
+    discountElem.textContent = `-${formatPrice(discountAmount)}`;
+  } else {
+    discountRow.style.display = "none";
+  }
+
+  const curr = CURRENCIES[currentCurrency] || CURRENCIES.USD;
+  const isFreeThreshold = (subtotal * curr.rate) >= curr.threshold;
+  const isPromoFree = appliedPromo && appliedPromo.freeShip;
+
+  let shippingCostUSD = 0;
+  if (selectedShippingSpeed === "express") {
+    shippingCostUSD = 14.00;
+  } else {
+    shippingCostUSD = (isFreeThreshold || isPromoFree) ? 0.00 : 5.00;
+  }
+
+  const taxableBase = Math.max(0, subtotal - discountAmount);
+  const taxUSD = taxableBase * 0.05; // 5% estimated tax
+  const finalUSD = taxableBase + shippingCostUSD + taxUSD;
+
+  subtotalElem.textContent = formatPrice(subtotal);
+  shippingElem.textContent = shippingCostUSD === 0 ? "FREE" : formatPrice(shippingCostUSD);
+  taxElem.textContent = formatPrice(taxUSD);
+  finalTotalElem.textContent = formatPrice(finalUSD);
+  submitBtnTotal.textContent = formatPrice(finalUSD);
+}
+
+function fillDemoCheckout() {
+  document.getElementById("checkout-email").value = "elena.sommer@specialtyroasters.com";
+  document.getElementById("checkout-fname").value = "Elena";
+  document.getElementById("checkout-lname").value = "Sommer";
+  document.getElementById("checkout-address").value = "742 Evergreen Artisan Way, Suite 4B";
+  document.getElementById("checkout-city").value = "Portland";
+  document.getElementById("checkout-state").value = "OR";
+  document.getElementById("checkout-zip").value = "97201";
+  showToast("Demo address populated!");
+}
+
+function handleCheckoutSubmit(e) {
+  e.preventDefault();
+
+  const btn = document.getElementById("submit-order-btn");
+  btn.disabled = true;
+  btn.innerHTML = `<span>Processing Secure Payment...</span>`;
+
+  setTimeout(() => {
+    btn.disabled = false;
+    btn.innerHTML = `Complete Order &bull; <span id="checkout-submit-total">$0.00</span>`;
+    
+    // Generate order confirmation details
+    const orderId = `#TB-${Math.floor(10000 + Math.random() * 90000)}`;
+    const email = document.getElementById("checkout-email").value;
+    const name = `${document.getElementById("checkout-fname").value} ${document.getElementById("checkout-lname").value}`;
+    const address = `${document.getElementById("checkout-address").value}, ${document.getElementById("checkout-city").value}, ${document.getElementById("checkout-state").value}`;
+    const finalTotalText = document.getElementById("checkout-final-total").textContent;
+
+    // Delivery date calculation (3 business days ahead)
+    const delivDate = new Date();
+    delivDate.setDate(delivDate.getDate() + (selectedShippingSpeed === "express" ? 2 : 4));
+    const delivStr = delivDate.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+
+    // Populate confirmation modal
+    document.getElementById("receipt-order-id").textContent = orderId;
+    document.getElementById("receipt-delivery-date").textContent = delivStr;
+    document.getElementById("receipt-email").textContent = email;
+    document.getElementById("receipt-total-paid").textContent = finalTotalText;
+    document.getElementById("receipt-shipping-dest").textContent = `${name}, ${address}`;
+
+    const receiptList = document.getElementById("receipt-items-list");
+    receiptList.innerHTML = cart.map(item => `
+      <div class="receipt-item-line">
+        <span>${item.quantity}x ${item.name} (${item.variantName})</span>
+        <strong>${formatPrice(item.price * item.quantity)}</strong>
+      </div>
+    `).join("");
+
+    // Clear cart
+    cart = [];
+    appliedPromo = null;
+    saveCartToStorage();
+    updateCartUI();
+
+    closeCheckoutModal();
+    const confDialog = document.getElementById("confirmation-dialog");
+    confDialog.showModal();
+    showToast("Order placed successfully!");
+  }, 1200);
+}
+
+function closeConfirmationAndShop() {
+  const confDialog = document.getElementById("confirmation-dialog");
+  if (confDialog) confDialog.close();
+  window.location.hash = "#products-section";
+}
+
+// =============================================================================
+// Newsletter & Global Listeners
+// =============================================================================
+function handleNewsletter(e) {
+  e.preventDefault();
+  const emailInput = document.getElementById("newsletter-email");
+  const email = emailInput.value.trim();
+  if (!email) return;
+
+  appliedPromo = { code: "TRUEBARK15", discountRate: 0.15, freeShip: false };
+  updateCartUI();
+  emailInput.value = "";
+  showToast("Welcome! 15% discount code TRUEBARK15 automatically applied to your bag.");
+}
+
+function showToast(message) {
+  const container = document.getElementById("toast-container");
+  if (!container) return;
+
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.innerHTML = `<span class="toast-gold-check">&#10003;</span> <span>${message}</span>`;
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    toast.style.transform = "translateY(10px)";
+    setTimeout(() => toast.remove(), 300);
+  }, 3500);
+}
+
+function setupEventListeners() {
+  // Mobile Nav Toggle
+  const toggle = document.getElementById("mobile-menu-toggle");
+  const nav = document.getElementById("main-nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const active = nav.classList.toggle("mobile-active");
+      toggle.setAttribute("aria-expanded", active);
+    });
+  }
+
+  // Cart Drawer open/close triggers
+  const cartTrigger = document.getElementById("cart-trigger");
+  const cartClose = document.getElementById("cart-close-btn");
+  const cartOverlay = document.getElementById("cart-drawer-overlay");
+
+  if (cartTrigger) cartTrigger.addEventListener("click", openCartDrawer);
+  if (cartClose) cartClose.addEventListener("click", closeCartDrawer);
+  if (cartOverlay) {
+    cartOverlay.addEventListener("click", (e) => {
+      if (e.target === cartOverlay) closeCartDrawer();
+    });
+  }
+
+  // Filter Tabs
+  const filterTabs = document.querySelectorAll(".filter-tab");
+  filterTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      filterTabs.forEach((t) => {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
+      });
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
+      activeFilter = tab.dataset.filter;
+      renderProductGrid();
+    });
+  });
+
+  // Search Toggle
+  const searchTrigger = document.getElementById("search-trigger");
+  const searchOverlay = document.getElementById("search-overlay");
+  const searchClose = document.getElementById("search-close-btn");
+  const searchInput = document.getElementById("store-search-input");
+
+  if (searchTrigger && searchOverlay) {
+    searchTrigger.addEventListener("click", () => {
+      searchOverlay.hidden = !searchOverlay.hidden;
+      if (!searchOverlay.hidden) searchInput.focus();
+    });
+  }
+  if (searchClose && searchOverlay) {
+    searchClose.addEventListener("click", () => {
+      searchOverlay.hidden = true;
+    });
+  }
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      if (!query) {
+        renderProductGrid();
+        return;
+      }
+      const grid = document.getElementById("product-grid");
+      const matched = PRODUCTS.filter((p) => 
+        p.name.toLowerCase().includes(query) ||
+        p.description.toLowerCase().includes(query) ||
+        p.subtitle.toLowerCase().includes(query)
+      );
+      if (matched.length === 0) {
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px;">No spices matching "${query}". Try "Sugar Mix", "Tin", or "Quills".</div>`;
+      } else {
+        grid.innerHTML = matched.map((product) => {
+          const defaultVariant = product.variants[product.defaultVariantIndex];
+          return `
+            <article class="product-card" data-product-id="${product.id}">
+              <div class="card-media-wrap" onclick="openProductModal('${product.id}')">
+                <img src="${product.image}" alt="${product.name}" class="card-img" loading="lazy">
+                <span class="card-badge">${product.badge}</span>
+                <button class="quick-view-overlay-btn" type="button">Quick View</button>
+              </div>
+              <div class="card-body">
+                <span class="card-category">${product.categoryName}</span>
+                <h3 class="card-title">${product.name}</h3>
+                <p class="card-desc">${product.description}</p>
+                <div class="card-footer">
+                  <span class="card-price">${formatPrice(defaultVariant.price)}</span>
+                  <button class="btn btn-gold btn-card-add" onclick="quickAddToCart('${product.id}', 1)">Add to Bag</button>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("");
+      }
+    });
+  }
+}
