@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>True Bark | Authentic Hand-Harvested Ceylon Cinnamon & Coffee Spices</title>
-  <meta name="description" content="Discover True Bark: Pure, unadulterated Ceylon cinnamon from Sri Lanka. Featuring single-serve Ceylon cinnamon sugar sticks and heirloom embossed vintage tins.">
+  <title>True Bark | Pure Ceylon Cinnamon & Barista Coffee Spices</title>
+  <meta name="description" content="Discover True Bark: Pure, unadulterated Ceylon cinnamon from Sri Lanka. Featuring single-serve Ceylon cinnamon sugar sticks and heirloom keepsake tins.">
   
   <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,7 +18,7 @@
   <!-- Top Announcement Bar -->
   <div class="announcement-bar" role="region" aria-label="Store Announcement">
     <div class="announcement-content">
-      <span class="announcement-pill">NEW HARVEST</span>
+      <span class="announcement-pill">FRESH HARVEST</span>
       <span class="announcement-text">Complimentary Shipping on all orders over <strong id="bar-free-ship-threshold">$45</strong> with code <code class="promo-badge">TRUEBARK15</code> for 15% off</span>
       <div class="currency-selector-wrapper">
         <label for="currency-select" class="sr-only">Choose Currency</label>
@@ -43,30 +43,27 @@
       <!-- Brand Logo -->
       <a href="#" class="brand-logo" aria-label="True Bark Home">
         <div class="brand-emblem">
-          <svg viewBox="0 0 40 40" width="36" height="36" fill="currentColor">
+          <svg viewBox="0 0 40 40" width="34" height="34" fill="currentColor">
             <path d="M20 2C10.06 2 2 10.06 2 20s8.06 18 18 18 18-8.06 18-18S29.94 2 20 2zm0 33.5C11.44 35.5 4.5 28.56 4.5 20S11.44 4.5 20 4.5 35.5 11.44 35.5 20 28.56 35.5 20 35.5z"/>
             <path d="M20 7c-4.42 0-8 3.58-8 8 0 3.2 1.88 5.96 4.6 7.24L16 32h8l-.6-9.76C26.12 20.96 28 18.2 28 15c0-4.42-3.58-8-8-8zm-1.5 6.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v4.5h-3v-4.5z"/>
           </svg>
         </div>
         <div class="brand-text">
           <span class="brand-name">TRUE BARK</span>
-          <span class="brand-sub">CEYLON CINNAMON ARTISANS &bull; EST. SRI LANKA</span>
+          <span class="brand-sub">CEYLON CINNAMON ARTISANS &bull; SRI LANKA</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
       <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="#products-section" class="nav-link active">Shop Spices</a></li>
-          <li><a href="#sugar-sticks-feature" class="nav-link">Sugar Mix Sticks</a></li>
-          <li><a href="#vintage-tins-feature" class="nav-link">Keepsake Tins</a></li>
-          <li><a href="#ceylon-vs-cassia" class="nav-link">Ceylon vs Cassia</a></li>
-          <li><a href="#barista-recipes" class="nav-link">Barista Pairings</a></li>
-          <li><a href="#our-story" class="nav-link">Terroir & Origin</a></li>
+          <li><a href="#quick-order-section" class="nav-link active">Shop Harvest</a></li>
+          <li><a href="#why-ceylon-section" class="nav-link">Why True Ceylon</a></li>
+          <li><a href="#reviews-section" class="nav-link">Barista Reviews</a></li>
         </ul>
       </nav>
 
-      <!-- Action Icons (Search, Favorites, Cart) -->
+      <!-- Action Icons (Search, Cart) -->
       <div class="header-actions">
         <button class="header-action-btn" id="search-trigger" aria-label="Search spices">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -81,532 +78,223 @@
     <!-- Quick Search Dropdown -->
     <div class="search-overlay" id="search-overlay" hidden>
       <div class="search-inner">
-        <input type="search" id="store-search-input" placeholder="Search True Bark (e.g. Sugar Mix, Espresso Tin, Quills, Gift Set)..." aria-label="Search catalog">
+        <input type="search" id="store-search-input" placeholder="Search True Bark (e.g. Sugar Mix, Espresso Tin, Quills)..." aria-label="Search catalog">
         <button class="search-close-btn" id="search-close-btn" aria-label="Close search">&times;</button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section with LCP Priority Optimization -->
-  <section class="hero-section" id="hero">
-    <div class="hero-backdrop-gradient"></div>
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-icon">&#10022;</span>
-          <span>100% PURE SRI LANKAN CINNAMOMUM VERUM</span>
-        </div>
-        <h1 class="hero-title">
-          The Pure Gold of Ceylon.<br>
-          <em>Hand-Harvested & Unadulterated.</em>
-        </h1>
-        <p class="hero-lead">
-          Elevate your daily coffee ritual and culinary creations with authentic, paper-thin bark peeled from generational estates in Sri Lanka. Naturally sweet, delicate, and ultra-low in coumarin.
-        </p>
-        <div class="hero-cta-group">
-          <a href="#products-section" class="btn btn-gold">Explore The Collection</a>
-          <a href="#ceylon-vs-cassia" class="btn btn-outline-light">Why Ceylon Matters</a>
-        </div>
-        <div class="hero-trust-row">
-          <div class="trust-item">
-            <span class="trust-num">&lt;0.004%</span>
-            <span class="trust-desc">Coumarin (Liver Safe)</span>
-          </div>
-          <div class="trust-divider"></div>
-          <div class="trust-item">
-            <span class="trust-num">Grade Alba</span>
-            <span class="trust-desc">Finest Botanical Cut</span>
-          </div>
-          <div class="trust-divider"></div>
-          <div class="trust-item">
-            <span class="trust-num">Direct Estate</span>
-            <span class="trust-desc">Fair Trade Sri Lanka</span>
-          </div>
-        </div>
+  <!-- Hero Section with Background Video -->
+  <section class="hero-video-section" id="hero">
+    <div class="hero-video-container">
+      <video 
+        id="hero-video" 
+        class="hero-video-element" 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        poster="assets/images/sugar-mix-sachets.jpg">
+        <source src="assets/videos/hero-coffee.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="hero-video-scrim"></div>
+    </div>
+
+    <div class="section-container hero-video-content">
+      <div class="hero-badge">
+        <span class="badge-icon">&#10022;</span>
+        <span>100% PURE SRI LANKAN CINNAMOMUM VERUM</span>
       </div>
-      <div class="hero-visual">
-        <div class="hero-card-featured">
-          <img 
-            src="assets/images/sugar-mix-sachets.jpg" 
-            alt="True Bark Ceylon Cinnamon Sugar Mix Sticks served alongside artisanal latte and hammered copper bowl" 
-            class="hero-img"
-            fetchpriority="high"
-            width="1024"
-            height="571">
-          <div class="hero-floating-tag tag-sugar-mix">
-            <span class="tag-title">Ceylon Cinnamon Sugar Mix</span>
-            <span class="tag-sub">5g Single-Serve Barista Sticks</span>
-            <span class="tag-price">From $9.50</span>
-          </div>
-          <div class="hero-floating-tag tag-tin-sample">
-            <span class="tag-badge">Artisan Tin</span>
-            <span class="tag-title">Heirloom Espresso Tin</span>
-          </div>
-        </div>
+      <h1 class="hero-title">
+        The Pure Gold of Ceylon.<br>
+        <em>Crafted for Coffee & Gourmet Kitchens.</em>
+      </h1>
+      <p class="hero-lead">
+        Hand-harvested, paper-thin inner bark stone-milled into a delicate culinary spice. Naturally sweet, zero bitter grit, and laboratory certified coumarin-safe (&lt;0.004%).
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#quick-order-section" class="btn btn-gold btn-lg">&#128722; Quick Order Spices</a>
+        <button type="button" class="btn btn-outline-light btn-lg" onclick="openCartDrawer()">View Shopping Bag</button>
+      </div>
+
+      <!-- Quick Video Controls -->
+      <div class="hero-media-controls">
+        <button type="button" class="video-ctrl-btn" id="video-play-btn" aria-label="Pause or play background video">
+          <span id="play-status-icon">&#10074;&#10074;</span>
+          <span class="ctrl-label" id="play-status-text">Pause Video</span>
+        </button>
+        <button type="button" class="video-ctrl-btn" id="video-mute-btn" aria-label="Mute or unmute background video">
+          <span id="mute-status-icon">&#128263;</span>
+          <span class="ctrl-label" id="mute-status-text">Muted</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- Sticky Quick Feature Ticker -->
+  <!-- Streamlined Perks Bar -->
   <section class="perks-strip">
     <div class="perks-container">
       <div class="perk-box">
         <div class="perk-icon">&#9749;</div>
         <div class="perk-info">
-          <h4>The Coffee Topper</h4>
-          <p>Melts into crema without chalky residue</p>
-        </div>
-      </div>
-      <div class="perk-box">
-        <div class="perk-icon">&#10024;</div>
-        <div class="perk-info">
-          <h4>Hand-Rolled Alba Bark</h4>
-          <p>Extracted from delicate inner tree bark</p>
+          <h4>Dissolves in Crema</h4>
+          <p>Zero astringent sediment in your cup</p>
         </div>
       </div>
       <div class="perk-box">
         <div class="perk-icon">&#127807;</div>
         <div class="perk-info">
-          <h4>Never Blended with Cassia</h4>
-          <p>Lab-certified coumarin purity</p>
+          <h4>Coumarin-Safe (&lt;0.004%)</h4>
+          <p>Liver-safe for daily coffee & oats</p>
+        </div>
+      </div>
+      <div class="perk-box">
+        <div class="perk-icon">&#10024;</div>
+        <div class="perk-info">
+          <h4>Direct Estate Sri Lanka</h4>
+          <p>100% pure Alba & C5 grade bark</p>
         </div>
       </div>
       <div class="perk-box">
         <div class="perk-icon">&#128230;</div>
         <div class="perk-info">
-          <h4>Airtight Keepsake Tins</h4>
-          <p>Preserves volatile aromatic oils for 24+ mos</p>
+          <h4>Free US Shipping ($45+)</h4>
+          <p>Dispatched in airtight keepsake tins</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Main Storefront / Catalog Section -->
-  <main class="catalog-section" id="products-section">
+  <!-- Quick Order Section: Fast, Frictionless, Low Scroll -->
+  <main class="catalog-section quick-order-area" id="quick-order-section">
     <div class="section-container">
       <div class="section-header text-center">
-        <span class="section-subtitle">THE HARVEST COLLECTION</span>
-        <h2 class="section-title">Artisanal Ceylon Cinnamon</h2>
-        <p class="section-lead">Crafted for specialty coffee roasters, pastry chefs, and discerning home pantries.</p>
+        <span class="section-subtitle">THE FRESH HARVEST COLLECTION</span>
+        <h2 class="section-title">Order True Bark Spices</h2>
+        <p class="section-lead">Select your harvest below and add directly to your bag for same-day packing.</p>
         
         <!-- Filter Tabs -->
         <div class="filter-tabs" role="tablist" aria-label="Product categories">
           <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Harvests</button>
           <button class="filter-tab" data-filter="sticks" role="tab" aria-selected="false">Sugar Mix Sticks (5g)</button>
-          <button class="filter-tab" data-filter="tins" role="tab" aria-selected="false">Vintage Keepsake Tins</button>
+          <button class="filter-tab" data-filter="tins" role="tab" aria-selected="false">Keepsake Tins</button>
           <button class="filter-tab" data-filter="quills" role="tab" aria-selected="false">Whole Alba Quills</button>
           <button class="filter-tab" data-filter="gift" role="tab" aria-selected="false">Connoisseur Sets</button>
         </div>
       </div>
 
-      <!-- Product Grid (Populated dynamically & progressively enhanced) -->
+      <!-- Product Grid (Populated dynamically via app.js with instant variant selection) -->
       <div class="product-grid" id="product-grid">
         <!-- Rendered via app.js -->
       </div>
     </div>
   </main>
 
-  <!-- Spotlight Feature 1: The Ceylon Cinnamon Sugar Mix Sticks -->
-  <section class="feature-spotlight bg-dark" id="sugar-sticks-feature">
-    <div class="section-container feature-grid">
-      <div class="feature-media">
-        <div class="media-frame">
-          <img 
-            src="assets/images/sugar-sticks-detail.jpg" 
-            alt="True Bark Ceylon Cinnamon Sugar Mix 5g sticks fan with hammered copper dish" 
-            loading="lazy" 
-            class="feature-img"
-            width="850"
-            height="500">
-          <div class="media-accent-tag">
-            <span class="accent-number">5g</span>
-            <span class="accent-label">Golden Ratio Single Serve</span>
-          </div>
-        </div>
-      </div>
-      <div class="feature-details">
-        <span class="spotlight-sub">SPECIALTY COFFEE COMPANION</span>
-        <h2 class="spotlight-title">True Bark Sugar Mix Sticks</h2>
-        <p class="spotlight-text">
-          Engineered specifically for baristas and coffee purists. Ordinary cinnamon clumps on espresso crema and turns bitter. Our proprietary micro-milled Ceylon cinnamon is folded with raw golden cane crystals that instantly dissolve into lattes, flat whites, cappuccinos, and morning oats.
-        </p>
-        
-        <ul class="feature-checklist">
-          <li>
-            <strong>Pre-Portioned 5g Sticks:</strong> Perfectly measured for a standard 8–12 oz specialty drink or morning breakfast bowl.
-          </li>
-          <li>
-            <strong>Aroma-Locked Nitrogen Barrier:</strong> Keeps delicate terpenes and cinnamaldehyde fresh until the exact moment you open it.
-          </li>
-          <li>
-            <strong>Pocket & Travel Friendly:</strong> Upgrade hotel coffee, office espresso, and camping brews anywhere in the world.
-          </li>
-        </ul>
-
-        <div class="spotlight-pricing-row">
-          <div class="price-display">
-            <span class="price-label">Starting at</span>
-            <span class="price-value" id="spotlight-stick-price">$9.50</span>
-          </div>
-          <button class="btn btn-gold" onclick="openProductModal('true-bark-sugar-mix')">View Box Sizes & Subscribe</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Spotlight Feature 2: Vintage Heirloom Keepsake Tins -->
-  <section class="feature-spotlight" id="vintage-tins-feature">
-    <div class="section-container feature-grid reversed">
-      <div class="feature-details">
-        <span class="spotlight-sub">HEIRLOOM TIN PACKAGING</span>
-        <h2 class="spotlight-title">Ceylon Cinnamon Powder in Keepsake Metal Tins</h2>
-        <p class="spotlight-text">
-          Packaged in museum-grade, embossed tins celebrating the rich harvesting heritage of Sri Lankan estate harvesters. Designed to block UV light, humidity, and heat, ensuring your culinary cinnamon remains intensely aromatic for up to two years.
-        </p>
-        
-        <div class="tin-variants-card">
-          <div class="tin-variant-item">
-            <div class="tin-variant-indicator gold"></div>
-            <div>
-              <h4>Standard Gold & Dark Espresso Tin</h4>
-              <p>Deep espresso matte body with lustrous gold lid and embossed heritage harvest iconography.</p>
-            </div>
-          </div>
-          <div class="tin-variant-item">
-            <div class="tin-variant-indicator brown"></div>
-            <div>
-              <h4>Artisan Sample Kraft Tin</h4>
-              <p>Warm caramel-toned tin with cream lithograph art and hand-tied twine sample tag.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="spotlight-pricing-row">
-          <div class="price-display">
-            <span class="price-label">Net Wt 140g (5oz)</span>
-            <span class="price-value" id="spotlight-tin-price">$28.00</span>
-          </div>
-          <button class="btn btn-bark" onclick="openProductModal('true-bark-powder-gold-tin')">Customize Tin & Grind</button>
-        </div>
-      </div>
-
-      <div class="feature-media">
-        <div class="media-frame">
-          <img 
-            src="assets/images/cinnamon-powder-tins.jpg" 
-            alt="True Bark Ceylon Cinnamon Powder in Standard Gold & Espresso Tin and Sample Light Brown Tin" 
-            loading="lazy" 
-            class="feature-img"
-            width="1024"
-            height="555">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Comparison: Ceylon vs Cassia -->
-  <section class="comparison-section bg-cream" id="ceylon-vs-cassia">
+  <!-- Compact "Why True Ceylon" Benefit Strip (No Giant Tables) -->
+  <section class="compact-benefits-section bg-cream" id="why-ceylon-section">
     <div class="section-container">
       <div class="section-header text-center">
-        <span class="section-subtitle">THE HEALTH & TASTE TRUTH</span>
-        <h2 class="section-title">Why True Ceylon Cinnamon Matters</h2>
-        <p class="section-lead">
-          Over 90% of supermarket cinnamon is actually <em>Cassia</em>—a cheap, pungent substitute packed with liver-toxic coumarin. True Bark is 100% verified <em>Cinnamomum verum</em>.
-        </p>
+        <span class="section-subtitle">THE HEALTH & FLAVOR DIFFERENCE</span>
+        <h2 class="section-title">Why Ceylon Beats Grocery Store Cassia</h2>
+        <p class="section-lead">Over 90% of supermarket cinnamon is cheap, bitter Cassia. Here is why True Bark is in a league of its own:</p>
       </div>
 
-      <div class="comparison-table-wrapper">
-        <table class="comparison-table" aria-label="Ceylon Cinnamon vs Cassia Cinnamon Comparison">
-          <thead>
-            <tr>
-              <th scope="col" class="comp-metric">Botanical Attribute</th>
-              <th scope="col" class="comp-ceylon highlight-col">
-                <div class="th-badge">THE TRUE BARK STANDARD</div>
-                <span>True Ceylon Cinnamon</span>
-                <small>(Cinnamomum verum)</small>
-              </th>
-              <th scope="col" class="comp-cassia">
-                <span>Ordinary Cassia Cinnamon</span>
-                <small>(Cinnamomum cassia / loureiroi)</small>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Coumarin Content</th>
-              <td class="highlight-col positive">
-                <strong>&lt; 0.004%</strong>
-                <span class="subtext">Virtually negligible. Safe for daily coffee, smoothies, and oats.</span>
-              </td>
-              <td class="negative">
-                <strong>Up to 1.00% (250x higher!)</strong>
-                <span class="subtext">Documented liver toxicity risks if consumed in regular daily doses.</span>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Flavor Profile</th>
-              <td class="highlight-col positive">
-                <strong>Subtle, floral, naturally sweet</strong>
-                <span class="subtext">Warm citrus and honey undertones that complement delicate beans.</span>
-              </td>
-              <td class="negative">
-                <strong>Harsh, pungent, bitter bite</strong>
-                <span class="subtext">Overpowers espresso, leaves dry astringent chalkiness on the palate.</span>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Physical Structure</th>
-              <td class="highlight-col positive">
-                <strong>Paper-thin, multi-layered quills</strong>
-                <span class="subtext">Soft inner bark hand-scraped and layered like a delicate cigar.</span>
-              </td>
-              <td class="negative">
-                <strong>Thick, hard, hollow wood</strong>
-                <span class="subtext">Tough outer tree bark that is virtually impossible to grind by hand.</span>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Color & Texture</th>
-              <td class="highlight-col positive">
-                <strong>Warm golden-tan, velvety powder</strong>
-                <span class="subtext">Milled to micron-level fineness to dissolve evenly.</span>
-              </td>
-              <td class="negative">
-                <strong>Dark reddish-brown, coarse grit</strong>
-                <span class="subtext">Heavy sediment sinks to the bottom of your coffee mug.</span>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Geographic Terroir</th>
-              <td class="highlight-col positive">
-                <strong>100% Sri Lanka (Southern Estates)</strong>
-                <span class="subtext">Single-origin volcanic soil with optimal coastal humidity.</span>
-              </td>
-              <td class="negative">
-                <strong>Indonesia, China, Vietnam</strong>
-                <span class="subtext">Mass-harvested industrial lumber plantations.</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="benefits-cards-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon-badge">&#128154;</div>
+          <h3>Daily Liver Safety</h3>
+          <p class="benefit-stat">&lt;0.004% Coumarin</p>
+          <p class="benefit-desc">
+            Common cassia contains up to 1.00% coumarin—a compound known to cause liver damage with daily use. True Bark Ceylon cinnamon has virtually undetectable coumarin, making it safe for daily morning lattes and smoothies.
+          </p>
+        </div>
 
-      <div class="certification-callout">
-        <div class="cert-item">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-          <span>Laboratory Certified Coumarin-Safe</span>
+        <div class="benefit-card">
+          <div class="benefit-icon-badge">&#10024;</div>
+          <h3>Naturally Sweet & Floral</h3>
+          <p class="benefit-stat">Zero Harsh Burn</p>
+          <p class="benefit-desc">
+            Unlike cheap cassia that numbs your palate with spicy heat, Ceylon cinnamon offers delicate citrus, honey, and floral warmth that enhances specialty coffee beans without overpowering them.
+          </p>
         </div>
-        <div class="cert-item">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
-          <span>Non-Irradiated & Heavy Metal Tested</span>
-        </div>
-        <div class="cert-item">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-          <span>Fair Return to Peeling Artisans</span>
+
+        <div class="benefit-card">
+          <div class="benefit-icon-badge">&#127807;</div>
+          <h3>Whisper-Thin Inner Bark</h3>
+          <p class="benefit-stat">Alba Grade Milled</p>
+          <p class="benefit-desc">
+            Hand-peeled from tender inner bark layers, then stone-milled to micron fineness. It dissolves smoothly into microfoam and batters instead of leaving a gritty, sandy residue.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Barista & Culinary Recipes -->
-  <section class="recipes-section" id="barista-recipes">
+  <!-- Compact Verified Social Proof -->
+  <section class="reviews-section" id="reviews-section">
     <div class="section-container">
       <div class="section-header text-center">
-        <span class="section-subtitle">THE BARISTA KITCHEN</span>
-        <h2 class="section-title">Signature Cinnamon Pairings</h2>
-        <p class="section-lead">Craft cafe-quality drinks at home with these proven formulas developed by specialty coffee roasters.</p>
-      </div>
-
-      <div class="recipe-cards-grid">
-        <!-- Recipe 1 -->
-        <div class="recipe-card">
-          <div class="recipe-card-header">
-            <span class="recipe-badge">Espresso Drink</span>
-            <span class="recipe-time">3 Mins</span>
-          </div>
-          <h3 class="recipe-title">True Bark Gold Cortado</h3>
-          <p class="recipe-desc">A velvety 1:1 balance of rich espresso and micro-foamed milk dusted with pure Ceylon cinnamon sugar mix.</p>
-          <div class="recipe-ingredients">
-            <strong>Key Ingredients:</strong>
-            <ul>
-              <li>1 stick True Bark Ceylon Cinnamon Sugar Mix</li>
-              <li>Double shot medium-roast espresso</li>
-              <li>2 oz steamed oat or whole milk</li>
-              <li>Edible gold leaf flake (optional garnish)</li>
-            </ul>
-          </div>
-          <button class="btn btn-sm btn-outline-bark" onclick="quickAddToCart('true-bark-sugar-mix', 1)">
-            + Add Sugar Mix to Cart
-          </button>
-        </div>
-
-        <!-- Recipe 2 -->
-        <div class="recipe-card">
-          <div class="recipe-card-header">
-            <span class="recipe-badge">Cold Brew</span>
-            <span class="recipe-time">5 Mins</span>
-          </div>
-          <h3 class="recipe-title">Spiced Sweet Cream Cold Foam</h3>
-          <p class="recipe-desc">Silky cold foam infused with stone-milled True Bark powder poured over slow-steeped cold brew coffee.</p>
-          <div class="recipe-ingredients">
-            <strong>Key Ingredients:</strong>
-            <ul>
-              <li>1/2 tsp True Bark Ceylon Cinnamon Powder</li>
-              <li>2 tbsp heavy cream & 1 tbsp oat milk</li>
-              <li>1 tsp raw maple syrup</li>
-              <li>6 oz single-origin cold brew</li>
-            </ul>
-          </div>
-          <button class="btn btn-sm btn-outline-bark" onclick="quickAddToCart('true-bark-powder-gold-tin', 1)">
-            + Add Keepsake Tin to Cart
-          </button>
-        </div>
-
-        <!-- Recipe 3 -->
-        <div class="recipe-card">
-          <div class="recipe-card-header">
-            <span class="recipe-badge">Slow Brew</span>
-            <span class="recipe-time">10 Mins</span>
-          </div>
-          <h3 class="recipe-title">Alba Quill Steeping Brew</h3>
-          <p class="recipe-desc">Slow-steeped whole Alba Ceylon quill inside French press or pour-over grounds for a delicate floral aroma.</p>
-          <div class="recipe-ingredients">
-            <strong>Key Ingredients:</strong>
-            <ul>
-              <li>1 True Bark Alba Grade Cinnamon Quill</li>
-              <li>22g freshly ground Ethiopia or Colombia coffee</li>
-              <li>350g hot water (202&deg;F / 94&deg;C)</li>
-            </ul>
-          </div>
-          <button class="btn btn-sm btn-outline-bark" onclick="quickAddToCart('true-bark-alba-quills', 1)">
-            + Add Alba Quills to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Brand Story & Sri Lanka Terroir -->
-  <section class="story-section bg-dark text-white" id="our-story">
-    <div class="section-container story-grid">
-      <div class="story-content">
-        <span class="spotlight-sub gold-text">ROOTS IN SOUTHERN SRI LANKA</span>
-        <h2 class="spotlight-title">Preserving Centuries of Bark Peeling Artistry</h2>
-        <p>
-          In the lush hillside valleys of Galle and Matara, cinnamon harvesting is not an industrial process—it is a hereditary craft passed down across five generations. 
-        </p>
-        <p>
-          Unlike mass-market spices that sit in dusty warehouses for years, True Bark is harvested in small seasonal flushes. The outer coarse rind is peeled away by hand with a brass blade, revealing the tender, fragrant inner parchment. These whisper-thin layers are rolled into quills and sun-dried under tropical trade winds before immediate hermetic sealing.
-        </p>
-        <div class="story-stats-grid">
-          <div class="story-stat">
-            <span class="stat-big">100%</span>
-            <span class="stat-caption">Single-Estate Sri Lanka</span>
-          </div>
-          <div class="story-stat">
-            <span class="stat-big">0%</span>
-            <span class="stat-caption">Pesticides or Fillers</span>
-          </div>
-          <div class="story-stat">
-            <span class="stat-big">24h</span>
-            <span class="stat-caption">Milled & Sealed for Peak Aromatics</span>
-          </div>
-        </div>
-      </div>
-      <div class="story-visual">
-        <div class="terroir-card">
-          <div class="terroir-map-icon">&#128506;</div>
-          <h3>The True Ceylon Terroir</h3>
-          <p class="terroir-location">Matara & Galle Districts &bull; 6&deg;N Latitude</p>
-          <div class="terroir-specs">
-            <div class="spec-row">
-              <span>Soil</span>
-              <strong>Volcanic Loam & River Silt</strong>
-            </div>
-            <div class="spec-row">
-              <span>Elevation</span>
-              <strong>300m - 550m Foothills</strong>
-            </div>
-            <div class="spec-row">
-              <span>Climate</span>
-              <strong>Equatorial Rainforest & Ocean Mists</strong>
-            </div>
-          </div>
-          <div class="terroir-stamp">
-            <span>AUTHENTIC SRI LANKAN HERITAGE</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Verified Customer Reviews Section -->
-  <section class="reviews-section" id="reviews">
-    <div class="section-container">
-      <div class="section-header text-center">
-        <span class="section-subtitle">THE CONNOISSEUR CONSENSUS</span>
-        <h2 class="section-title">Loved by Baristas & Home Gourmets</h2>
+        <span class="section-subtitle">VERIFIED TASTING REVIEWS</span>
+        <h2 class="section-title">Loved by Baristas & Home Bakers</h2>
         <div class="overall-rating-badge">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <span class="score"><strong>4.96</strong> out of 5.0</span>
-          <span class="review-count">(342 verified reviews)</span>
+          <span class="review-count">(342 verified orders)</span>
         </div>
       </div>
 
       <div class="reviews-grid">
-        <!-- Review 1 -->
         <div class="review-card">
           <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <h4 class="review-heading">"Game changer for my morning latte."</h4>
           <p class="review-quote">
-            "The True Bark Sugar Mix sticks are genius. I keep a box by my Breville espresso machine. Just one stick sprinkled over the microfoam gives this incredible sweet aroma without any of that bitter burning throat catch from grocery store cassia."
+            "The True Bark Sugar Mix sticks are genius. I keep a box by my espresso machine. One stick dusted over the microfoam gives this incredible sweet aroma without any bitter throat catch."
           </p>
           <div class="reviewer-meta">
             <span class="reviewer-name">Marcus V.</span>
-            <span class="reviewer-badge">&bull; Verified Coffee Roaster, Seattle</span>
+            <span class="reviewer-badge">&bull; Specialty Coffee Roaster</span>
           </div>
         </div>
 
-        <!-- Review 2 -->
         <div class="review-card">
           <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <h4 class="review-heading">"The gold tin is a work of art on my counter."</h4>
           <p class="review-quote">
-            "The Standard Gold and Dark Espresso tin looks like a 19th century apothecary artifact. But the cinnamon inside is even better—sweet, floral, and so finely ground it literally melts. I also love knowing the coumarin level is negligible because I use it daily."
+            "The Standard Gold and Dark Espresso tin looks like a 19th-century luxury apothecary piece. The cinnamon inside is sweet, floral, and dissolves completely."
           </p>
           <div class="reviewer-meta">
             <span class="reviewer-name">Elena S.</span>
-            <span class="reviewer-badge">&bull; Verified Pastry Chef, Brooklyn</span>
+            <span class="reviewer-badge">&bull; Verified Pastry Chef</span>
           </div>
         </div>
 
-        <!-- Review 3 -->
         <div class="review-card">
           <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <h4 class="review-heading">"You can immediately smell the difference."</h4>
           <p class="review-quote">
-            "I ordered the Connoisseur Gift Set. The hammered copper dish and brass spoon are heirloom quality. Once you smell genuine Ceylon bark, you can never go back to grocery cinnamon."
+            "I ordered the Connoisseur Gift Set. The hammered copper dish and brass spoon are heirloom quality. Once you smell genuine Ceylon bark, you can never go back."
           </p>
           <div class="reviewer-meta">
             <span class="reviewer-name">David L.</span>
-            <span class="reviewer-badge">&bull; Verified Buyer, Chicago</span>
+            <span class="reviewer-badge">&bull; Verified Home Gourmet</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Newsletter Signup -->
+  <!-- Newsletter Signup (Compact) -->
   <section class="newsletter-section">
     <div class="section-container text-center">
       <span class="section-subtitle">JOIN THE TASTING CIRCLE</span>
-      <h2 class="section-title">Receive 15% Off Your First Harvest</h2>
-      <p class="section-lead">Subscribe for seasonal single-estate lot releases, barista brew guides, and exclusive heirloom tin restocks.</p>
+      <h2 class="section-title">Take 15% Off Your Order</h2>
+      <p class="section-lead">Use code <code class="promo-badge">TRUEBARK15</code> at checkout or enter your email to automatically unlock it.</p>
       <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)">
         <input type="email" id="newsletter-email" placeholder="Enter your email address" required aria-label="Email address for newsletter">
-        <button type="submit" class="btn btn-gold">Join the Circle</button>
+        <button type="submit" class="btn btn-gold">Claim 15% Off</button>
       </form>
-      <p class="newsletter-disclaimer">Zero spam. Only authentic spice stories. Unsubscribe anytime.</p>
     </div>
   </section>
 
@@ -619,7 +307,7 @@
           <span class="brand-sub">CEYLON CINNAMON ARTISANS</span>
         </div>
         <p class="footer-desc">
-          Honoring Sri Lanka's finest spice heritage. Pure, hand-harvested Cinnamomum verum packaged in hermetic tins and single-serve sticks for coffee connoisseurs worldwide.
+          Honoring Sri Lanka's finest spice heritage. Pure, hand-harvested Cinnamomum verum packaged in hermetic keepsake tins and single-serve barista sticks.
         </p>
         <div class="footer-badges">
           <span>&bull; Hand-Harvested Sri Lanka</span>
@@ -628,46 +316,50 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Spices & Blends</h4>
+        <h4>The Collection</h4>
         <ul>
-          <li><a href="#products-section">All Products</a></li>
-          <li><a href="#sugar-sticks-feature">Sugar Mix Sticks (5g)</a></li>
-          <li><a href="#vintage-tins-feature">Standard Gold & Espresso Tin</a></li>
-          <li><a href="#vintage-tins-feature">Artisan Kraft Brown Tin</a></li>
-          <li><a href="#products-section">Whole Alba Grade Quills</a></li>
-          <li><a href="#products-section">Connoisseur Gift Sets</a></li>
+          <li><a href="#quick-order-section">All Harvests</a></li>
+          <li><a href="#quick-order-section" onclick="filterCategory('sticks')">Sugar Mix Sticks (5g)</a></li>
+          <li><a href="#quick-order-section" onclick="filterCategory('tins')">Standard Gold Tin</a></li>
+          <li><a href="#quick-order-section" onclick="filterCategory('tins')">Artisan Kraft Brown Tin</a></li>
+          <li><a href="#quick-order-section" onclick="filterCategory('quills')">Whole Alba Quills</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Learn & Discover</h4>
-        <ul>
-          <li><a href="#ceylon-vs-cassia">Ceylon vs. Cassia Guide</a></li>
-          <li><a href="#barista-recipes">Barista Recipe Formulas</a></li>
-          <li><a href="#our-story">Terroir & Harvester Estates</a></li>
-          <li><a href="#reviews">Verified Customer Reviews</a></li>
-          <li><a href="#">Wholesale for Roasters & Cafes</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Customer Care</h4>
+        <h4>Ordering & Care</h4>
         <ul>
           <li><a href="javascript:void(0)" onclick="openCartDrawer()">View Shopping Bag</a></li>
-          <li><a href="#">Shipping & Returns Policy</a></li>
-          <li><a href="#">Coumarin Lab Certifications</a></li>
-          <li><a href="#">Frequently Asked Questions</a></li>
-          <li><a href="#">Contact Ceylon Concierge</a></li>
+          <li><a href="javascript:void(0)" onclick="openCheckoutModal()">Instant Checkout</a></li>
+          <li><a href="#why-ceylon-section">Ceylon vs. Cassia Guide</a></li>
+          <li><a href="#">Coumarin Lab Reports</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="section-container footer-bottom-inner">
-        <p>&copy; 2026 True Bark Spice Co. All rights reserved. Crafted with authentic Ceylon cinnamon.</p>
+        <p>&copy; 2026 True Bark Spice Co. Hand-harvested Ceylon Cinnamon.</p>
         <div class="payment-icons-row">
-          <span>Visa</span> &bull; <span>Mastercard</span> &bull; <span>Apple Pay</span> &bull; <span>Google Pay</span> &bull; <span>Shop Pay</span>
+          <span>Visa</span> &bull; <span>Mastercard</span> &bull; <span>Apple Pay</span> &bull; <span>Google Pay</span>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Sticky Bottom Order Bar (Mobile-friendly, zero scrolling needed) -->
+  <div class="sticky-order-bar" id="sticky-order-bar">
+    <div class="sticky-bar-inner">
+      <div class="sticky-bar-summary">
+        <span class="sticky-bag-icon">&#128722;</span>
+        <div>
+          <strong id="sticky-bar-items">0 items</strong>
+          <span class="sticky-bar-total" id="sticky-bar-total">$0.00</span>
+        </div>
+      </div>
+      <div class="sticky-bar-actions">
+        <button class="btn btn-gold btn-sm" onclick="openCartDrawer()">View Bag & Checkout</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Slide-Out Shopping Cart Drawer -->
   <aside class="cart-drawer-overlay" id="cart-drawer-overlay" aria-hidden="true">
@@ -696,7 +388,7 @@
         <div class="cart-empty-state" id="cart-empty-state">
           <div class="empty-icon">&#128722;</div>
           <p>Your bag is currently empty.</p>
-          <a href="#products-section" class="btn btn-gold btn-sm" onclick="closeCartDrawer()">Shop True Bark Collection</a>
+          <a href="#quick-order-section" class="btn btn-gold btn-sm" onclick="closeCartDrawer()">Shop True Bark Collection</a>
         </div>
       </div>
 
@@ -730,12 +422,6 @@
           </div>
         </div>
 
-        <!-- Order Note Toggle -->
-        <details class="order-note-details">
-          <summary>Add gift message or order note</summary>
-          <textarea id="order-note-input" rows="2" placeholder="Write your special instructions or gift card message here..."></textarea>
-        </details>
-
         <button class="btn btn-gold btn-block checkout-cta" id="checkout-trigger-btn" onclick="openCheckoutModal()">
           Proceed to Secure Checkout
         </button>
@@ -747,13 +433,12 @@
     </div>
   </aside>
 
-  <!-- Modern Native Dialog: Product Quick-View Modal (Compliant with Modern Web Guidance) -->
+  <!-- Modern Native Dialog: Product Quick-View Modal -->
   <dialog id="product-quick-view-dialog" class="modern-dialog" closedby="any" aria-labelledby="modal-product-title">
     <div class="dialog-content-wrapper">
       <button class="dialog-close-btn" id="modal-close-btn" aria-label="Close dialog" onclick="closeProductModal()">&times;</button>
       
       <div class="modal-product-layout">
-        <!-- Media Column -->
         <div class="modal-media-col">
           <div class="modal-main-img-wrap">
             <img id="modal-product-img" src="" alt="Product Image" width="500" height="500">
@@ -765,7 +450,6 @@
           </div>
         </div>
 
-        <!-- Details Column -->
         <div class="modal-info-col">
           <span class="modal-category" id="modal-product-category"></span>
           <h2 class="modal-title" id="modal-product-title"></h2>
@@ -781,15 +465,11 @@
 
           <p class="modal-desc" id="modal-product-desc"></p>
 
-          <!-- Variant / Pack Size Selector -->
           <div class="modal-variants-wrap" id="modal-variants-wrap">
             <label class="variant-label">Choose Package Option:</label>
-            <div class="variant-chips-grid" id="modal-variant-chips">
-              <!-- Rendered dynamically -->
-            </div>
+            <div class="variant-chips-grid" id="modal-variant-chips"></div>
           </div>
 
-          <!-- Purchase Type: One-Time vs Subscribe & Save -->
           <div class="purchase-plan-selector">
             <label class="plan-option selected" id="plan-onetime">
               <input type="radio" name="purchase_plan" value="onetime" checked onchange="handlePlanChange('onetime')">
@@ -806,12 +486,11 @@
                   <span class="save-tag">SAVE 15%</span>
                 </div>
                 <span class="plan-price" id="plan-sub-price">$23.80</span>
-                <span class="sub-frequency">Delivered fresh every 30 days. Pause or cancel anytime.</span>
+                <span class="sub-frequency">Delivered fresh monthly. Pause or cancel anytime.</span>
               </div>
             </label>
           </div>
 
-          <!-- Quantity & Add to Cart -->
           <div class="modal-actions-row">
             <div class="quantity-stepper">
               <button class="qty-btn" aria-label="Decrease quantity" onclick="decrementModalQty()">-</button>
@@ -821,17 +500,6 @@
             <button class="btn btn-gold btn-lg flex-1" id="modal-add-cart-btn" onclick="addToCartFromModal()">
               Add to Bag &bull; <span id="modal-btn-price">$28.00</span>
             </button>
-          </div>
-
-          <!-- Botanical Specs Table -->
-          <div class="modal-specs-accordion">
-            <h4>Botanical & Sourcing Specs</h4>
-            <div class="specs-mini-table">
-              <div class="spec-cell"><span>Botanical:</span> <strong>Cinnamomum verum</strong></div>
-              <div class="spec-cell"><span>Origin:</span> <strong>Southern Coast, Sri Lanka</strong></div>
-              <div class="spec-cell"><span>Coumarin:</span> <strong>&lt; 0.004% (Lab Certified)</strong></div>
-              <div class="spec-cell"><span>Shelf Life:</span> <strong>24 Months (Airtight)</strong></div>
-            </div>
           </div>
         </div>
       </div>
@@ -853,17 +521,7 @@
             <button type="button" class="btn btn-xs btn-outline-bark" onclick="fillDemoCheckout()">Fill Demo Info</button>
           </div>
 
-          <!-- Progress Tabs -->
-          <div class="checkout-steps-indicator">
-            <div class="step-dot active" id="step-dot-1">1. Shipping</div>
-            <div class="step-connector"></div>
-            <div class="step-dot" id="step-dot-2">2. Payment</div>
-            <div class="step-connector"></div>
-            <div class="step-dot" id="step-dot-3">3. Review</div>
-          </div>
-
           <form id="checkout-form" onsubmit="handleCheckoutSubmit(event)">
-            <!-- Contact Info -->
             <div class="form-section">
               <h4 class="form-section-title">Contact Information</h4>
               <div class="form-group">
@@ -872,7 +530,6 @@
               </div>
             </div>
 
-            <!-- Shipping Address -->
             <div class="form-section">
               <h4 class="form-section-title">Shipping Address</h4>
               <div class="form-row">
@@ -905,14 +562,13 @@
               </div>
             </div>
 
-            <!-- Shipping Speed -->
             <div class="form-section">
               <h4 class="form-section-title">Shipping Method</h4>
               <div class="shipping-options-list">
                 <label class="shipping-option-card selected">
                   <input type="radio" name="shipping_speed" value="standard" checked onchange="updateShippingMethod('standard')">
                   <div class="shipping-option-info">
-                    <span class="shipping-title">Standard Fresh Priority (3–5 Business Days)</span>
+                    <span class="shipping-title">Standard Priority (3–5 Business Days)</span>
                     <span class="shipping-note">Free on orders $45+ (otherwise $5.00)</span>
                   </div>
                   <strong class="shipping-cost" id="checkout-standard-cost">FREE</strong>
@@ -920,7 +576,7 @@
                 <label class="shipping-option-card">
                   <input type="radio" name="shipping_speed" value="express" onchange="updateShippingMethod('express')">
                   <div class="shipping-option-info">
-                    <span class="shipping-title">Express Courier Air (1–2 Business Days)</span>
+                    <span class="shipping-title">Express Air Courier (1–2 Business Days)</span>
                     <span class="shipping-note">Immediate roasting & packing dispatch</span>
                   </div>
                   <strong class="shipping-cost">$14.00</strong>
@@ -928,7 +584,6 @@
               </div>
             </div>
 
-            <!-- Payment Simulation -->
             <div class="form-section">
               <h4 class="form-section-title">Payment Method (Test Simulation)</h4>
               <div class="payment-tabs-row">
@@ -949,12 +604,12 @@
               <div class="card-fields-box">
                 <div class="form-group">
                   <label for="card-num">Card Number</label>
-                  <input type="text" id="card-num" placeholder="4242 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 4242" value="4242 8888 9999 4242">
+                  <input type="text" id="card-num" placeholder="4242 •••• •••• 4242" value="4242 8888 9999 4242">
                 </div>
                 <div class="form-row">
                   <div class="form-group flex-1">
                     <label for="card-exp">Expiry (MM/YY)</label>
-                    <input type="text" id="card-exp" placeholder="10/28" value="12/28">
+                    <input type="text" id="card-exp" placeholder="12/28" value="12/28">
                   </div>
                   <div class="form-group flex-1">
                     <label for="card-cvc">CVC</label>
@@ -970,12 +625,9 @@
           </form>
         </div>
 
-        <!-- Checkout Order Summary Col -->
         <div class="checkout-summary-col">
           <h4 class="summary-col-title">Order Summary</h4>
-          <div class="checkout-items-list" id="checkout-items-list">
-            <!-- Rendered by app.js -->
-          </div>
+          <div class="checkout-items-list" id="checkout-items-list"></div>
           
           <div class="checkout-totals-box">
             <div class="c-row">
@@ -1001,7 +653,7 @@
           </div>
 
           <div class="checkout-assurances">
-            <p>&#128230; Orders dispatched within 24 hours from California or Sri Lanka hub.</p>
+            <p>&#128230; Orders dispatched within 24 hours.</p>
             <p>&#127807; 100% Recyclable metal tins & compostable plant foil sticks.</p>
           </div>
         </div>
@@ -1013,10 +665,10 @@
   <dialog id="confirmation-dialog" class="modern-dialog" closedby="any" aria-labelledby="receipt-title">
     <div class="dialog-content-wrapper confirmation-content-box text-center">
       <div class="confirmation-icon">&#10004;</div>
-      <span class="confirmation-sub">THANK YOU FOR SUPPORTING AUTHENTIC ARTISAN HARVESTS</span>
+      <span class="confirmation-sub">THANK YOU FOR SUPPORTING ARTISANAL HARVESTS</span>
       <h2 id="receipt-title" class="confirmation-title">Order Confirmed!</h2>
       <p class="confirmation-lead">
-        Your shipment is being prepared with our newly harvested Ceylon cinnamon lots. An email confirmation has been dispatched to <strong id="receipt-email">customer@example.com</strong>.
+        Your shipment is being prepared. Confirmation sent to <strong id="receipt-email">customer@example.com</strong>.
       </p>
 
       <div class="receipt-card">
@@ -1027,7 +679,7 @@
           </div>
           <div>
             <span class="receipt-label">Estimated Delivery</span>
-            <strong class="receipt-val" id="receipt-delivery-date">October 5, 2026</strong>
+            <strong class="receipt-val" id="receipt-delivery-date">October 12, 2026</strong>
           </div>
           <div>
             <span class="receipt-label">Total Paid</span>
@@ -1035,9 +687,7 @@
           </div>
         </div>
 
-        <div class="receipt-items-list" id="receipt-items-list">
-          <!-- Populated dynamically -->
-        </div>
+        <div class="receipt-items-list" id="receipt-items-list"></div>
 
         <div class="receipt-shipping-address">
           <span class="receipt-label">Shipping To</span>

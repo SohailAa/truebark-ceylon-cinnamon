@@ -1,6 +1,6 @@
 /**
  * True Bark Ceylon Cinnamon - E-Commerce Store Application
- * Hand-crafted with modern web standards and responsive reactivity.
+ * Streamlined, high-conversion architecture with video hero and quick ordering.
  */
 
 // =============================================================================
@@ -23,9 +23,9 @@ const PRODUCTS = [
     image: "assets/images/sugar-sticks-detail.jpg",
     gallery: ["assets/images/sugar-sticks-detail.jpg", "assets/images/sugar-mix-sachets.jpg", "assets/images/cappuccino-serve.jpg"],
     variants: [
-      { id: "box-25", name: "Barista Box (25 Sticks)", price: 22.00, subPrice: 18.70 },
-      { id: "box-50", name: "Cafe Bulk Box (50 Sticks)", price: 38.00, subPrice: 32.30 },
-      { id: "sample-10", name: "Tasting Pocket Pack (10 Sticks)", price: 9.50, subPrice: 8.08 }
+      { id: "box-25", name: "Box of 25 Sticks", price: 22.00, subPrice: 18.70 },
+      { id: "box-50", name: "Cafe Box of 50", price: 38.00, subPrice: 32.30 },
+      { id: "sample-10", name: "10-Pack Sampler", price: 9.50, subPrice: 8.08 }
     ],
     defaultVariantIndex: 0
   },
@@ -46,7 +46,7 @@ const PRODUCTS = [
     gallery: ["assets/images/gold-espresso-tin.jpg", "assets/images/cinnamon-powder-tins.jpg"],
     variants: [
       { id: "gold-tin-single", name: "Collector Gold Tin (140g)", price: 28.00, subPrice: 23.80 },
-      { id: "gold-tin-duo", name: "Duo Reserve (2x 140g Tins)", price: 52.00, subPrice: 44.20 }
+      { id: "gold-tin-duo", name: "Duo Reserve (2x 140g)", price: 52.00, subPrice: 44.20 }
     ],
     defaultVariantIndex: 0
   },
@@ -67,7 +67,7 @@ const PRODUCTS = [
     gallery: ["assets/images/sample-brown-tin.jpg", "assets/images/cinnamon-powder-tins.jpg"],
     variants: [
       { id: "brown-tin-single", name: "Sample Kraft Tin (140g)", price: 24.00, subPrice: 20.40 },
-      { id: "brown-tin-refill", name: "Kraft Tin + Pouch Refill", price: 42.00, subPrice: 35.70 }
+      { id: "brown-tin-refill", name: "Kraft Tin + Refill Pouch", price: 42.00, subPrice: 35.70 }
     ],
     defaultVariantIndex: 0
   },
@@ -98,7 +98,7 @@ const PRODUCTS = [
     subtitle: "Gold Tin + Sugar Mix Sticks + Hammered Copper Dish & Brass Spoon",
     category: "gift",
     categoryName: "Connoisseur Sets",
-    badge: "Holiday Edition",
+    badge: "Deluxe Edition",
     rating: 5.00,
     reviewsCount: 78,
     description: "The definitive collector's experience for coffee and culinary aficionados. Includes the Heirloom Gold & Espresso Tin (140g), a 25-pack box of Ceylon Sugar Mix Sticks, a solid hand-hammered copper tasting bowl, and a vintage engraved brass spice spoon.",
@@ -113,6 +113,15 @@ const PRODUCTS = [
     defaultVariantIndex: 0
   }
 ];
+
+// Map of currently selected variant index per product card
+const cardSelectedVariants = {
+  "true-bark-sugar-mix": 0,
+  "true-bark-powder-gold-tin": 0,
+  "true-bark-powder-brown-tin": 0,
+  "true-bark-alba-quills": 0,
+  "true-bark-connoisseur-gift-set": 0
+};
 
 // =============================================================================
 // Currencies & Exchange Rates
@@ -147,39 +156,68 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartUI();
   setupDialogPolyfillFallbacks();
   setupEventListeners();
+  initVideoControls();
 });
 
 // =============================================================================
-// Modern Web Guidance: Setup Dialog Polyfill Fallbacks for closedby="any"
+// Dialog Fallbacks for closedby="any"
 // =============================================================================
 function setupDialogPolyfillFallbacks() {
   const dialogs = document.querySelectorAll("dialog");
-
   dialogs.forEach((dialog) => {
-    // If browser doesn't natively support closedBy, apply click bounds fallback
     if (!("closedBy" in HTMLDialogElement.prototype)) {
       dialog.addEventListener("click", (event) => {
-        // If clicking the dialog element directly (the backdrop)
         if (event.target !== dialog) return;
-
         const rect = dialog.getBoundingClientRect();
         const isDialogContent =
           rect.top <= event.clientY &&
           event.clientY <= rect.top + rect.height &&
           rect.left <= event.clientX &&
           event.clientX <= rect.left + rect.width;
-
-        if (!isDialogContent) {
-          dialog.close();
-        }
+        if (!isDialogContent) dialog.close();
       });
     }
-
-    // Cancel event to sync custom close handlers if needed
-    dialog.addEventListener("cancel", () => {
-      // Browser handles Esc closing natively
-    });
   });
+}
+
+// =============================================================================
+// Video Controls
+// =============================================================================
+function initVideoControls() {
+  const video = document.getElementById("hero-video");
+  const playBtn = document.getElementById("video-play-btn");
+  const playIcon = document.getElementById("play-status-icon");
+  const playText = document.getElementById("play-status-text");
+  const muteBtn = document.getElementById("video-mute-btn");
+  const muteIcon = document.getElementById("mute-status-icon");
+  const muteText = document.getElementById("mute-status-text");
+
+  if (video && playBtn) {
+    playBtn.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        if (playIcon) playIcon.innerHTML = "&#10074;&#10074;";
+        if (playText) playText.textContent = "Pause Video";
+      } else {
+        video.pause();
+        if (playIcon) playIcon.innerHTML = "&#9658;";
+        if (playText) playText.textContent = "Play Video";
+      }
+    });
+  }
+
+  if (video && muteBtn) {
+    muteBtn.addEventListener("click", () => {
+      video.muted = !video.muted;
+      if (video.muted) {
+        if (muteIcon) muteIcon.innerHTML = "&#128263;";
+        if (muteText) muteText.textContent = "Muted";
+      } else {
+        if (muteIcon) muteIcon.innerHTML = "&#128266;";
+        if (muteText) muteText.textContent = "Sound On";
+      }
+    });
+  }
 }
 
 // =============================================================================
@@ -204,20 +242,12 @@ function initCurrencySelector() {
     }
     renderProductGrid();
     updateCartUI();
-    updateSpotlightPrices();
     showToast(`Currency switched to ${currentCurrency}`);
   });
 }
 
-function updateSpotlightPrices() {
-  const stickPrice = document.getElementById("spotlight-stick-price");
-  if (stickPrice) stickPrice.textContent = formatPrice(9.50);
-  const tinPrice = document.getElementById("spotlight-tin-price");
-  if (tinPrice) tinPrice.textContent = formatPrice(28.00);
-}
-
 // =============================================================================
-// Product Catalog Rendering
+// Product Catalog Rendering (Streamlined with Instant Card Actions)
 // =============================================================================
 function renderProductGrid() {
   const grid = document.getElementById("product-grid");
@@ -228,7 +258,9 @@ function renderProductGrid() {
     : PRODUCTS.filter((p) => p.category === activeFilter);
 
   grid.innerHTML = filtered.map((product) => {
-    const defaultVariant = product.variants[product.defaultVariantIndex];
+    const selectedVIndex = cardSelectedVariants[product.id] ?? product.defaultVariantIndex;
+    const activeVariant = product.variants[selectedVIndex] || product.variants[0];
+
     return `
       <article class="product-card" data-product-id="${product.id}">
         <div class="card-media-wrap" onclick="openProductModal('${product.id}')" role="button" aria-label="Quick view ${product.name}">
@@ -251,12 +283,27 @@ function renderProductGrid() {
             <span>${product.reviewsCount} reviews</span>
           </div>
           <p class="card-desc">${product.description}</p>
+
+          ${product.variants.length > 1 ? `
+            <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
+              ${product.variants.map((v, idx) => `
+                <button 
+                  type="button" 
+                  class="variant-btn-pill ${idx === selectedVIndex ? 'active-pill' : ''}" 
+                  onclick="selectCardVariant('${product.id}', ${idx})"
+                  style="padding: 4px 10px; font-size: 0.72rem; border-radius: 4px; border: 1px solid ${idx === selectedVIndex ? 'var(--color-espresso)' : 'var(--color-cream-border)'}; background: ${idx === selectedVIndex ? 'var(--color-espresso)' : 'var(--color-white)'}; color: ${idx === selectedVIndex ? 'var(--color-gold-bright)' : 'var(--color-text-secondary)'}; cursor: pointer; font-weight: 600;">
+                  ${v.name}
+                </button>
+              `).join("")}
+            </div>
+          ` : ''}
+
           <div class="card-footer">
             <div class="price-container">
-              <span class="card-price">${formatPrice(defaultVariant.price)}</span>
-              <span class="card-sub-price">Sub: ${formatPrice(defaultVariant.subPrice)} (-15%)</span>
+              <span class="card-price">${formatPrice(activeVariant.price)}</span>
+              <span class="card-sub-price">Sub & Save: ${formatPrice(activeVariant.subPrice)}</span>
             </div>
-            <button class="btn btn-gold btn-card-add" onclick="quickAddToCart('${product.id}', 1)">
+            <button class="btn btn-gold btn-card-add" onclick="quickAddToCartSelected('${product.id}', 1)">
               Add to Bag
             </button>
           </div>
@@ -264,6 +311,48 @@ function renderProductGrid() {
       </article>
     `;
   }).join("");
+}
+
+function selectCardVariant(productId, variantIndex) {
+  cardSelectedVariants[productId] = variantIndex;
+  renderProductGrid();
+}
+
+function quickAddToCartSelected(productId, qty = 1) {
+  const product = PRODUCTS.find((p) => p.id === productId);
+  if (!product) return;
+  const selectedVIndex = cardSelectedVariants[productId] ?? product.defaultVariantIndex;
+  const variant = product.variants[selectedVIndex] || product.variants[0];
+
+  addToCart({
+    productId: product.id,
+    name: product.name,
+    variantId: variant.id,
+    variantName: variant.name,
+    image: product.image,
+    price: variant.price,
+    isSubscription: false,
+    quantity: qty
+  });
+
+  openCartDrawer();
+}
+
+function filterCategory(cat) {
+  activeFilter = cat;
+  const filterTabs = document.querySelectorAll(".filter-tab");
+  filterTabs.forEach((t) => {
+    if (t.dataset.filter === cat) {
+      t.classList.add("active");
+      t.setAttribute("aria-selected", "true");
+    } else {
+      t.classList.remove("active");
+      t.setAttribute("aria-selected", "false");
+    }
+  });
+  renderProductGrid();
+  const target = document.getElementById("quick-order-section");
+  if (target) target.scrollIntoView({ behavior: "smooth" });
 }
 
 // =============================================================================
@@ -274,7 +363,7 @@ function openProductModal(productId) {
   if (!product) return;
 
   currentModalProduct = product;
-  currentModalVariantIndex = 0;
+  currentModalVariantIndex = cardSelectedVariants[productId] ?? 0;
   currentModalPurchasePlan = "onetime";
 
   const dialog = document.getElementById("product-quick-view-dialog");
@@ -296,22 +385,19 @@ function openProductModal(productId) {
   descElem.textContent = product.description;
   if (qtyInput) qtyInput.value = 1;
 
-  // Render variant chips
   chipsContainer.innerHTML = product.variants.map((v, idx) => `
-    <button type="button" class="variant-chip ${idx === 0 ? 'active' : ''}" onclick="selectModalVariant(${idx})">
+    <button type="button" class="variant-chip ${idx === currentModalVariantIndex ? 'active' : ''}" onclick="selectModalVariant(${idx})">
       ${v.name}
     </button>
   `).join("");
 
   updateModalPriceDisplays();
 
-  // Reset purchase plan radio
   const onetimeRadio = document.querySelector('input[name="purchase_plan"][value="onetime"]');
   if (onetimeRadio) onetimeRadio.checked = true;
   document.getElementById("plan-onetime").classList.add("selected");
   document.getElementById("plan-sub").classList.remove("selected");
 
-  // Show Modal using native API
   dialog.showModal();
 }
 
@@ -411,25 +497,6 @@ function saveCartToStorage() {
   } catch (e) {}
 }
 
-function quickAddToCart(productId, qty = 1) {
-  const product = PRODUCTS.find((p) => p.id === productId);
-  if (!product) return;
-  const variant = product.variants[product.defaultVariantIndex];
-
-  addToCart({
-    productId: product.id,
-    name: product.name,
-    variantId: variant.id,
-    variantName: variant.name,
-    image: product.image,
-    price: variant.price,
-    isSubscription: false,
-    quantity: qty
-  });
-
-  openCartDrawer();
-}
-
 function addToCart(item) {
   const existingIndex = cart.findIndex(
     (ci) => ci.productId === item.productId && ci.variantId === item.variantId && ci.isSubscription === item.isSubscription
@@ -478,6 +545,10 @@ function updateCartUI() {
   const discountVal = document.getElementById("cart-discount");
   const discountLabel = document.getElementById("discount-code-label");
 
+  // Sticky order bar elements
+  const stickyBarItems = document.getElementById("sticky-bar-items");
+  const stickyBarTotal = document.getElementById("sticky-bar-total");
+
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
   if (counter) counter.textContent = totalItems;
   if (drawerCount) drawerCount.textContent = `(${totalItems} item${totalItems === 1 ? '' : 's'})`;
@@ -489,7 +560,7 @@ function updateCartUI() {
         <div class="cart-empty-state">
           <div class="empty-icon">&#128722;</div>
           <p>Your bag is currently empty.</p>
-          <a href="#products-section" class="btn btn-gold btn-sm" onclick="closeCartDrawer()">Shop True Bark Collection</a>
+          <a href="#quick-order-section" class="btn btn-gold btn-sm" onclick="closeCartDrawer()">Shop True Bark Collection</a>
         </div>
       `;
     }
@@ -497,6 +568,8 @@ function updateCartUI() {
     if (totalElem) totalElem.textContent = formatPrice(0);
     if (freeShipFill) freeShipFill.style.width = "0%";
     if (discountRow) discountRow.style.display = "none";
+    if (stickyBarItems) stickyBarItems.textContent = "0 items";
+    if (stickyBarTotal) stickyBarTotal.textContent = formatPrice(0);
     return;
   }
 
@@ -507,7 +580,7 @@ function updateCartUI() {
         <img src="${item.image}" alt="${item.name}" class="cart-item-thumb">
         <div class="cart-item-info">
           <h4 class="cart-item-title">${item.name}</h4>
-          <span class="cart-item-variant">${item.variantName} ${item.isSubscription ? '• Fresh Monthly (-15%)' : ''}</span>
+          <span class="cart-item-variant">${item.variantName} ${item.isSubscription ? '• Monthly (-15%)' : ''}</span>
           <span class="cart-item-price">${formatPrice(item.price)}</span>
           <div class="cart-item-actions">
             <div class="qty-stepper-sm">
@@ -561,6 +634,9 @@ function updateCartUI() {
   const finalTotal = Math.max(0, subtotal - discountAmount);
   if (subtotalElem) subtotalElem.textContent = formatPrice(subtotal);
   if (totalElem) totalElem.textContent = formatPrice(finalTotal);
+
+  if (stickyBarItems) stickyBarItems.textContent = `${totalItems} item${totalItems === 1 ? '' : 's'}`;
+  if (stickyBarTotal) stickyBarTotal.textContent = formatPrice(finalTotal);
 }
 
 function bumpCartIcon() {
@@ -608,10 +684,6 @@ function applyPromoCode() {
     appliedPromo = { code: "FREESHIP", discountRate: 0.0, freeShip: true };
     msg.className = "promo-message success";
     msg.textContent = "Complimentary shipping unlocked!";
-  } else if (code === "BARISTA20") {
-    appliedPromo = { code: "BARISTA20", discountRate: 0.20, freeShip: false };
-    msg.className = "promo-message success";
-    msg.textContent = "20% Barista Guild VIP discount applied!";
   } else {
     msg.className = "promo-message error";
     msg.textContent = "Invalid discount code. Try TRUEBARK15.";
@@ -692,7 +764,7 @@ function renderCheckoutSummary() {
   }
 
   const taxableBase = Math.max(0, subtotal - discountAmount);
-  const taxUSD = taxableBase * 0.05; // 5% estimated tax
+  const taxUSD = taxableBase * 0.05;
   const finalUSD = taxableBase + shippingCostUSD + taxUSD;
 
   subtotalElem.textContent = formatPrice(subtotal);
@@ -724,19 +796,16 @@ function handleCheckoutSubmit(e) {
     btn.disabled = false;
     btn.innerHTML = `Complete Order &bull; <span id="checkout-submit-total">$0.00</span>`;
     
-    // Generate order confirmation details
     const orderId = `#TB-${Math.floor(10000 + Math.random() * 90000)}`;
     const email = document.getElementById("checkout-email").value;
     const name = `${document.getElementById("checkout-fname").value} ${document.getElementById("checkout-lname").value}`;
     const address = `${document.getElementById("checkout-address").value}, ${document.getElementById("checkout-city").value}, ${document.getElementById("checkout-state").value}`;
     const finalTotalText = document.getElementById("checkout-final-total").textContent;
 
-    // Delivery date calculation (3 business days ahead)
     const delivDate = new Date();
     delivDate.setDate(delivDate.getDate() + (selectedShippingSpeed === "express" ? 2 : 4));
     const delivStr = delivDate.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 
-    // Populate confirmation modal
     document.getElementById("receipt-order-id").textContent = orderId;
     document.getElementById("receipt-delivery-date").textContent = delivStr;
     document.getElementById("receipt-email").textContent = email;
@@ -751,7 +820,6 @@ function handleCheckoutSubmit(e) {
       </div>
     `).join("");
 
-    // Clear cart
     cart = [];
     appliedPromo = null;
     saveCartToStorage();
@@ -767,12 +835,9 @@ function handleCheckoutSubmit(e) {
 function closeConfirmationAndShop() {
   const confDialog = document.getElementById("confirmation-dialog");
   if (confDialog) confDialog.close();
-  window.location.hash = "#products-section";
+  window.location.hash = "#quick-order-section";
 }
 
-// =============================================================================
-// Newsletter & Global Listeners
-// =============================================================================
 function handleNewsletter(e) {
   e.preventDefault();
   const emailInput = document.getElementById("newsletter-email");
@@ -802,7 +867,6 @@ function showToast(message) {
 }
 
 function setupEventListeners() {
-  // Mobile Nav Toggle
   const toggle = document.getElementById("mobile-menu-toggle");
   const nav = document.getElementById("main-nav");
   if (toggle && nav) {
@@ -812,7 +876,6 @@ function setupEventListeners() {
     });
   }
 
-  // Cart Drawer open/close triggers
   const cartTrigger = document.getElementById("cart-trigger");
   const cartClose = document.getElementById("cart-close-btn");
   const cartOverlay = document.getElementById("cart-drawer-overlay");
@@ -825,7 +888,6 @@ function setupEventListeners() {
     });
   }
 
-  // Filter Tabs
   const filterTabs = document.querySelectorAll(".filter-tab");
   filterTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
@@ -840,7 +902,6 @@ function setupEventListeners() {
     });
   });
 
-  // Search Toggle
   const searchTrigger = document.getElementById("search-trigger");
   const searchOverlay = document.getElementById("search-overlay");
   const searchClose = document.getElementById("search-close-btn");
@@ -888,7 +949,7 @@ function setupEventListeners() {
                 <p class="card-desc">${product.description}</p>
                 <div class="card-footer">
                   <span class="card-price">${formatPrice(defaultVariant.price)}</span>
-                  <button class="btn btn-gold btn-card-add" onclick="quickAddToCart('${product.id}', 1)">Add to Bag</button>
+                  <button class="btn btn-gold btn-card-add" onclick="quickAddToCartSelected('${product.id}', 1)">Add to Bag</button>
                 </div>
               </div>
             </article>
