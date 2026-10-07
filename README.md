@@ -2,7 +2,7 @@
 
 A luxury e-commerce storefront crafted for **True Bark**, an artisanal spice and specialty coffee companion brand specializing in authentic, pure Sri Lankan Ceylon Cinnamon (*Cinnamomum verum*).
 
-![True Bark Ceylon Cinnamon Packaging](assets/images/sugar-mix-sachets.jpg)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSohailAa%2Ftruebark-ceylon-cinnamon)
 
 ---
 
@@ -57,13 +57,16 @@ npx serve .
 
 ---
 
-## 📦 Deployment to Vercel
+## 📦 Deployment to Vercel (Automatic from GitHub)
 
-This repository is optimized for zero-config Vercel deployment:
+To deploy directly from GitHub with automatic continuous deployment on every `git push`:
 
-```bash
-# Deploy with Vercel CLI
-npx vercel --prod
-```
+1. **One-Click Deploy**:
+   Click the **[Deploy with Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSohailAa%2Ftruebark-ceylon-cinnamon)** button or visit [vercel.com/new](https://vercel.com/new).
+2. **Import Repository**:
+   Under "Import Git Repository", search for `truebark-ceylon-cinnamon` (or paste `https://github.com/SohailAa/truebark-ceylon-cinnamon`).
+3. **Deploy**:
+   Leave the default settings as-is (Framework: *Other*, Root Directory: `./`). Click **Deploy**.
+4. **Continuous Delivery**:
+   Now, every time you or an agent pushes code to the `main` branch, Vercel will automatically build and publish the live production site in seconds!
 
-Or connect the GitHub repository directly to [Vercel](https://vercel.com) for automatic deployments on push.
