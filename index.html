@@ -58,7 +58,6 @@
       <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
         <ul class="nav-links">
           <li><a href="#quick-order-section" class="nav-link active">Shop Harvest</a></li>
-          <li><a href="#blueprint-section" class="nav-link">Sachet Blueprint</a></li>
           <li><a href="#why-ceylon-section" class="nav-link">Why True Ceylon</a></li>
           <li><a href="#reviews-section" class="nav-link">Barista Reviews</a></li>
         </ul>
@@ -79,24 +78,15 @@
     <!-- Quick Search Dropdown -->
     <div class="search-overlay" id="search-overlay" hidden>
       <div class="search-inner">
-        <input type="search" id="store-search-input" placeholder="Search True Bark (e.g. Sugar Mix, Espresso Tin, Quills)..." aria-label="Search catalog">
+        <input type="search" id="store-search-input" placeholder="Search True Bark (e.g. Sugar Mix, Espresso Tin)..." aria-label="Search catalog">
         <button class="search-close-btn" id="search-close-btn" aria-label="Close search">&times;</button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section with HD Photographic Setting, Blueprint Vector, and Video Support -->
+  <!-- Hero Section with Background Video -->
   <section class="hero-video-section" id="hero">
     <div class="hero-video-container">
-      <!-- Full HD Master Photographic Backdrop -->
-      <img 
-        src="assets/images/hero-coffee-sachets.jpg" 
-        alt="True Bark Ceylon Cinnamon Barista Setting" 
-        class="hero-bg-image" 
-        id="hero-bg-img"
-        fetchpriority="high">
-
-      <!-- Ambient Background Video -->
       <video 
         id="hero-video" 
         class="hero-video-element" 
@@ -104,8 +94,7 @@
         loop 
         muted 
         playsinline 
-        poster="assets/images/hero-coffee-sachets.jpg"
-        style="display: none; opacity: 0;">
+        poster="assets/images/sugar-mix-square.jpg">
         <source src="assets/videos/hero-coffee.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
@@ -113,19 +102,6 @@
     </div>
 
     <div class="section-container hero-video-content">
-      <!-- Interactive Media Switcher -->
-      <div class="hero-mode-switch" role="group" aria-label="Hero background mode">
-        <button type="button" class="hero-mode-pill active" id="hero-mode-photo" onclick="switchHeroMode('photo')">
-          &#128248; HD Coffee Setting
-        </button>
-        <button type="button" class="hero-mode-pill" id="hero-mode-blueprint" onclick="switchHeroMode('blueprint')">
-          &#128208; Sachet Blueprint
-        </button>
-        <button type="button" class="hero-mode-pill" id="hero-mode-video" onclick="switchHeroMode('video')">
-          &#127916; Ambient Pour Video
-        </button>
-      </div>
-
       <div class="hero-badge">
         <span class="badge-icon">&#10022;</span>
         <span>100% PURE SRI LANKAN CINNAMOMUM VERUM</span>
@@ -140,11 +116,11 @@
 
       <div class="hero-cta-group">
         <a href="#quick-order-section" class="btn btn-gold btn-lg">&#128722; Quick Order Spices</a>
-        <a href="#blueprint-section" class="btn btn-outline-light btn-lg">&#128208; Inspect Sachet Blueprint</a>
+        <button type="button" class="btn btn-outline-light btn-lg" onclick="openCartDrawer()">View Shopping Bag</button>
       </div>
 
-      <!-- Quick Video Controls (Active when video is playing) -->
-      <div class="hero-media-controls" id="hero-media-controls" style="display: none;">
+      <!-- Quick Video Controls -->
+      <div class="hero-media-controls" id="hero-media-controls">
         <button type="button" class="video-ctrl-btn" id="video-play-btn" aria-label="Pause or play background video">
           <span id="play-status-icon">&#10074;&#10074;</span>
           <span class="ctrl-label" id="play-status-text">Pause Video</span>
@@ -215,155 +191,6 @@
       </div>
     </div>
   </main>
-
-  <!-- Architectural Packaging Blueprint & Print Specification Section -->
-  <section class="blueprint-section" id="blueprint-section">
-    <div class="section-container">
-      <div class="section-header text-center" style="margin-bottom: 30px;">
-        <span class="section-subtitle">PRECISION PACKAGING ARCHITECTURE</span>
-        <h2 class="section-title">Sachet Label Blueprint &amp; Print Spec</h2>
-        <p class="section-lead">
-          Engineered for aroma preservation and effortless barista table service. 1:1 vector print blueprint for the True Bark 5g Ceylon Cinnamon Sugar Mix stick.
-        </p>
-      </div>
-
-      <div class="blueprint-sheet">
-        <!-- Document Header -->
-        <div class="blueprint-doc-header">
-          <div class="blueprint-title-area">
-            <h3 class="blueprint-doc-title">Print Specification</h3>
-            <h4 class="blueprint-doc-subtitle">True Bark Ceylon Cinnamon Sugar Mix &bull; 5g Sachet</h4>
-          </div>
-          <div class="blueprint-doc-meta">
-            <p><strong>SCALE:</strong> 1:1 (HD Vector)</p>
-            <p><strong>COLORS:</strong> Dark Espresso (PMS 412C), Metallic Gold Foil</p>
-            <p><strong>MATERIAL:</strong> Multi-Layer Barrier Foil (Aroma-Locked)</p>
-          </div>
-        </div>
-
-        <div class="blueprint-scroll-viewport">
-          <!-- Front Display Panel -->
-          <div class="blueprint-display-wrap">
-            <div class="blueprint-panel-label">FRONT DISPLAY PANEL</div>
-
-            <!-- Width Measurement -->
-            <div class="measure-line-h sachet-measure-w" style="width: 600px;">
-              <span class="measure-tag-h">110 mm (Width)</span>
-            </div>
-
-            <div class="blueprint-front-row">
-              <!-- Height Measurement -->
-              <div class="measure-line-v sachet-measure-h" style="height: 140px;">
-                <span class="measure-tag-v">35 mm (Height)</span>
-              </div>
-
-              <!-- SACHET FRONT HD DESIGN -->
-              <div class="sachet-bg sachet-front-box">
-                <!-- Decorative Corner Filigree -->
-                <div class="sachet-filigree filigree-tl"></div>
-                <div class="sachet-filigree filigree-tr"></div>
-                <div class="sachet-filigree filigree-bl"></div>
-                <div class="sachet-filigree filigree-br"></div>
-
-                <!-- Main Typography -->
-                <div class="sachet-front-content text-center" style="width: 100%; z-index: 10;">
-                  <h3 class="serif-font text-gold-foil sachet-title-main">
-                    Ceylon Cinnamon
-                  </h3>
-                  <h4 class="serif-font text-gold-foil sachet-title-sub">
-                    Sugar Mix
-                  </h4>
-                  <div class="gold-line"></div>
-                  <div class="sachet-bottom-row">
-                    <p class="sachet-claim">
-                      Premium &amp; Authentic | Hand-Harvested
-                    </p>
-                    <p class="sachet-wt">
-                      Net Wt 5g
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Website Link -->
-                <div class="sachet-url-wrap">
-                  <p class="sachet-url">www.truebarkcinnamon.com</p>
-                </div>
-
-                <!-- Botanical Graphics -->
-                <div class="sachet-botanical botanical-left">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.2">
-                    <path d="M12 21C12 21 4 15 4 9C4 5.5 7 3 10 3C11.5 3 12 4 12 4C12 4 12.5 3 14 3C17 3 20 5.5 20 9C20 15 12 21 12 21Z"/>
-                    <path d="M12 21V10"/>
-                  </svg>
-                </div>
-                <div class="sachet-botanical botanical-right">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.2">
-                    <path d="M12 21C12 21 4 15 4 9C4 5.5 7 3 10 3C11.5 3 12 4 12 4C12 4 12.5 3 14 3C17 3 20 5.5 20 9C20 15 12 21 12 21Z"/>
-                    <path d="M12 21V10"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Unrolled Film Layout Section -->
-          <div class="blueprint-film-section">
-            <div class="blueprint-film-heading">FULL UNROLLED FILM SPECIFICATION</div>
-            
-            <div class="film-container">
-              <!-- Top Fin Seal -->
-              <div class="film-crimp-area">
-                TOP SEAL AREA (CRIMP)
-              </div>
-
-              <!-- Back Left, Front, Back Right Panels -->
-              <div class="film-panels-row">
-                <div class="film-panel-back-left sachet-bg">
-                  <span class="film-fold-text">BACK SEAM FOLD</span>
-                </div>
-
-                <div class="film-panel-front sachet-bg">
-                  <h4 class="serif-font text-gold-foil film-front-title">Ceylon<br>Cinnamon</h4>
-                  <h5 class="serif-font text-gold-foil film-front-sub">Sugar Mix</h5>
-                  <p class="film-front-claim">Premium &amp; Authentic<br>Hand-Harvested</p>
-                  <p class="film-front-url">www.truebarkcinnamon.com</p>
-                </div>
-
-                <div class="film-panel-back-right sachet-bg">
-                  <div class="film-barcode-box">
-                    <span>BARCODE</span>
-                  </div>
-                  <p class="film-ingredients">
-                    Ingredients: Organic Golden Cane Sugar, True Ceylon Cinnamon (Cinnamomum verum).<br><br>
-                    Distributed by True Bark Spices.<br>Pure Ceylon Estate Reserve
-                  </p>
-                </div>
-              </div>
-
-              <!-- Bottom Fin Seal -->
-              <div class="film-crimp-area">
-                BOTTOM SEAL AREA (CRIMP)
-              </div>
-            </div>
-            
-            <div class="blueprint-film-note">
-              Total Unrolled Film Width: ~ 110mm (Front 55mm + Back Left 27.5mm + Back Right 27.5mm) &bull; Gauge: 40 Micron
-            </div>
-          </div>
-        </div>
-
-        <!-- Quick Action Bar -->
-        <div class="blueprint-actions-bar">
-          <button type="button" class="btn btn-gold btn-lg" onclick="quickAddToCartSelected('true-bark-sugar-mix', 1)">
-            &#128722; Add Box of 25 Sticks to Bag ($22.00)
-          </button>
-          <a href="#quick-order-section" class="btn btn-outline-bark">
-            View All Harvest Products
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Compact "Why True Ceylon" Benefit Strip (No Giant Tables) -->
   <section class="compact-benefits-section bg-cream" id="why-ceylon-section">
@@ -620,11 +447,6 @@
           <div class="modal-guarantee-strip">
             <span>&#10003; 100% Sri Lankan Estate Ceylon</span>
             <span>&#10003; Coumarin &lt;0.004%</span>
-          </div>
-          <div id="modal-blueprint-cta-wrap" style="display: none; margin-top: 12px;">
-            <a href="#blueprint-section" class="btn btn-sm btn-outline-bark btn-block" onclick="closeProductModal()">
-              &#128208; View 1:1 Vector Blueprint Spec
-            </a>
           </div>
         </div>
 

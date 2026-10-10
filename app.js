@@ -14,15 +14,14 @@ const PRODUCTS = [
     category: "sticks",
     categoryName: "Single-Serve Sticks",
     badge: "Barista Favorite",
-    hasBlueprint: true,
     rating: 4.98,
     reviewsCount: 184,
     description: "Formulated for specialty coffee lovers. Micro-milled pure Ceylon cinnamon blended with unrefined golden cane crystals in airtight 5g single-serve packets. Melts into espresso crema, lattes, or oatmeal without astringent sediment.",
     weight: "5g per stick (Net Wt 125g / 250g)",
     coumarin: "< 0.004% (Lab Certified)",
     origin: "Southern Coast, Sri Lanka",
-    image: "assets/images/sugar-sticks-hd.jpg",
-    gallery: ["assets/images/sugar-sticks-hd.jpg", "assets/images/sugar-mix-sachets.jpg", "assets/images/hero-coffee-sachets.jpg"],
+    image: "assets/images/sugar-mix-square.jpg",
+    gallery: ["assets/images/sugar-mix-square.jpg", "assets/images/sugar-mix-sachets.jpg"],
     variants: [
       { id: "box-25", name: "Box of 25 Sticks", price: 22.00, subPrice: 18.70 },
       { id: "box-50", name: "Cafe Box of 50", price: 38.00, subPrice: 32.30 },
@@ -43,8 +42,8 @@ const PRODUCTS = [
     weight: "Net Wt 140g (5oz)",
     coumarin: "< 0.003% (Negligible)",
     origin: "Matara Estate, Sri Lanka",
-    image: "assets/images/gold-espresso-tin-hd.jpg",
-    gallery: ["assets/images/gold-espresso-tin-hd.jpg", "assets/images/cinnamon-powder-tins.jpg"],
+    image: "assets/images/gold-tin-square.jpg",
+    gallery: ["assets/images/gold-tin-square.jpg", "assets/images/cinnamon-powder-tins.jpg"],
     variants: [
       { id: "gold-tin-single", name: "Collector Gold Tin (140g)", price: 28.00, subPrice: 23.80 },
       { id: "gold-tin-duo", name: "Duo Reserve (2x 140g)", price: 52.00, subPrice: 44.20 }
@@ -64,8 +63,8 @@ const PRODUCTS = [
     weight: "Net Wt 140g (5oz)",
     coumarin: "< 0.003% (Negligible)",
     origin: "Galle Region, Sri Lanka",
-    image: "assets/images/sample-brown-tin-hd.jpg",
-    gallery: ["assets/images/sample-brown-tin-hd.jpg", "assets/images/cinnamon-powder-tins.jpg"],
+    image: "assets/images/brown-tin-square.jpg",
+    gallery: ["assets/images/brown-tin-square.jpg", "assets/images/cinnamon-powder-tins.jpg"],
     variants: [
       { id: "brown-tin-single", name: "Sample Kraft Tin (140g)", price: 24.00, subPrice: 20.40 },
       { id: "brown-tin-refill", name: "Kraft Tin + Refill Pouch", price: 42.00, subPrice: 35.70 }
@@ -73,43 +72,22 @@ const PRODUCTS = [
     defaultVariantIndex: 0
   },
   {
-    id: "true-bark-alba-quills",
-    name: "Hand-Rolled Alba Grade Ceylon Quills",
-    subtitle: "Apothecary Jar of Slender Cigar-Rolled Inner Bark",
-    category: "quills",
-    categoryName: "Whole Alba Quills",
-    badge: "Rare Grade",
-    rating: 4.99,
-    reviewsCount: 95,
-    description: "Alba is the most prized grade of true Ceylon cinnamon. Hand-peeled into whisper-thin layers and tightly rolled like cigars. Steep into espresso portafilters, French press coffee, or mulled ciders for delicate citrus floral notes.",
-    weight: "Net Wt 100g (Approx. 20-25 Quills)",
-    coumarin: "< 0.002% (Undetectable)",
-    origin: "Southern Coast, Sri Lanka",
-    image: "assets/images/quills-dish-hd.jpg",
-    gallery: ["assets/images/quills-dish-hd.jpg", "assets/images/sugar-mix-sachets.jpg"],
-    variants: [
-      { id: "quills-100g", name: "Apothecary Jar (100g)", price: 26.00, subPrice: 22.10 },
-      { id: "quills-250g", name: "Connoisseur Jar (250g)", price: 58.00, subPrice: 49.30 }
-    ],
-    defaultVariantIndex: 0
-  },
-  {
-    id: "true-bark-connoisseur-gift-set",
-    name: "The Barista & Connoisseur Tasting Set",
-    subtitle: "Gold Tin + Sugar Mix Sticks + Hammered Copper Dish & Brass Spoon",
-    category: "gift",
-    categoryName: "Connoisseur Sets",
-    badge: "Deluxe Edition",
+    id: "true-bark-tins-duo",
+    name: "True Bark Heirloom Keepsake Tins — Twin Reserve Set",
+    subtitle: "Collector Set: Standard Gold Tin + Artisan Kraft Tin (2x 140g)",
+    category: "tins",
+    categoryName: "Keepsake Tins",
+    badge: "Collector Duo",
     rating: 5.00,
-    reviewsCount: 78,
-    description: "The definitive collector's experience for coffee and culinary aficionados. Includes the Heirloom Gold & Espresso Tin (140g), a 25-pack box of Ceylon Sugar Mix Sticks, a solid hand-hammered copper tasting bowl, and a vintage engraved brass spice spoon.",
-    weight: "Deluxe Gift Box (850g Total)",
-    coumarin: "Laboratory Certified Coumarin-Safe",
-    origin: "Curated Estate Sri Lanka",
-    image: "assets/images/tasting-set-hd.jpg",
-    gallery: ["assets/images/tasting-set-hd.jpg", "assets/images/gold-espresso-tin-hd.jpg", "assets/images/sugar-sticks-hd.jpg"],
+    reviewsCount: 86,
+    description: "The complete heirloom tin reserve. Includes both the Standard Gold & Dark Espresso Tin (140g) and the Artisan Kraft Sample Brown Tin (140g). Pure Sri Lankan Ceylon cinnamon stone-milled for daily coffee, lattes, and gourmet baking.",
+    weight: "Twin Set (Net Wt 280g / 10oz)",
+    coumarin: "< 0.003% (Lab Certified)",
+    origin: "Ceylon Heritage Reserve, Sri Lanka",
+    image: "assets/images/both-tins-full.jpg",
+    gallery: ["assets/images/both-tins-full.jpg", "assets/images/gold-tin-square.jpg", "assets/images/brown-tin-square.jpg"],
     variants: [
-      { id: "gift-set-full", name: "Complete Connoisseur Set", price: 68.00, subPrice: 59.50 }
+      { id: "twin-set", name: "Twin Reserve Duo (2x 140g)", price: 49.00, subPrice: 41.65 }
     ],
     defaultVariantIndex: 0
   }
@@ -120,8 +98,7 @@ const cardSelectedVariants = {
   "true-bark-sugar-mix": 0,
   "true-bark-powder-gold-tin": 0,
   "true-bark-powder-brown-tin": 0,
-  "true-bark-alba-quills": 0,
-  "true-bark-connoisseur-gift-set": 0
+  "true-bark-tins-duo": 0
 };
 
 // =============================================================================
@@ -222,46 +199,6 @@ function initVideoControls() {
 }
 
 // =============================================================================
-// Hero Media Mode Switcher
-// =============================================================================
-function switchHeroMode(mode) {
-  const bgImg = document.getElementById("hero-bg-img");
-  const video = document.getElementById("hero-video");
-  const videoCtrls = document.getElementById("hero-media-controls");
-  const pills = document.querySelectorAll(".hero-mode-pill");
-
-  pills.forEach((p) => p.classList.remove("active"));
-  const activePill = document.getElementById(`hero-mode-${mode}`);
-  if (activePill) activePill.classList.add("active");
-
-  if (mode === "photo") {
-    if (bgImg) {
-      bgImg.style.display = "block";
-      bgImg.style.opacity = "1";
-    }
-    if (video) {
-      video.style.display = "none";
-      video.pause();
-    }
-    if (videoCtrls) videoCtrls.style.display = "none";
-  } else if (mode === "video") {
-    if (bgImg) bgImg.style.opacity = "0";
-    if (video) {
-      video.style.display = "block";
-      video.style.opacity = "1";
-      video.play().catch(() => {});
-    }
-    if (videoCtrls) videoCtrls.style.display = "flex";
-  } else if (mode === "blueprint") {
-    const bpSection = document.getElementById("blueprint-section");
-    if (bpSection) {
-      bpSection.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-}
-window.switchHeroMode = switchHeroMode;
-
-// =============================================================================
 // Currency Formatting
 // =============================================================================
 function formatPrice(amountUSD) {
@@ -312,7 +249,6 @@ function renderProductGrid() {
             loading="lazy"
             decoding="async">
           <span class="card-badge">${product.badge}</span>
-          ${product.hasBlueprint ? `<a href="#blueprint-section" class="card-blueprint-badge" onclick="event.stopPropagation();">&#128208; Blueprint Spec</a>` : ''}
           <button class="quick-view-overlay-btn" type="button">Quick View</button>
         </div>
         <div class="card-body">
@@ -438,11 +374,6 @@ function openProductModal(productId) {
   if (onetimeRadio) onetimeRadio.checked = true;
   document.getElementById("plan-onetime").classList.add("selected");
   document.getElementById("plan-sub").classList.remove("selected");
-
-  const blueprintCta = document.getElementById("modal-blueprint-cta-wrap");
-  if (blueprintCta) {
-    blueprintCta.style.display = product.hasBlueprint ? "block" : "none";
-  }
 
   dialog.showModal();
 }
