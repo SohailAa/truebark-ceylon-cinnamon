@@ -254,6 +254,7 @@ function renderProductGrid() {
         <div class="card-body">
           <span class="card-category">${product.categoryName}</span>
           <h3 class="card-title">${product.name}</h3>
+          <p class="card-subtitle"><em>${product.subtitle.split('|')[0].trim()}</em></p>
           <div class="card-meta-row">
             <span class="card-rating">&#9733; ${product.rating.toFixed(2)}</span>
             <span>&bull;</span>
@@ -348,6 +349,7 @@ function openProductModal(productId) {
   const badgeElem = document.getElementById("modal-product-badge");
   const catElem = document.getElementById("modal-product-category");
   const titleElem = document.getElementById("modal-product-title");
+  const subElem = document.getElementById("modal-product-subtitle");
   const ratingElem = document.getElementById("modal-product-rating");
   const descElem = document.getElementById("modal-product-desc");
   const chipsContainer = document.getElementById("modal-variant-chips");
@@ -358,6 +360,7 @@ function openProductModal(productId) {
   badgeElem.textContent = product.badge;
   catElem.textContent = product.categoryName;
   titleElem.textContent = product.name;
+  if (subElem) subElem.textContent = product.subtitle;
   ratingElem.textContent = `${product.rating} (${product.reviewsCount} verified reviews)`;
   descElem.textContent = product.description;
   if (qtyInput) qtyInput.value = 1;
