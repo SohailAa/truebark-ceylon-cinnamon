@@ -9,19 +9,19 @@
 const PRODUCTS = [
   {
     id: "true-bark-sugar-mix",
-    name: "True Bark Ceylon Cinnamon Sugar Mix",
+    name: "True Bark Ceylon Cinnamon",
     subtitle: "5g Single-Serve Barista Sticks | Premium & Authentic Hand-Harvested",
     category: "sticks",
     categoryName: "Single-Serve Sticks",
     badge: "Barista Favorite",
     rating: 4.98,
     reviewsCount: 184,
-    description: "Formulated for specialty coffee lovers. Micro-milled pure Ceylon cinnamon blended with unrefined golden cane crystals in airtight 5g single-serve packets. Melts into espresso crema, lattes, or oatmeal without astringent sediment.",
+    description: "Formulated for specialty coffee lovers. Micro-milled pure Ceylon cinnamon in airtight 5g single-serve packets. Melts into espresso crema, lattes, or oatmeal without astringent sediment.",
     weight: "5g per stick (Net Wt 125g / 250g)",
     coumarin: "< 0.004% (Lab Certified)",
     origin: "Southern Coast, Sri Lanka",
     image: "assets/images/sugar-mix-square.jpg",
-    gallery: ["assets/images/sugar-mix-square.jpg", "assets/images/sugar-mix-sachets.jpg"],
+    gallery: ["assets/images/sugar-mix-square.jpg", "assets/images/cinnamon-stick-detail.jpg", "assets/images/sugar-mix-sachets.jpg"],
     variants: [
       { id: "box-25", name: "Box of 25 Sticks", price: 22.00, subPrice: 18.70 },
       { id: "box-50", name: "Cafe Box of 50", price: 38.00, subPrice: 32.30 },
@@ -909,7 +909,7 @@ function setupEventListeners() {
         p.subtitle.toLowerCase().includes(query)
       );
       if (matched.length === 0) {
-        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px;">No spices matching "${query}". Try "Sugar Mix", "Tin", or "Quills".</div>`;
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px;">No spices matching "${query}". Try "Cinnamon Sticks", "Tin", or "Powder".</div>`;
       } else {
         grid.innerHTML = matched.map((product) => {
           const defaultVariant = product.variants[product.defaultVariantIndex];

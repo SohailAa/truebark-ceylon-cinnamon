@@ -8,16 +8,13 @@ A luxury e-commerce storefront crafted for **True Bark**, an artisanal spice and
 
 ## 🌟 The Product Line
 
-1. **True Bark Ceylon Cinnamon Sugar Mix (5g Sticks)**
+1. **True Bark Ceylon Cinnamon (5g Sticks)**
    - Single-serve golden packets designed to dissolve into espresso crema, lattes, cappuccinos, oatmeal, and toast.
    - Preserves volatile essential oils with an aroma-locked foil barrier.
 2. **True Bark Ceylon Cinnamon Powder — Keepsake Metal Tins**
    - **Standard Gold & Dark Espresso Tin (140g)**: Collector's embossed metal tin celebrating Sri Lankan harvester heritage.
    - **Artisan Kraft Sample Brown Tin (140g)**: Lightweight pantry edition with rustic twine seal.
-3. **Hand-Rolled Alba Grade Quills**
-   - Slender cigar-rolled paper-thin inner bark sticks in an apothecary glass jar.
-4. **The Barista & Connoisseur Tasting Set**
-   - Deluxe collector's gift box including the Gold & Espresso tin, a 25-pack of Sugar Mix Sticks, a hand-hammered copper tasting dish, and an engraved brass measuring spoon.
+   - **Twin Reserve Set (2x 140g)**: Both heirloom keepsake tins in a collector's duo set.
 
 ---
 
