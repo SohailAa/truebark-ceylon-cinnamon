@@ -337,11 +337,12 @@ h1, h2, h3, h4, h5 {
 
 .brand-sub {
   display: block;
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
-  color: var(--color-bark);
-  font-weight: 600;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--color-gold-bright);
+  font-weight: 700;
   margin-top: 3px;
+  line-height: 1.25;
 }
 
 .main-nav .nav-links {
@@ -2057,6 +2058,11 @@ h1, h2, h3, h4, h5 {
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: block;
+  }
+
+  .brand-sub {
+    font-size: 0.52rem;
+    letter-spacing: 0.04em;
   }
 
   .main-nav {
