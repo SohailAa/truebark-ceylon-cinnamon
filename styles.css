@@ -128,29 +128,30 @@ h1, h2, h3, h4, h5 {
   display: inline-block;
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.95rem;
-  letter-spacing: 0.1em;
+  font-size: 1.18rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #A87B28;
-  font-weight: 600;
-  margin-bottom: 6px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .section-title {
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(2.45rem, 4.4vw, 3.65rem);
   color: var(--color-espresso);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   letter-spacing: -0.01em;
+  line-height: 1.18;
 }
 
 .section-title em {
   display: block;
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 400;
-  font-size: 0.82em;
+  font-weight: 500;
+  font-size: 0.9em;
   color: #A87B28;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .section-lead {
@@ -351,11 +352,11 @@ h1, h2, h3, h4, h5 {
   display: block;
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.88rem;
+  font-size: 1.08rem;
   letter-spacing: 0.03em;
   color: #A87B28;
-  font-weight: 600;
-  margin-top: 2px;
+  font-weight: 700;
+  margin-top: 3px;
   line-height: 1.2;
 }
 
@@ -543,11 +544,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-title {
-  font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+  font-size: clamp(2.65rem, 5vw, 4.2rem);
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.02em;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   text-shadow: 0 4px 18px rgba(0,0,0,0.5);
 }
 
@@ -640,14 +641,14 @@ h1, h2, h3, h4, h5 {
 .perk-info h4 {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.35rem;
+  font-weight: 700;
   color: #A87B28;
   line-height: 1.25;
 }
 
 .perk-info p {
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   color: var(--color-text-secondary);
 }
 
@@ -784,18 +785,18 @@ h1, h2, h3, h4, h5 {
 .card-category {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.88rem;
+  font-size: 1.08rem;
   letter-spacing: 0.05em;
   color: #A87B28;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 3px;
 }
 
 .card-title {
-  font-size: 1.32rem;
+  font-size: 1.55rem;
   font-family: var(--font-serif);
   color: var(--color-espresso);
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   line-height: 1.22;
   transition: color var(--transition-fast);
 }
@@ -807,9 +808,9 @@ h1, h2, h3, h4, h5 {
 .card-subtitle {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.94rem;
+  font-size: 1.15rem;
   color: #A87B28;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   line-height: 1.3;
 }
 
@@ -908,7 +909,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .benefit-card h3 {
-  font-size: 1.35rem;
+  font-size: 1.55rem;
   color: var(--color-espresso);
   margin-bottom: 4px;
 }
@@ -916,15 +917,15 @@ h1, h2, h3, h4, h5 {
 .benefit-stat {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.12rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
   letter-spacing: 0.02em;
   color: #A87B28;
   margin-bottom: 10px;
 }
 
 .benefit-desc {
-  font-size: 0.88rem;
+  font-size: 0.96rem;
   color: var(--color-text-secondary);
   line-height: 1.55;
 }
@@ -976,15 +977,15 @@ h1, h2, h3, h4, h5 {
 .review-heading {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.45rem;
+  font-weight: 700;
   color: #A87B28;
   margin-bottom: 8px;
   line-height: 1.3;
 }
 
 .review-quote {
-  font-size: 0.86rem;
+  font-size: 0.96rem;
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 16px;
@@ -1196,7 +1197,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .cart-title-wrap h3 {
-  font-size: 1.3rem;
+  font-size: 1.55rem;
+  font-weight: 700;
   color: var(--color-espresso);
   font-family: var(--font-serif);
 }
@@ -1525,15 +1527,16 @@ h1, h2, h3, h4, h5 {
 .modal-category {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   letter-spacing: 0.08em;
   color: #A87B28;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .modal-title {
-  font-size: 1.85rem;
+  font-size: 2.35rem;
   font-family: var(--font-serif);
+  font-weight: 700;
   color: var(--color-espresso);
   margin: 4px 0 2px;
 }
@@ -1541,7 +1544,7 @@ h1, h2, h3, h4, h5 {
 .modal-subtitle {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   color: #A87B28;
   margin: 0 0 10px;
   line-height: 1.35;
@@ -1747,12 +1750,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .form-section-title {
-  font-size: 0.92rem;
+  font-size: 1.25rem;
+  font-weight: 700;
   font-family: var(--font-serif);
   color: var(--color-espresso);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   border-bottom: 1px solid var(--color-cream-border);
-  padding-bottom: 4px;
+  padding-bottom: 6px;
 }
 
 .form-group {
@@ -1869,11 +1873,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .summary-col-title {
-  font-size: 1.05rem;
+  font-size: 1.35rem;
+  font-weight: 700;
   font-family: var(--font-serif);
   color: var(--color-espresso);
   border-bottom: 1px solid var(--color-cream-border);
-  padding-bottom: 6px;
+  padding-bottom: 8px;
 }
 
 .checkout-items-list {
@@ -1968,7 +1973,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .confirmation-title {
-  font-size: 2rem;
+  font-size: 2.35rem;
+  font-weight: 700;
   margin: 4px 0 8px;
 }
 
@@ -2112,8 +2118,9 @@ h1, h2, h3, h4, h5 {
   }
 
   .brand-sub {
-    font-size: 0.52rem;
-    letter-spacing: 0.04em;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    font-weight: 700;
   }
 
   .main-nav {
