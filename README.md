@@ -8,7 +8,7 @@ A luxury e-commerce storefront crafted for **True Bark**, an artisanal spice and
 
 ## 🌟 The Product Line
 
-1. **True Bark Ceylon Cinnamon (5g Sticks)**
+1. **Ceylon Cinnamon (5g Sticks)**
    - Single-serve golden packets designed to dissolve into espresso crema, lattes, cappuccinos, oatmeal, and toast.
    - Preserves volatile essential oils with an aroma-locked foil barrier.
 2. **True Bark Ceylon Cinnamon Powder — Keepsake Metal Tins**

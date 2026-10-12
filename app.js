@@ -9,7 +9,7 @@
 const PRODUCTS = [
   {
     id: "true-bark-sugar-mix",
-    name: "True Bark Ceylon Cinnamon",
+    name: "Ceylon Cinnamon",
     subtitle: "5g Single-Serve Barista Sticks | Premium & Authentic Hand-Harvested",
     category: "sticks",
     categoryName: "Single-Serve Sticks",
