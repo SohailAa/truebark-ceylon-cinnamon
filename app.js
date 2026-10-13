@@ -21,7 +21,14 @@ const PRODUCTS = [
     coumarin: "< 0.004% (Lab Certified)",
     origin: "Southern Coast, Sri Lanka",
     image: "assets/images/sugar-mix-square.jpg",
-    gallery: ["assets/images/sugar-mix-square.jpg", "assets/images/cinnamon-stick-detail.jpg", "assets/images/sugar-mix-sachets.jpg"],
+    gallery: [
+      "assets/images/sugar-mix-square.jpg",
+      "assets/images/cinnamon-stick-detail.jpg",
+      "assets/images/inspiration-03-cassia-vs-ceylon.jpg",
+      "assets/images/inspiration-04-look-inside.jpg",
+      "assets/images/inspiration-08-power-of-simple.jpg",
+      "assets/images/sugar-mix-sachets.jpg"
+    ],
     variants: [
       { id: "box-25", name: "Box of 25 Sticks", price: 22.00, subPrice: 18.70 },
       { id: "box-50", name: "Cafe Box of 50", price: 38.00, subPrice: 32.30 },
@@ -43,7 +50,12 @@ const PRODUCTS = [
     coumarin: "< 0.003% (Negligible)",
     origin: "Matara Estate, Sri Lanka",
     image: "assets/images/gold-tin-square.jpg",
-    gallery: ["assets/images/gold-tin-square.jpg", "assets/images/cinnamon-powder-tins.jpg"],
+    gallery: [
+      "assets/images/gold-tin-square.jpg",
+      "assets/images/inspiration-04-look-inside.jpg",
+      "assets/images/inspiration-08-power-of-simple.jpg",
+      "assets/images/cinnamon-powder-tins.jpg"
+    ],
     variants: [
       { id: "gold-tin-single", name: "Collector Gold Tin (140g)", price: 28.00, subPrice: 23.80 },
       { id: "gold-tin-duo", name: "Duo Reserve (2x 140g)", price: 52.00, subPrice: 44.20 }
@@ -64,7 +76,12 @@ const PRODUCTS = [
     coumarin: "< 0.003% (Negligible)",
     origin: "Galle Region, Sri Lanka",
     image: "assets/images/brown-tin-square.jpg",
-    gallery: ["assets/images/brown-tin-square.jpg", "assets/images/cinnamon-powder-tins.jpg"],
+    gallery: [
+      "assets/images/brown-tin-square.jpg",
+      "assets/images/inspiration-05-layers-never-lie.jpg",
+      "assets/images/inspiration-08-power-of-simple.jpg",
+      "assets/images/cinnamon-powder-tins.jpg"
+    ],
     variants: [
       { id: "brown-tin-single", name: "Sample Kraft Tin (140g)", price: 24.00, subPrice: 20.40 },
       { id: "brown-tin-refill", name: "Kraft Tin + Refill Pouch", price: 42.00, subPrice: 35.70 }
@@ -376,9 +393,27 @@ function openProductModal(productId) {
   const onetimeRadio = document.querySelector('input[name="purchase_plan"][value="onetime"]');
   if (onetimeRadio) onetimeRadio.checked = true;
   document.getElementById("plan-onetime").classList.add("selected");
-  document.getElementById("plan-sub").classList.remove("selected");
+  // Render gallery thumbnails
+  const thumbsContainer = document.getElementById("modal-thumbnails");
+  if (thumbsContainer && product.gallery && product.gallery.length > 1) {
+    thumbsContainer.innerHTML = product.gallery.map((imgSrc, idx) => `
+      <button type="button" class="modal-thumb-btn ${idx === 0 ? 'active' : ''}" onclick="setModalMainImg('${imgSrc}', this)" aria-label="View photo ${idx + 1}">
+        <img src="${imgSrc}" alt="${product.name} photo ${idx + 1}" loading="lazy">
+      </button>
+    `).join("");
+    thumbsContainer.style.display = "flex";
+  } else if (thumbsContainer) {
+    thumbsContainer.style.display = "none";
+  }
 
   dialog.showModal();
+}
+
+function setModalMainImg(src, btnElem) {
+  const imgElem = document.getElementById("modal-product-img");
+  if (imgElem) imgElem.src = src;
+  document.querySelectorAll(".modal-thumb-btn").forEach(b => b.classList.remove("active"));
+  if (btnElem) btnElem.classList.add("active");
 }
 
 function closeProductModal() {
@@ -938,4 +973,34 @@ function setupEventListeners() {
       }
     });
   }
+}
+
+// =============================================================================
+// Cinnamon Chronicles / Story Showcase Controller
+// =============================================================================
+let currentStoryIndex = 0;
+const totalStoryChapters = 6;
+
+function selectStoryChapter(idx) {
+  currentStoryIndex = idx;
+  const tabs = document.querySelectorAll(".story-chapter-tab");
+  const panels = document.querySelectorAll(".story-slide-panel");
+
+  tabs.forEach((tab, i) => {
+    const isActive = i === idx;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", isActive ? "true" : "false");
+  });
+
+  panels.forEach((panel, i) => {
+    panel.classList.toggle("active", i === idx);
+  });
+}
+
+function nextStoryChapter() {
+  selectStoryChapter((currentStoryIndex + 1) % totalStoryChapters);
+}
+
+function prevStoryChapter() {
+  selectStoryChapter((currentStoryIndex - 1 + totalStoryChapters) % totalStoryChapters);
 }
