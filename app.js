@@ -24,6 +24,7 @@ const PRODUCTS = [
     gallery: [
       "assets/images/sugar-mix-square.jpg",
       "assets/images/cinnamon-stick-detail.jpg",
+      "assets/images/sachet-supplier-ortho.jpg",
       "assets/images/inspiration-03-cassia-vs-ceylon.jpg",
       "assets/images/inspiration-04-look-inside.jpg",
       "assets/images/inspiration-08-power-of-simple.jpg",
