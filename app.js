@@ -8,8 +8,205 @@
 // =============================================================================
 const PRODUCTS = [
   {
+    id: "true-bark-powder-gold-tin",
+    name: "Ceylon Cinnamon Powder — Gold Cylinder Tin",
+    subtitle: "100g Composite Cylinder Can (73×120mm) | 245×119mm & 22×12cm Full Wrap",
+    category: "tins",
+    categoryName: "100g Cylinder Tins",
+    badge: "Flagship 100g Can",
+    rating: 4.99,
+    reviewsCount: 219,
+    description: "100% pure Alba & C5 grade Ceylon cinnamon stone-milled into a velvety powder. Packaged in our new 73mm × 120mm (100g / 3.5oz) gold-rimmed composite cylinder can with vintage Sri Lankan harvest lithography.",
+    weight: "Net Wt 100g (3.5oz) | 73mm × 120mm Can",
+    coumarin: "< 0.003% (Negligible)",
+    origin: "Matara Estate, Sri Lanka",
+    image: "assets/images/Cylinder_Tin_Gold_Square.jpg",
+    gallery: [
+      "assets/images/Cylinder_Tin_Gold_Square.jpg",
+      "assets/labels/Official_Can_Label_245x119mm_Edition_A_Gold.jpg",
+      "assets/labels/Label_1_CAD_Dieline_245x119mm_UHD.jpg",
+      "assets/labels/Official_Tin_Label_22x12cm_Edition_A_Gold.jpg",
+      "assets/labels/Label_3_Cylindrical_Tins_Mockup_UHD.jpg",
+      "assets/images/gold-tin-square.jpg"
+    ],
+    variants: [
+      { id: "gold-tin-125mm", name: "100g Cylinder Tin (73×120mm)", price: 24.00, subPrice: 20.40 },
+      { id: "gold-tin-duo", name: "2-Pack Cylinder Tins (200g)", price: 44.00, subPrice: 37.40 },
+      { id: "gold-tin-single", name: "Collector Squat Tin (140g)", price: 28.00, subPrice: 23.80 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
+    id: "true-bark-powder-brown-tin",
+    name: "Ceylon Cinnamon Powder — Artisan Kraft Cylinder Tin",
+    subtitle: "100g Composite Cylinder Can (73×120mm) | Matte Caramel Kraft Edition",
+    category: "tins",
+    categoryName: "100g Cylinder Tins",
+    badge: "Artisan Kraft Can",
+    rating: 4.96,
+    reviewsCount: 142,
+    description: "Warm caramel Kraft composite cylinder can (73mm × 120mm, 100g / 3.5oz) with matte black lid/base rims and espresso botanical woodcut engravings. Filled with stone-milled pure Sri Lankan Ceylon cinnamon powder.",
+    weight: "Net Wt 100g (3.5oz) | 73mm × 120mm Can",
+    coumarin: "< 0.003% (Negligible)",
+    origin: "Galle Region, Sri Lanka",
+    image: "assets/images/Cylinder_Tin_Kraft_Square.jpg",
+    gallery: [
+      "assets/images/Cylinder_Tin_Kraft_Square.jpg",
+      "assets/labels/Official_Can_Label_245x119mm_Edition_B_Kraft.jpg",
+      "assets/labels/Label_2_CAD_Dieline_245x119mm_UHD.jpg",
+      "assets/labels/Official_Tin_Label_22x12cm_Edition_B_Kraft.jpg",
+      "assets/labels/Label_3_Cylindrical_Tins_Mockup_UHD.jpg",
+      "assets/images/brown-tin-square.jpg"
+    ],
+    variants: [
+      { id: "brown-tin-125mm", name: "100g Kraft Cylinder (73×120mm)", price: 22.00, subPrice: 18.70 },
+      { id: "brown-tin-refill", name: "2-Pack Kraft Cylinders (200g)", price: 40.00, subPrice: 34.00 },
+      { id: "brown-tin-single", name: "Sample Squat Tin (140g)", price: 24.00, subPrice: 20.40 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
+    id: "true-bark-tins-duo",
+    name: "100g Cylinder Tins — Twin Reserve Duo",
+    subtitle: "Gold-Rim Dark Espresso Can + Black-Rim Artisan Kraft Can (2x 100g / 73×120mm)",
+    category: "tins",
+    categoryName: "100g Cylinder Tins",
+    badge: "Twin Cylinder Set",
+    rating: 5.00,
+    reviewsCount: 98,
+    description: "The complete 100g cylinder tin reserve. Includes both the Gold-Rimmed Dark Espresso Cylinder Can and the Black-Rimmed Artisan Kraft Cylinder Can (73mm × 120mm composite cans).",
+    weight: "Twin Set: 2x 100g (200g Total) | 73×120mm Cans",
+    coumarin: "< 0.003% (Lab Certified)",
+    origin: "Ceylon Heritage Reserve, Sri Lanka",
+    image: "assets/images/Cylinder_Tins_Duo_Square.jpg",
+    gallery: [
+      "assets/images/Cylinder_Tins_Duo_Square.jpg",
+      "assets/labels/Label_3_Cylindrical_Tins_Mockup_UHD.jpg",
+      "assets/labels/Supplier_Tin_Complete_Spec_Sheet_UHD.jpg",
+      "assets/labels/Label_1_CAD_Dieline_245x119mm_UHD.jpg",
+      "assets/labels/Label_2_CAD_Dieline_245x119mm_UHD.jpg"
+    ],
+    variants: [
+      { id: "tall-125mm-set", name: "Twin 100g Cylinder Duo (2x 100g)", price: 42.00, subPrice: 35.70 },
+      { id: "twin-set", name: "Collector Squat Duo (2x 140g)", price: 49.00, subPrice: 41.65 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
+    id: "true-bark-ceylon-turmeric",
+    name: "Ceylon Turmeric Powder — 100g Window Pouch",
+    subtitle: "100g Stand-Up Pouch (15×24×3cm) | Front 8×12cm & Behind 10×14cm Labels",
+    category: "pouches",
+    categoryName: "Single-Origin Pouches",
+    badge: "100g Pouch & Jar",
+    rating: 4.98,
+    reviewsCount: 94,
+    description: "Sun-cured and stone-milled Ceylon turmeric root from small-holder farms in Sri Lanka. Packaged in our 15cm × 24cm × 3cm (100g) matte stand-up window pouch with official 8×12cm front and 10×14cm rear stickers.",
+    weight: "Net Wt 100g (3.5oz) | 15×24×3cm Pouch",
+    coumarin: "100% Pure Curcuma longa",
+    origin: "Kandy & Matale Highlands, Sri Lanka",
+    image: "assets/images/Pouch_1_Turmeric_Square.jpg",
+    gallery: [
+      "assets/images/Pouch_1_Turmeric_Square.jpg",
+      "assets/images/Pouch_1_Ceylon_Turmeric_UHD.jpg",
+      "assets/labels/Official_Front_Sticker_8x12cm_1_Turmeric.jpg",
+      "assets/labels/Official_Behind_Sticker_10x14cm_1_Turmeric.jpg",
+      "assets/labels/Flat_Pouch_Label_1_Turmeric_UHD.jpg",
+      "assets/labels/Back_Pouch_Label_1_Turmeric_UHD.jpg"
+    ],
+    variants: [
+      { id: "turmeric-pouch-100g", name: "100g Window Pouch (15×24×3cm)", price: 16.00, subPrice: 13.60 },
+      { id: "turmeric-pouch-jar-bundle", name: "100g Pouch + Shaker Jar Duo", price: 28.00, subPrice: 23.80 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
+    id: "true-bark-ceylon-cloves",
+    name: "Whole Ceylon Cloves — 50g Window Pouch",
+    subtitle: "50g Stand-Up Pouch (12×20×2cm) | Front 8×12cm & Behind 10×14cm Labels",
+    category: "pouches",
+    categoryName: "Single-Origin Pouches",
+    badge: "50g Window Pouch",
+    rating: 4.96,
+    reviewsCount: 72,
+    description: "Hand-harvested whole Ceylon clove buds sun-dried to preserve their intense eugenol essential oil concentration. Packaged in our 12cm × 20cm × 2cm (50g) stand-up window pouch.",
+    weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
+    coumarin: "100% Pure Syzygium aromaticum",
+    origin: "Kandy Spice Gardens, Sri Lanka",
+    image: "assets/images/Pouch_2_Cloves_Square.jpg",
+    gallery: [
+      "assets/images/Pouch_2_Cloves_Square.jpg",
+      "assets/images/Pouch_2_Ceylon_Cloves_UHD.jpg",
+      "assets/labels/Official_Front_Sticker_8x12cm_2_Cloves.jpg",
+      "assets/labels/Official_Behind_Sticker_10x14cm_2_Cloves.jpg",
+      "assets/labels/Flat_Pouch_Label_2_Cloves_UHD.jpg",
+      "assets/labels/Back_Pouch_Label_2_Cloves_UHD.jpg"
+    ],
+    variants: [
+      { id: "cloves-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 15.00, subPrice: 12.75 },
+      { id: "cloves-pouch-2pack", name: "2-Pack Pouches (100g Total)", price: 27.00, subPrice: 22.95 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
+    id: "true-bark-ceylon-mace",
+    name: "Whole Ceylon Mace Blades — 50g Window Pouch",
+    subtitle: "50g Stand-Up Pouch (12×20×2cm) | Front 8×12cm & Behind 10×14cm Labels",
+    category: "pouches",
+    categoryName: "Single-Origin Pouches",
+    badge: "50g Window Pouch",
+    rating: 4.99,
+    reviewsCount: 58,
+    description: "Intact, sun-cured lacy aril blades harvested from fresh Sri Lankan nutmeg fruit. Packaged in our 12cm × 20cm × 2cm (50g) stand-up window pouch with official 8×12cm front and 10×14cm rear labels.",
+    weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
+    coumarin: "100% Pure Myristica fragrans Aril",
+    origin: "Central Highlands, Sri Lanka",
+    image: "assets/images/Pouch_3_Mace_Square.jpg",
+    gallery: [
+      "assets/images/Pouch_3_Mace_Square.jpg",
+      "assets/images/Pouch_3_Ceylon_Mace_UHD.jpg",
+      "assets/labels/Official_Front_Sticker_8x12cm_3_Mace.jpg",
+      "assets/labels/Official_Behind_Sticker_10x14cm_3_Mace.jpg",
+      "assets/labels/Flat_Pouch_Label_3_Mace_UHD.jpg",
+      "assets/labels/Back_Pouch_Label_3_Mace_UHD.jpg"
+    ],
+    variants: [
+      { id: "mace-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 19.00, subPrice: 16.15 },
+      { id: "mace-pouch-2pack", name: "2-Pack Pouches (100g Total)", price: 34.00, subPrice: 28.90 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
+    id: "true-bark-ceylon-chili-flakes",
+    name: "Crushed Ceylon Chili Flakes — 50g Window Pouch",
+    subtitle: "50g Stand-Up Pouch (12×20×2cm) | Front 8×12cm & Behind 10×14cm Labels",
+    category: "pouches",
+    categoryName: "Single-Origin Pouches",
+    badge: "50g Window Pouch",
+    rating: 4.95,
+    reviewsCount: 81,
+    description: "Sun-ripened Sri Lankan red chilies coarse-crushed with seeds for a clean, vibrant heat and smoky-sweet fruitiness. Packaged in our 12cm × 20cm × 2cm (50g) stand-up window pouch.",
+    weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
+    coumarin: "100% Pure Sun-Cured Ceylon Chilli",
+    origin: "Dry Zone Estates, Sri Lanka",
+    image: "assets/images/Pouch_4_Chili_Square.jpg",
+    gallery: [
+      "assets/images/Pouch_4_Chili_Square.jpg",
+      "assets/images/Pouch_4_Ceylon_Chili_Flakes_UHD.jpg",
+      "assets/labels/Official_Front_Sticker_8x12cm_4_Chili_Flakes.jpg",
+      "assets/labels/Official_Behind_Sticker_10x14cm_4_Chili_Flakes.jpg",
+      "assets/labels/Flat_Pouch_Label_4_Chili_Flakes_UHD.jpg",
+      "assets/labels/Back_Pouch_Label_4_Chili_Flakes_UHD.jpg"
+    ],
+    variants: [
+      { id: "chili-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 14.00, subPrice: 11.90 },
+      { id: "chili-pouch-2pack", name: "2-Pack Pouches (100g Total)", price: 25.00, subPrice: 21.25 }
+    ],
+    defaultVariantIndex: 0
+  },
+  {
     id: "true-bark-sugar-mix",
-    name: "Ceylon Cinnamon",
+    name: "Ceylon Cinnamon — 5g Barista Sticks",
     subtitle: "5g Single-Serve Barista Sticks | Premium & Authentic Hand-Harvested",
     category: "sticks",
     categoryName: "Single-Serve Sticks",
@@ -34,195 +231,6 @@ const PRODUCTS = [
       { id: "box-25", name: "Box of 25 Sticks", price: 22.00, subPrice: 18.70 },
       { id: "box-50", name: "Cafe Box of 50", price: 38.00, subPrice: 32.30 },
       { id: "sample-10", name: "10-Pack Sampler", price: 9.50, subPrice: 8.08 }
-    ],
-    defaultVariantIndex: 0
-  },
-  {
-    id: "true-bark-powder-gold-tin",
-    name: "True Bark Ceylon Cinnamon Powder",
-    subtitle: "Standard Gold & Dark Espresso Heirloom Tin | Pure & Unadulterated",
-    category: "tins",
-    categoryName: "Keepsake Tins",
-    badge: "Flagship Keepsake",
-    rating: 4.97,
-    reviewsCount: 219,
-    description: "100% pure Alba & C5 grade Ceylon cinnamon stone-milled into a velvety powder. Packaged in a collector's dark espresso metal tin with polished gold lid and base, featuring embossed vintage Sri Lankan harvest lithography.",
-    weight: "Net Wt 140g (5oz)",
-    coumarin: "< 0.003% (Negligible)",
-    origin: "Matara Estate, Sri Lanka",
-    image: "assets/images/gold-tin-square.jpg",
-    gallery: [
-      "assets/images/gold-tin-square.jpg",
-      "assets/labels/Label_1_Dark_Espresso_Gold_Wrap_UHD.jpg",
-      "assets/labels/Label_3_Cylindrical_Tins_Mockup_UHD.jpg",
-      "assets/images/inspiration-04-look-inside.jpg",
-      "assets/images/inspiration-08-power-of-simple.jpg",
-      "assets/images/cinnamon-powder-tins.jpg"
-    ],
-    variants: [
-      { id: "gold-tin-single", name: "Collector Gold Tin (140g)", price: 28.00, subPrice: 23.80 },
-      { id: "gold-tin-125mm", name: "125mm Cylindrical Gold Tube (100g)", price: 24.00, subPrice: 20.40 },
-      { id: "gold-tin-duo", name: "Duo Reserve (2x 140g)", price: 52.00, subPrice: 44.20 }
-    ],
-    defaultVariantIndex: 0
-  },
-  {
-    id: "true-bark-powder-brown-tin",
-    name: "True Bark Ceylon Cinnamon Powder",
-    subtitle: "Artisan Kraft Sample Tin | Rustic Twine Seal & 125mm Tube Editions",
-    category: "tins",
-    categoryName: "Keepsake Tins",
-    badge: "Artisan Limited",
-    rating: 4.93,
-    reviewsCount: 112,
-    description: "Earth-toned caramel Kraft tin with cream botanical engravings and a hand-tied artisan sample tag. The exact same stone-milled pure Ceylon cinnamon powder in a lightweight eco-matte pantry tin.",
-    weight: "Net Wt 140g (5oz) / 100g (3.5oz)",
-    coumarin: "< 0.003% (Negligible)",
-    origin: "Galle Region, Sri Lanka",
-    image: "assets/images/brown-tin-square.jpg",
-    gallery: [
-      "assets/images/brown-tin-square.jpg",
-      "assets/labels/Label_2_Artisan_Kraft_Wrap_UHD.jpg",
-      "assets/labels/Label_3_Cylindrical_Tins_Mockup_UHD.jpg",
-      "assets/images/inspiration-05-layers-never-lie.jpg",
-      "assets/images/inspiration-08-power-of-simple.jpg",
-      "assets/images/cinnamon-powder-tins.jpg"
-    ],
-    variants: [
-      { id: "brown-tin-single", name: "Sample Kraft Tin (140g)", price: 24.00, subPrice: 20.40 },
-      { id: "brown-tin-125mm", name: "125mm Cylindrical Kraft Tube (100g)", price: 22.00, subPrice: 18.70 },
-      { id: "brown-tin-refill", name: "Kraft Tin + Refill Pouch", price: 42.00, subPrice: 35.70 }
-    ],
-    defaultVariantIndex: 0
-  },
-  {
-    id: "true-bark-tins-duo",
-    name: "True Bark Heirloom Keepsake Tins — Twin Reserve Set",
-    subtitle: "Collector Set: Standard Gold Tin + Artisan Kraft Tin (2x 140g / 125mm Tubes)",
-    category: "tins",
-    categoryName: "Keepsake Tins",
-    badge: "Collector Duo",
-    rating: 5.00,
-    reviewsCount: 86,
-    description: "The complete heirloom tin reserve. Includes both the Standard Gold & Dark Espresso Tin and the Artisan Kraft Tin. Pure Sri Lankan Ceylon cinnamon stone-milled for daily coffee, lattes, and gourmet baking.",
-    weight: "Twin Set (Net Wt 280g / 200g)",
-    coumarin: "< 0.003% (Lab Certified)",
-    origin: "Ceylon Heritage Reserve, Sri Lanka",
-    image: "assets/labels/Label_3_Cylindrical_Tins_Mockup_UHD.jpg",
-    gallery: [
-      "assets/labels/Label_3_Cylindrical_Tins_Mockup_UHD.jpg",
-      "assets/images/both-tins-full.jpg",
-      "assets/labels/Supplier_Tin_Complete_Spec_Sheet_UHD.jpg",
-      "assets/images/gold-tin-square.jpg",
-      "assets/images/brown-tin-square.jpg"
-    ],
-    variants: [
-      { id: "twin-set", name: "Twin Reserve Duo (2x 140g)", price: 49.00, subPrice: 41.65 },
-      { id: "tall-125mm-set", name: "125mm Cylindrical Tube Duo (2x 100g)", price: 44.00, subPrice: 37.40 }
-    ],
-    defaultVariantIndex: 0
-  },
-  {
-    id: "true-bark-ceylon-turmeric",
-    name: "Ceylon Turmeric Powder",
-    subtitle: "High-Curcumin Single-Origin Harvest | 100g Pouch (15×24×3cm) & Shaker Jar",
-    category: "pouches",
-    categoryName: "Single-Origin Pouches",
-    badge: "Golden Harvest",
-    rating: 4.98,
-    reviewsCount: 94,
-    description: "Sun-cured and stone-milled Ceylon turmeric root from small-holder farms in Sri Lanka. Rich saffron-gold hue and warm earthy aroma ideal for golden milk lattes, curries, and daily wellness rituals.",
-    weight: "Net Wt 100g (3.5oz) | 15×24×3cm Pouch",
-    coumarin: "100% Pure Curcuma longa",
-    origin: "Kandy & Matale Highlands, Sri Lanka",
-    image: "assets/images/Pouch_1_Turmeric_Square.jpg",
-    gallery: [
-      "assets/images/Pouch_1_Turmeric_Square.jpg",
-      "assets/images/Pouch_1_Ceylon_Turmeric_UHD.jpg",
-      "assets/labels/Flat_Pouch_Label_1_Turmeric_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_1_Turmeric_UHD.jpg"
-    ],
-    variants: [
-      { id: "turmeric-pouch-100g", name: "100g Window Pouch (15×24×3cm)", price: 16.00, subPrice: 13.60 },
-      { id: "turmeric-pouch-jar-bundle", name: "100g Pouch + Shaker Jar Duo", price: 28.00, subPrice: 23.80 }
-    ],
-    defaultVariantIndex: 0
-  },
-  {
-    id: "true-bark-ceylon-cloves",
-    name: "Whole Ceylon Cloves",
-    subtitle: "Hand-Picked Unopened Flower Buds | 50g Window Pouch (12×20×2cm)",
-    category: "pouches",
-    categoryName: "Single-Origin Pouches",
-    badge: "Estate Select",
-    rating: 4.96,
-    reviewsCount: 72,
-    description: "Hand-harvested whole Ceylon clove buds sun-dried to preserve their intense eugenol essential oil concentration. Warm, sweet-spicy aromatic profile for masala chai, mulled cider, and slow-braised dishes.",
-    weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
-    coumarin: "100% Pure Syzygium aromaticum",
-    origin: "Kandy Spice Gardens, Sri Lanka",
-    image: "assets/images/Pouch_2_Cloves_Square.jpg",
-    gallery: [
-      "assets/images/Pouch_2_Cloves_Square.jpg",
-      "assets/images/Pouch_2_Ceylon_Cloves_UHD.jpg",
-      "assets/labels/Flat_Pouch_Label_2_Cloves_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_2_Cloves_UHD.jpg"
-    ],
-    variants: [
-      { id: "cloves-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 15.00, subPrice: 12.75 },
-      { id: "cloves-pouch-2pack", name: "2-Pack Reserve (100g Total)", price: 27.00, subPrice: 22.95 }
-    ],
-    defaultVariantIndex: 0
-  },
-  {
-    id: "true-bark-ceylon-mace",
-    name: "Whole Ceylon Mace Blades",
-    subtitle: "Delicate Crimson-Amber Nutmeg Aril | 50g Window Pouch (12×20×2cm)",
-    category: "pouches",
-    categoryName: "Single-Origin Pouches",
-    badge: "Rare Botanical",
-    rating: 4.99,
-    reviewsCount: 58,
-    description: "Intact, sun-cured lacy aril blades harvested from fresh Sri Lankan nutmeg fruit. Offers a brighter, more floral and citrus-warm complexity than ground nutmeg—prized for artisanal baking, custards, and savory broths.",
-    weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
-    coumarin: "100% Pure Myristica fragrans Aril",
-    origin: "Central Highlands, Sri Lanka",
-    image: "assets/images/Pouch_3_Mace_Square.jpg",
-    gallery: [
-      "assets/images/Pouch_3_Mace_Square.jpg",
-      "assets/images/Pouch_3_Ceylon_Mace_UHD.jpg",
-      "assets/labels/Flat_Pouch_Label_3_Mace_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_3_Mace_UHD.jpg"
-    ],
-    variants: [
-      { id: "mace-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 19.00, subPrice: 16.15 },
-      { id: "mace-pouch-2pack", name: "2-Pack Reserve (100g Total)", price: 34.00, subPrice: 28.90 }
-    ],
-    defaultVariantIndex: 0
-  },
-  {
-    id: "true-bark-ceylon-chili-flakes",
-    name: "Crushed Ceylon Chili Flakes",
-    subtitle: "Sun-Ripened Crimson Bird's Eye & Wanni Peppers | 50g Pouch (12×20×2cm)",
-    category: "pouches",
-    categoryName: "Single-Origin Pouches",
-    badge: "Small-Batch Crush",
-    rating: 4.95,
-    reviewsCount: 81,
-    description: "Sun-ripened Sri Lankan red chilies coarse-crushed with seeds for a clean, vibrant heat and smoky-sweet fruitiness. Packaged in an airtight stand-up window pouch to lock in natural capsaicin oils and deep crimson color.",
-    weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
-    coumarin: "100% Pure Sun-Cured Ceylon Chilli",
-    origin: "Dry Zone Estates, Sri Lanka",
-    image: "assets/images/Pouch_4_Chili_Square.jpg",
-    gallery: [
-      "assets/images/Pouch_4_Chili_Square.jpg",
-      "assets/images/Pouch_4_Ceylon_Chili_Flakes_UHD.jpg",
-      "assets/labels/Flat_Pouch_Label_4_Chili_Flakes_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_4_Chili_Flakes_UHD.jpg"
-    ],
-    variants: [
-      { id: "chili-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 14.00, subPrice: 11.90 },
-      { id: "chili-pouch-2pack", name: "2-Pack Reserve (100g Total)", price: 25.00, subPrice: 21.25 }
     ],
     defaultVariantIndex: 0
   }
