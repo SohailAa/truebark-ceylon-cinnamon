@@ -82,7 +82,7 @@ const PRODUCTS = [
     gallery: [
       "assets/images/Cylinder_Tins_Duo_Square.jpg",
       "assets/labels/Label_3_Cylindrical_Tins_Mockup_UHD.jpg",
-      "assets/labels/Supplier_Tin_Complete_Spec_Sheet_UHD.jpg",
+      "assets/labels/TinHeritage_Supplier_Tin_Complete_Spec_Sheet_UHD.jpg?v=tin2026",
       "assets/labels/Label_1_CAD_Dieline_245x119mm_UHD.jpg",
       "assets/labels/Label_2_CAD_Dieline_245x119mm_UHD.jpg"
     ],
