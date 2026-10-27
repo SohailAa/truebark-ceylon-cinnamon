@@ -93,114 +93,60 @@ const PRODUCTS = [
     defaultVariantIndex: 0
   },
   {
-    id: "true-bark-ceylon-turmeric",
-    name: "Ceylon Turmeric Powder — 100g Window Pouch",
-    subtitle: "100g Stand-Up Pouch (15×24×3cm) | Front 8×12cm & Behind 10×14cm Labels",
+    id: "true-bark-cinnamon-pouch-100g",
+    name: "Ceylon Cinnamon Powder — 100g Window Pouch & Jar",
+    subtitle: "100g Stand-Up Pouch (15×24×3cm) | Front 8×12cm & Behind 10×14cm Official Labels",
     category: "pouches",
-    categoryName: "Single-Origin Pouches",
+    categoryName: "Ceylon Cinnamon Pouches",
     badge: "100g Pouch & Jar",
-    rating: 4.98,
-    reviewsCount: 94,
-    description: "Sun-cured and stone-milled Ceylon turmeric root from small-holder farms in Sri Lanka. Packaged in our 15cm × 24cm × 3cm (100g) matte stand-up window pouch with official 8×12cm front and 10×14cm rear stickers.",
-    weight: "Net Wt 100g (3.5oz) | 15×24×3cm Pouch",
-    coumarin: "100% Pure Curcuma longa",
-    origin: "Kandy & Matale Highlands, Sri Lanka",
-    image: "assets/images/Pouch_1_Turmeric_Square.jpg",
-    gallery: [
-      "assets/images/Pouch_1_Turmeric_Square.jpg",
-      "assets/images/Pouch_1_Ceylon_Turmeric_UHD.jpg",
-      "assets/labels/Official_Front_Sticker_8x12cm_1_Turmeric.jpg",
-      "assets/labels/Official_Behind_Sticker_10x14cm_1_Turmeric.jpg",
-      "assets/labels/Flat_Pouch_Label_1_Turmeric_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_1_Turmeric_UHD.jpg"
-    ],
-    variants: [
-      { id: "turmeric-pouch-100g", name: "100g Window Pouch (15×24×3cm)", price: 16.00, subPrice: 13.60 },
-      { id: "turmeric-pouch-jar-bundle", name: "100g Pouch + Shaker Jar Duo", price: 28.00, subPrice: 23.80 }
-    ],
-    defaultVariantIndex: 0
-  },
-  {
-    id: "true-bark-ceylon-cloves",
-    name: "Whole Ceylon Cloves — 50g Window Pouch",
-    subtitle: "50g Stand-Up Pouch (12×20×2cm) | Front 8×12cm & Behind 10×14cm Labels",
-    category: "pouches",
-    categoryName: "Single-Origin Pouches",
-    badge: "50g Window Pouch",
-    rating: 4.96,
-    reviewsCount: 72,
-    description: "Hand-harvested whole Ceylon clove buds sun-dried to preserve their intense eugenol essential oil concentration. Packaged in our 12cm × 20cm × 2cm (50g) stand-up window pouch.",
-    weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
-    coumarin: "100% Pure Syzygium aromaticum",
-    origin: "Kandy Spice Gardens, Sri Lanka",
-    image: "assets/images/Pouch_2_Cloves_Square.jpg",
-    gallery: [
-      "assets/images/Pouch_2_Cloves_Square.jpg",
-      "assets/images/Pouch_2_Ceylon_Cloves_UHD.jpg",
-      "assets/labels/Official_Front_Sticker_8x12cm_2_Cloves.jpg",
-      "assets/labels/Official_Behind_Sticker_10x14cm_2_Cloves.jpg",
-      "assets/labels/Flat_Pouch_Label_2_Cloves_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_2_Cloves_UHD.jpg"
-    ],
-    variants: [
-      { id: "cloves-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 15.00, subPrice: 12.75 },
-      { id: "cloves-pouch-2pack", name: "2-Pack Pouches (100g Total)", price: 27.00, subPrice: 22.95 }
-    ],
-    defaultVariantIndex: 0
-  },
-  {
-    id: "true-bark-ceylon-mace",
-    name: "Whole Ceylon Mace Blades — 50g Window Pouch",
-    subtitle: "50g Stand-Up Pouch (12×20×2cm) | Front 8×12cm & Behind 10×14cm Labels",
-    category: "pouches",
-    categoryName: "Single-Origin Pouches",
-    badge: "50g Window Pouch",
     rating: 4.99,
-    reviewsCount: 58,
-    description: "Intact, sun-cured lacy aril blades harvested from fresh Sri Lankan nutmeg fruit. Packaged in our 12cm × 20cm × 2cm (50g) stand-up window pouch with official 8×12cm front and 10×14cm rear labels.",
-    weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
-    coumarin: "100% Pure Myristica fragrans Aril",
-    origin: "Central Highlands, Sri Lanka",
-    image: "assets/images/Pouch_3_Mace_Square.jpg",
+    reviewsCount: 164,
+    description: "100% pure Sri Lankan Alba & C5 Ceylon cinnamon stone-milled into a fine, aromatic powder. Packaged in our 15cm × 24cm × 3cm (100g / 3.5oz) matte stand-up window pouch with official 8×12cm front and 10×14cm rear stickers.",
+    weight: "Net Wt 100g (3.5oz) | 15×24×3cm Pouch",
+    coumarin: "< 0.004% (Lab Certified)",
+    origin: "Matara & Galle Highlands, Sri Lanka",
+    image: "assets/images/Ceylon_Cinnamon_Pouch_100g_Square.jpg",
     gallery: [
-      "assets/images/Pouch_3_Mace_Square.jpg",
-      "assets/images/Pouch_3_Ceylon_Mace_UHD.jpg",
-      "assets/labels/Official_Front_Sticker_8x12cm_3_Mace.jpg",
-      "assets/labels/Official_Behind_Sticker_10x14cm_3_Mace.jpg",
-      "assets/labels/Flat_Pouch_Label_3_Mace_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_3_Mace_UHD.jpg"
+      "assets/images/Ceylon_Cinnamon_Pouch_100g_Square.jpg",
+      "assets/images/Ceylon_Cinnamon_Pouch_100g_UHD.jpg",
+      "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_100g.jpg",
+      "assets/labels/Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_100g.jpg",
+      "assets/labels/Flat_Pouch_Label_Ceylon_Cinnamon_100g_UHD.jpg",
+      "assets/labels/Back_Pouch_Label_Ceylon_Cinnamon_100g_UHD.jpg",
+      "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_Gold.jpg"
     ],
     variants: [
-      { id: "mace-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 19.00, subPrice: 16.15 },
-      { id: "mace-pouch-2pack", name: "2-Pack Pouches (100g Total)", price: 34.00, subPrice: 28.90 }
+      { id: "cinnamon-pouch-100g", name: "100g Window Pouch (15×24×3cm)", price: 18.00, subPrice: 15.30 },
+      { id: "cinnamon-pouch-jar-bundle", name: "100g Pouch + Shaker Jar Duo", price: 30.00, subPrice: 25.50 },
+      { id: "cinnamon-pouch-200g", name: "2-Pack 100g Pouches (200g)", price: 32.00, subPrice: 27.20 }
     ],
     defaultVariantIndex: 0
   },
   {
-    id: "true-bark-ceylon-chili-flakes",
-    name: "Crushed Ceylon Chili Flakes — 50g Window Pouch",
-    subtitle: "50g Stand-Up Pouch (12×20×2cm) | Front 8×12cm & Behind 10×14cm Labels",
+    id: "true-bark-cinnamon-pouch-50g",
+    name: "Ceylon Cinnamon Powder — 50g Window Pouch",
+    subtitle: "50g Stand-Up Pouch (12×20×2cm) | Front 8×12cm & Behind 10×14cm Official Labels",
     category: "pouches",
-    categoryName: "Single-Origin Pouches",
+    categoryName: "Ceylon Cinnamon Pouches",
     badge: "50g Window Pouch",
-    rating: 4.95,
-    reviewsCount: 81,
-    description: "Sun-ripened Sri Lankan red chilies coarse-crushed with seeds for a clean, vibrant heat and smoky-sweet fruitiness. Packaged in our 12cm × 20cm × 2cm (50g) stand-up window pouch.",
+    rating: 4.98,
+    reviewsCount: 118,
+    description: "Single-origin Sri Lankan Ceylon cinnamon powder sealed in an airtight 12cm × 20cm × 2cm (50g / 1.76oz) resealable stand-up window pouch. Ideal for daily espresso lattes, baking, or refilling your True Bark Cylinder Tin.",
     weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
-    coumarin: "100% Pure Sun-Cured Ceylon Chilli",
-    origin: "Dry Zone Estates, Sri Lanka",
-    image: "assets/images/Pouch_4_Chili_Square.jpg",
+    coumarin: "< 0.004% (Lab Certified)",
+    origin: "Southern Coast, Sri Lanka",
+    image: "assets/images/Ceylon_Cinnamon_Pouch_50g_Square.jpg",
     gallery: [
-      "assets/images/Pouch_4_Chili_Square.jpg",
-      "assets/images/Pouch_4_Ceylon_Chili_Flakes_UHD.jpg",
-      "assets/labels/Official_Front_Sticker_8x12cm_4_Chili_Flakes.jpg",
-      "assets/labels/Official_Behind_Sticker_10x14cm_4_Chili_Flakes.jpg",
-      "assets/labels/Flat_Pouch_Label_4_Chili_Flakes_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_4_Chili_Flakes_UHD.jpg"
+      "assets/images/Ceylon_Cinnamon_Pouch_50g_Square.jpg",
+      "assets/images/Ceylon_Cinnamon_Pouch_50g_UHD.jpg",
+      "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_50g.jpg",
+      "assets/labels/Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_50g.jpg",
+      "assets/labels/Flat_Pouch_Label_Ceylon_Cinnamon_50g_UHD.jpg",
+      "assets/labels/Back_Pouch_Label_Ceylon_Cinnamon_50g_UHD.jpg"
     ],
     variants: [
-      { id: "chili-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 14.00, subPrice: 11.90 },
-      { id: "chili-pouch-2pack", name: "2-Pack Pouches (100g Total)", price: 25.00, subPrice: 21.25 }
+      { id: "cinnamon-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 12.00, subPrice: 10.20 },
+      { id: "cinnamon-pouch-50g-3pack", name: "3-Pack 50g Pouches (150g)", price: 32.00, subPrice: 27.20 }
     ],
     defaultVariantIndex: 0
   },
@@ -238,14 +184,12 @@ const PRODUCTS = [
 
 // Map of currently selected variant index per product card
 const cardSelectedVariants = {
-  "true-bark-sugar-mix": 0,
   "true-bark-powder-gold-tin": 0,
   "true-bark-powder-brown-tin": 0,
   "true-bark-tins-duo": 0,
-  "true-bark-ceylon-turmeric": 0,
-  "true-bark-ceylon-cloves": 0,
-  "true-bark-ceylon-mace": 0,
-  "true-bark-ceylon-chili-flakes": 0
+  "true-bark-cinnamon-pouch-100g": 0,
+  "true-bark-cinnamon-pouch-50g": 0,
+  "true-bark-sugar-mix": 0
 };
 
 // =============================================================================
