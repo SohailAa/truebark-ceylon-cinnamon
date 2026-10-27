@@ -60,6 +60,7 @@
           <li><a href="#quick-order-section" class="nav-link active">Shop Harvest</a></li>
           <li><a href="#why-ceylon-section" class="nav-link">The Cinnamon Truth</a></li>
           <li><a href="#reviews-section" class="nav-link">Barista Reviews</a></li>
+          <li><a href="label-studio.html" class="nav-link">Label Studio</a></li>
         </ul>
       </nav>
 
@@ -78,7 +79,7 @@
     <!-- Quick Search Dropdown -->
     <div class="search-overlay" id="search-overlay" hidden>
       <div class="search-inner">
-        <input type="search" id="store-search-input" placeholder="Search True Bark (e.g. Ceylon Cinnamon, Espresso Tin)..." aria-label="Search catalog">
+        <input type="search" id="store-search-input" placeholder="Search True Bark (e.g. Ceylon Cinnamon, Turmeric, Cloves, Mace)..." aria-label="Search catalog">
         <button class="search-close-btn" id="search-close-btn" aria-label="Close search">&times;</button>
       </div>
     </div>
@@ -179,7 +180,8 @@
         <div class="filter-tabs" role="tablist" aria-label="Product categories">
           <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Harvests</button>
           <button class="filter-tab" data-filter="sticks" role="tab" aria-selected="false">Ceylon Cinnamon Sticks (5g)</button>
-          <button class="filter-tab" data-filter="tins" role="tab" aria-selected="false">Keepsake Tins</button>
+          <button class="filter-tab" data-filter="tins" role="tab" aria-selected="false">Keepsake Tins (125mm &amp; 140g)</button>
+          <button class="filter-tab" data-filter="pouches" role="tab" aria-selected="false">Single-Origin Spice Pouches</button>
         </div>
       </div>
 
@@ -596,20 +598,19 @@
       <div class="footer-col">
         <h4>The Collection</h4>
         <ul>
-          <li><a href="#quick-order-section">All Harvests</a></li>
+          <li><a href="#quick-order-section" onclick="filterCategory('all')">All Harvests (8 SKUs)</a></li>
           <li><a href="#quick-order-section" onclick="filterCategory('sticks')">Ceylon Cinnamon Sticks (5g)</a></li>
-          <li><a href="#quick-order-section" onclick="filterCategory('tins')">Standard Gold Tin (140g)</a></li>
-          <li><a href="#quick-order-section" onclick="filterCategory('tins')">Artisan Kraft Brown Tin (140g)</a></li>
-          <li><a href="#quick-order-section" onclick="filterCategory('tins')">Twin Reserve Keepsake Duo</a></li>
+          <li><a href="#quick-order-section" onclick="filterCategory('tins')">Keepsake Tins (125mm &amp; 140g)</a></li>
+          <li><a href="#quick-order-section" onclick="filterCategory('pouches')">Single-Origin Spice Pouches</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Ordering & Care</h4>
+        <h4>Ordering &amp; Packaging</h4>
         <ul>
           <li><a href="javascript:void(0)" onclick="openCartDrawer()">View Shopping Bag</a></li>
           <li><a href="javascript:void(0)" onclick="openCheckoutModal()">Instant Checkout</a></li>
+          <li><a href="label-studio.html">Packaging &amp; Label Studio</a></li>
           <li><a href="#why-ceylon-section">Ceylon vs. Cassia Guide</a></li>
-          <li><a href="#">Coumarin Lab Reports</a></li>
         </ul>
       </div>
     </div>

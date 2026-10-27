@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>True Bark | 125mm Cylindrical Tin Label & Dieline Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --espresso: #180F0A;
+      --espresso-card: #22150E;
+      --gold: #D4AF37;
+      --gold-light: #E8C67C;
+      --kraft: #C89D66;
+      --cream: #FAF6F0;
+      --stone: #C4B5A5;
+      --border: rgba(212, 175, 55, 0.28);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--espresso);
+      color: var(--cream);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      padding-bottom: 5rem;
+    }
+    header {
+      background: linear-gradient(180deg, #120A06 0%, #1E120B 100%);
+      border-bottom: 2px solid var(--gold);
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .brand-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      color: var(--gold-light);
+      letter-spacing: 0.04em;
+    }
+    .brand-sub {
+      color: var(--stone);
+      font-size: 0.92rem;
+      margin-top: 0.25rem;
+    }
+    .header-actions {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.35rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1px solid var(--gold);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #D4AF37 0%, #B38A22 100%);
+      color: #180F0A;
+    }
+    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .btn-outline {
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--gold-light);
+    }
+    .btn-outline:hover { background: rgba(212, 175, 55, 0.2); }
+
+    .container {
+      max-width: 1440px;
+      margin: 2.5rem auto;
+      padding: 0 2rem;
+    }
+
+    /* Dieline Calculator Bar */
+    .calc-panel {
+      background: var(--espresso-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      align-items: end;
+    }
+    .calc-group label {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
+      margin-bottom: 0.45rem;
+      font-weight: 600;
+    }
+    .calc-group input, .calc-group select {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #140B07;
+      color: var(--cream);
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+    .calc-result {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px dashed var(--gold);
+      border-radius: 10px;
+      padding: 0.85rem 1.1rem;
+    }
+    .calc-result .res-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--stone);
+    }
+    .calc-result .res-value {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-top: 0.15rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .card {
+      background: var(--espresso-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    }
+    .card-header {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 1.15rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+    .badge {
+      background: rgba(212, 175, 55, 0.16);
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      padding: 0.25rem 0.75rem;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .card-body {
+      padding: 1.5rem;
+    }
+    .label-preview-wrap {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: #F4EFE6;
+    }
+    .label-preview-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .dieline-overlay {
+      position: absolute;
+      inset: 4.5% 2.8%;
+      border: 2px dashed rgba(220, 38, 38, 0.85);
+      pointer-events: none;
+      display: none;
+    }
+    .dieline-overlay.active {
+      display: block;
+    }
+    .dieline-overlay::before {
+      content: "TRIM LINE (118mm × 215mm) — 3mm BLEED OUTSIDE";
+      position: absolute;
+      top: -22px;
+      left: 8px;
+      background: #DC2626;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.05em;
+    }
+    .spec-list {
+      margin-top: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--stone);
+    }
+    .spec-list strong { color: var(--cream); }
+
+    @media print {
+      header, .calc-panel, .no-print { display: none !important; }
+      body { background: #fff; color: #000; padding: 0; }
+      .card { border: none; box-shadow: none; break-inside: avoid; margin-bottom: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1 class="brand-title">TRUE BARK — Packaging Label &amp; Dieline Studio</h1>
+      <p class="brand-sub">Factory CAD Dielines: 73mm × 120mm Composite Can (245×119mm Wrap) • Pouch Front (8×12cm) • Pouch Behind (10×14cm)</p>
+    </div>
+    <div class="header-actions no-print">
+      <a class="btn btn-outline" href="index.html">← Back to Storefront</a>
+      <button class="btn btn-outline" onclick="toggleDielines()">Toggle Trim &amp; Bleed Guides</button>
+      <a class="btn btn-outline" href="assets/labels/Supplier_Tin_Complete_Spec_Sheet_UHD.jpg" download>Download Tin Spec Sheet (UHD)</a>
+      <a class="btn btn-outline" href="assets/labels/Supplier_Pouch_Line_Complete_Spec_Sheet_UHD.jpg" download>Download Pouch Line Spec Sheet (UHD)</a>
+      <button class="btn btn-primary" onclick="window.print()">Print / Save PDF Dielines</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Supplier Verified Exact Measurements Banner -->
+    <section class="calc-panel" style="margin-bottom: 1.25rem; background: rgba(212, 175, 55, 0.08); border-color: rgba(212, 175, 55, 0.35);">
+      <div class="calc-result" style="border-left:none; padding-left:0;">
+        <div class="res-label">73mm × 120mm Composite Can Wrap</div>
+        <div class="res-value">245×119mm (Print: 235×114mm | 5mm Bot | 10mm Paste)</div>
+      </div>
+      <div class="calc-result">
+        <div class="res-label">Pouch Front Sticker</div>
+        <div class="res-value">Width 8 cm × Height 12 cm (80×120mm)</div>
+      </div>
+      <div class="calc-result">
+        <div class="res-label">Pouch Behind Sticker (Max)</div>
+        <div class="res-value">Width 10 cm × Height 14 cm (100×140mm)</div>
+      </div>
+      <div class="calc-result">
+        <div class="res-label">100g Stand-Up Pouch Size</div>
+        <div class="res-value">15 cm × 24 cm × 3 cm (150×240×30mm)</div>
+      </div>
+      <div class="calc-result">
+        <div class="res-label">50g Stand-Up Pouch Size</div>
+        <div class="res-value">12 cm × 20 cm × 2 cm (120×200×20mm)</div>
+      </div>
+    </section>
+
+    <!-- Interactive Canister Dimension & Circumference Calculator -->
+    <section class="calc-panel no-print">
+      <div class="calc-group">
+        <label for="tinHeight">Finished Can Height (mm)</label>
+        <input type="number" id="tinHeight" value="120" min="80" max="200" oninput="updateDielineCalc()">
+      </div>
+      <div class="calc-group">
+        <label for="rimAllowance">Bottom Background Strip (mm)</label>
+        <input type="number" id="rimAllowance" value="5" min="0" max="20" oninput="updateDielineCalc()">
+      </div>
+      <div class="calc-group">
+        <label for="tinDiameter">Composite Can Diameter Ø (mm)</label>
+        <input type="number" id="tinDiameter" value="73" min="45" max="120" oninput="updateDielineCalc()">
+      </div>
+      <div class="calc-group">
+        <label for="seamOverlap">Right Pasting Area (mm)</label>
+        <input type="number" id="seamOverlap" value="10" min="0" max="25" oninput="updateDielineCalc()">
+      </div>
+      <div class="calc-result">
+        <div class="res-label">Total Label Size (CAD Dieline)</div>
+        <div class="res-value" id="trimSizeOut">245 mm (W) × 119 mm (H)</div>
+      </div>
+      <div class="calc-result">
+        <div class="res-label">Active Printing Area (No-Text Margins Excluded)</div>
+        <div class="res-value" id="bleedSizeOut">235 mm (W) × 114 mm (H)</div>
+      </div>
+    </section>
+
+    <!-- Flat Wrap Labels Side by Side -->
+    <div class="grid-2">
+      <!-- Edition A -->
+      <article class="card">
+        <div class="card-header" style="flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <h2 class="card-title">1. Edition A — Dark Espresso &amp; Gold Foil (245×119mm CAD Dieline)</h2>
+          </div>
+          <div style="display:flex; gap:0.45rem; align-items:center; flex-wrap:wrap;">
+            <span class="badge">73mm × 120mm Can</span>
+            <a class="btn btn-outline no-print" style="padding:0.36rem 0.75rem; font-size:0.78rem;" href="assets/labels/Label_1_CAD_Dieline_245x119mm_UHD.jpg" download>CAD Dieline Proof</a>
+            <a class="btn btn-primary no-print" style="padding:0.36rem 0.75rem; font-size:0.78rem;" href="assets/labels/Label_1_Dark_Espresso_Gold_Wrap_UHD.jpg" download>Press-Ready (2940×1428)</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="label-preview-wrap">
+            <img src="assets/labels/Label_1_CAD_Dieline_245x119mm_UHD.jpg" alt="Edition A Dark Espresso and Metallic Gold 245x119mm CAD Dieline">
+            <div class="dieline-overlay"></div>
+          </div>
+          <div class="spec-list">
+            <div><strong>Total Label:</strong> 245 mm (W) × 119 mm (H) [2940×1428 px]</div>
+            <div><strong>Printing Area:</strong> 235 mm (W) × 114 mm (H) [All text inside]</div>
+            <div><strong>Bottom 5mm Strip:</strong> Espresso Background Colour — NO TEXT</div>
+            <div><strong>Right 10mm Flap:</strong> Pasting Area Background — NO TEXT</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Edition B -->
+      <article class="card">
+        <div class="card-header" style="flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <h2 class="card-title">2. Edition B — Artisan Kraft &amp; Espresso Ink (245×119mm CAD Dieline)</h2>
+          </div>
+          <div style="display:flex; gap:0.45rem; align-items:center; flex-wrap:wrap;">
+            <span class="badge">73mm × 120mm Can</span>
+            <a class="btn btn-outline no-print" style="padding:0.36rem 0.75rem; font-size:0.78rem;" href="assets/labels/Label_2_CAD_Dieline_245x119mm_UHD.jpg" download>CAD Dieline Proof</a>
+            <a class="btn btn-primary no-print" style="padding:0.36rem 0.75rem; font-size:0.78rem;" href="assets/labels/Label_2_Artisan_Kraft_Wrap_UHD.jpg" download>Press-Ready (2940×1428)</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="label-preview-wrap">
+            <img src="assets/labels/Label_2_CAD_Dieline_245x119mm_UHD.jpg" alt="Edition B Artisan Kraft and Deep Espresso Ink 245x119mm CAD Dieline">
+            <div class="dieline-overlay"></div>
+          </div>
+          <div class="spec-list">
+            <div><strong>Total Label:</strong> 245 mm (W) × 119 mm (H) [2940×1428 px]</div>
+            <div><strong>Printing Area:</strong> 235 mm (W) × 114 mm (H) [All text inside]</div>
+            <div><strong>Bottom 5mm Strip:</strong> Natural Kraft Background — NO TEXT</div>
+            <div><strong>Right 10mm Flap:</strong> Pasting Area Background — NO TEXT</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- 3D Mockup & Complete Supplier Sheet -->
+    <div class="grid-2">
+      <article class="card">
+        <div class="card-header">
+          <h2 class="card-title">3. 3D Cylindrical Canister Mockup (73mm Ø × 120mm Composite Cans)</h2>
+          <a class="btn btn-outline no-print" style="padding:0.4rem 0.85rem; font-size:0.8rem;" href="assets/labels/Label_3_Cylindrical_Tins_Mockup_UHD.jpg" download>Download 3D Mockup</a>
+        </div>
+        <div class="card-body">
+          <div class="label-preview-wrap">
+            <img src="assets/labels/Label_3_Cylindrical_Tins_Mockup_UHD.jpg" alt="3D Cylindrical Canisters Mockup">
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <h2 class="card-title">4. All-in-One 73mm × 120mm Composite Can Supplier Specification Sheet</h2>
+          <a class="btn btn-primary no-print" style="padding:0.4rem 0.85rem; font-size:0.8rem;" href="assets/labels/Supplier_Tin_Complete_Spec_Sheet_UHD.jpg" download>Download Tin Spec Sheet</a>
+        </div>
+        <div class="card-body">
+          <div class="label-preview-wrap">
+            <img src="assets/labels/Supplier_Tin_Complete_Spec_Sheet_UHD.jpg" alt="Complete Supplier Specification Sheet">
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- PART II: STAND-UP WINDOW POUCH & SHAKER JAR LINE -->
+    <article class="card" style="margin-bottom:2.5rem;">
+      <div class="card-header">
+        <div>
+          <h2 class="card-title">5. Sri Lankan Spice Pouch Collection — Front (8×12 cm), Behind (10×14 cm) &amp; Packshot Master Spec Sheet</h2>
+        </div>
+        <div style="display:flex; gap:0.5rem; align-items:center;">
+          <span class="badge">Front 8×12cm • Behind 10×14cm • 100g &amp; 50g Pouches</span>
+          <a class="btn btn-primary no-print" style="padding:0.4rem 0.85rem; font-size:0.8rem;" href="assets/labels/Supplier_Pouch_Line_Complete_Spec_Sheet_UHD.jpg" download>Download Pouch Line Spec Sheet (2800×3480)</a>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="label-preview-wrap">
+          <img src="assets/labels/Supplier_Pouch_Line_Complete_Spec_Sheet_UHD.jpg" alt="Complete Pouch and Jar Line Supplier Specification Sheet">
+        </div>
+      </div>
+    </article>
+
+    <div class="grid-2">
+      <article class="card">
+        <div class="card-header" style="flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <h2 class="card-title">SKU-01: Ceylon Turmeric Powder</h2>
+            <span style="font-size:0.75rem; color:var(--text-muted);">100g Pouch (15×24×3 cm) &amp; Shaker Jar</span>
+          </div>
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+            <a class="btn btn-outline no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Flat_Pouch_Label_1_Turmeric_UHD.jpg" download>Front (8×12cm)</a>
+            <a class="btn btn-outline no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Back_Pouch_Label_1_Turmeric_UHD.jpg" download>Behind (10×14cm)</a>
+            <a class="btn btn-primary no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Pouch_1_Ceylon_Turmeric_UHD.jpg" download>Packshot UHD</a>
+          </div>
+        </div>
+        <div class="card-body" style="display:grid; grid-template-columns: 1fr 1.05fr 1.15fr; gap:0.75rem; align-items:center;">
+          <div class="label-preview-wrap"><img src="assets/labels/Flat_Pouch_Label_1_Turmeric_UHD.jpg" alt="Turmeric Front Sticker 8x12cm"></div>
+          <div class="label-preview-wrap"><img src="assets/labels/Back_Pouch_Label_1_Turmeric_UHD.jpg" alt="Turmeric Behind Sticker 10x14cm"></div>
+          <div class="label-preview-wrap"><img src="assets/labels/Pouch_1_Ceylon_Turmeric_UHD.jpg" alt="Turmeric Rebranded Pouch and Jar Packshot"></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header" style="flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <h2 class="card-title">SKU-02: Whole Ceylon Cloves</h2>
+            <span style="font-size:0.75rem; color:var(--text-muted);">50g Stand-Up Window Pouch (12×20×2 cm)</span>
+          </div>
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+            <a class="btn btn-outline no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Flat_Pouch_Label_2_Cloves_UHD.jpg" download>Front (8×12cm)</a>
+            <a class="btn btn-outline no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Back_Pouch_Label_2_Cloves_UHD.jpg" download>Behind (10×14cm)</a>
+            <a class="btn btn-primary no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Pouch_2_Ceylon_Cloves_UHD.jpg" download>Packshot UHD</a>
+          </div>
+        </div>
+        <div class="card-body" style="display:grid; grid-template-columns: 1fr 1.05fr 1.15fr; gap:0.75rem; align-items:center;">
+          <div class="label-preview-wrap"><img src="assets/labels/Flat_Pouch_Label_2_Cloves_UHD.jpg" alt="Cloves Front Sticker 8x12cm"></div>
+          <div class="label-preview-wrap"><img src="assets/labels/Back_Pouch_Label_2_Cloves_UHD.jpg" alt="Cloves Behind Sticker 10x14cm"></div>
+          <div class="label-preview-wrap"><img src="assets/labels/Pouch_2_Ceylon_Cloves_UHD.jpg" alt="Cloves Rebranded Pouch Packshot"></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header" style="flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <h2 class="card-title">SKU-03: Whole Ceylon Mace</h2>
+            <span style="font-size:0.75rem; color:var(--text-muted);">50g Stand-Up Window Pouch (12×20×2 cm)</span>
+          </div>
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+            <a class="btn btn-outline no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Flat_Pouch_Label_3_Mace_UHD.jpg" download>Front (8×12cm)</a>
+            <a class="btn btn-outline no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Back_Pouch_Label_3_Mace_UHD.jpg" download>Behind (10×14cm)</a>
+            <a class="btn btn-primary no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Pouch_3_Ceylon_Mace_UHD.jpg" download>Packshot UHD</a>
+          </div>
+        </div>
+        <div class="card-body" style="display:grid; grid-template-columns: 1fr 1.05fr 1.15fr; gap:0.75rem; align-items:center;">
+          <div class="label-preview-wrap"><img src="assets/labels/Flat_Pouch_Label_3_Mace_UHD.jpg" alt="Mace Front Sticker 8x12cm"></div>
+          <div class="label-preview-wrap"><img src="assets/labels/Back_Pouch_Label_3_Mace_UHD.jpg" alt="Mace Behind Sticker 10x14cm"></div>
+          <div class="label-preview-wrap"><img src="assets/labels/Pouch_3_Ceylon_Mace_UHD.jpg" alt="Mace Rebranded Pouch Packshot"></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-header" style="flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <h2 class="card-title">SKU-04: Crushed Ceylon Chili Flakes</h2>
+            <span style="font-size:0.75rem; color:var(--text-muted);">50g Stand-Up Window Pouch (12×20×2 cm)</span>
+          </div>
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+            <a class="btn btn-outline no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Flat_Pouch_Label_4_Chili_Flakes_UHD.jpg" download>Front (8×12cm)</a>
+            <a class="btn btn-outline no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Back_Pouch_Label_4_Chili_Flakes_UHD.jpg" download>Behind (10×14cm)</a>
+            <a class="btn btn-primary no-print" style="padding:0.32rem 0.65rem; font-size:0.74rem;" href="assets/labels/Pouch_4_Ceylon_Chili_Flakes_UHD.jpg" download>Packshot UHD</a>
+          </div>
+        </div>
+        <div class="card-body" style="display:grid; grid-template-columns: 1fr 1.05fr 1.15fr; gap:0.75rem; align-items:center;">
+          <div class="label-preview-wrap"><img src="assets/labels/Flat_Pouch_Label_4_Chili_Flakes_UHD.jpg" alt="Chili Flakes Front Sticker 8x12cm"></div>
+          <div class="label-preview-wrap"><img src="assets/labels/Back_Pouch_Label_4_Chili_Flakes_UHD.jpg" alt="Chili Flakes Behind Sticker 10x14cm"></div>
+          <div class="label-preview-wrap"><img src="assets/labels/Pouch_4_Ceylon_Chili_Flakes_UHD.jpg" alt="Chili Flakes Rebranded Pouch Packshot"></div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    function updateDielineCalc() {
+      const h = parseFloat(document.getElementById('tinHeight').value) || 120;
+      const botStrip = parseFloat(document.getElementById('rimAllowance').value) || 5;
+      const d = parseFloat(document.getElementById('tinDiameter').value) || 73;
+      const pasteW = parseFloat(document.getElementById('seamOverlap').value) || 10;
+
+      const totalH = Math.round(h - 1);
+      const printH = Math.round(totalH - botStrip);
+      const printW = (d === 73) ? 235 : Math.round(Math.PI * d + 5.7);
+      const totalW = Math.round(printW + pasteW);
+
+      document.getElementById('trimSizeOut').textContent = `${totalW} mm (W) × ${totalH} mm (H)`;
+      document.getElementById('bleedSizeOut').textContent = `${printW} mm (W) × ${printH} mm (H) [No-Text: ${botStrip}mm Bot, ${pasteW}mm Right]`;
+    }
+
+    function toggleDielines() {
+      document.querySelectorAll('.dieline-overlay').forEach(el => el.classList.toggle('active'));
+    }
+
+    updateDielineCalc();
+  </script>
+</body>
+</html>
