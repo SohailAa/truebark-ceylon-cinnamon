@@ -173,9 +173,9 @@ const PRODUCTS = [
       "assets/images/sugar-mix-square.jpg",
       "assets/images/cinnamon-stick-detail.jpg",
       "assets/images/sachet-supplier-ortho.jpg",
-      "assets/images/inspiration-03-cassia-vs-ceylon.jpg",
-      "assets/images/inspiration-04-look-inside.jpg",
-      "assets/images/inspiration-08-power-of-simple.jpg",
+      "assets/images/story-05-barista-crema-science.jpg",
+      "assets/images/story-03-dawn-peeling-craft.jpg",
+      "assets/images/story-06-coumarin-wellness.jpg",
       "assets/images/sugar-mix-sachets.jpg"
     ],
     variants: [
