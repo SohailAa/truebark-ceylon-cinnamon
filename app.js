@@ -95,28 +95,30 @@ const PRODUCTS = [
   {
     id: "true-bark-cinnamon-pouch-100g",
     name: "Ceylon Cinnamon Powder — 100g Window Pouch & Jar",
-    subtitle: "100g Stand-Up Pouch (15×24×3cm) | Front 8×12cm & Behind 10×14cm Official Labels",
+    subtitle: "100g Stand-Up Pouch (15×24×3cm) | Unified Heritage Tin-Style Front (8×12cm) & Rear (10×14cm) Labels",
     category: "pouches",
     categoryName: "Ceylon Cinnamon Pouches",
     badge: "100g Pouch & Jar",
     rating: 4.99,
     reviewsCount: 164,
-    description: "100% pure Sri Lankan Alba & C5 Ceylon cinnamon stone-milled into a fine, aromatic powder. Packaged in our 15cm × 24cm × 3cm (100g / 3.5oz) matte stand-up window pouch with official 8×12cm front and 10×14cm rear stickers.",
+    description: "100% pure Sri Lankan Alba & C5 Ceylon cinnamon stone-milled into a fine, aromatic powder. Packaged in our 15cm × 24cm × 3cm (100g / 3.5oz) matte stand-up window pouch featuring the exact Sri Lankan heritage lithography as our 100g Cylinder Tins (8×12cm front & 10×14cm rear stickers).",
     weight: "Net Wt 100g (3.5oz) | 15×24×3cm Pouch",
     coumarin: "< 0.004% (Lab Certified)",
     origin: "Matara & Galle Highlands, Sri Lanka",
     image: "assets/images/Ceylon_Cinnamon_Pouch_100g_Square.jpg",
     gallery: [
       "assets/images/Ceylon_Cinnamon_Pouch_100g_Square.jpg",
-      "assets/images/Ceylon_Cinnamon_Pouch_100g_UHD.jpg",
+      "assets/images/Ceylon_Cinnamon_Pouch_100g_Gold_Square.jpg",
       "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_100g.jpg",
       "assets/labels/Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_100g.jpg",
+      "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_Gold.jpg",
+      "assets/labels/Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_Gold.jpg",
       "assets/labels/Flat_Pouch_Label_Ceylon_Cinnamon_100g_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_Ceylon_Cinnamon_100g_UHD.jpg",
-      "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_Gold.jpg"
+      "assets/labels/Back_Pouch_Label_Ceylon_Cinnamon_100g_UHD.jpg"
     ],
     variants: [
-      { id: "cinnamon-pouch-100g", name: "100g Window Pouch (15×24×3cm)", price: 18.00, subPrice: 15.30 },
+      { id: "cinnamon-pouch-100g", name: "100g Window Pouch — Artisan Kraft (15×24×3cm)", price: 18.00, subPrice: 15.30 },
+      { id: "cinnamon-pouch-100g-gold", name: "100g Window Pouch — Dark Gold Edition (15×24×3cm)", price: 18.00, subPrice: 15.30 },
       { id: "cinnamon-pouch-jar-bundle", name: "100g Pouch + Shaker Jar Duo", price: 30.00, subPrice: 25.50 },
       { id: "cinnamon-pouch-200g", name: "2-Pack 100g Pouches (200g)", price: 32.00, subPrice: 27.20 }
     ],
@@ -125,27 +127,30 @@ const PRODUCTS = [
   {
     id: "true-bark-cinnamon-pouch-50g",
     name: "Ceylon Cinnamon Powder — 50g Window Pouch",
-    subtitle: "50g Stand-Up Pouch (12×20×2cm) | Front 8×12cm & Behind 10×14cm Official Labels",
+    subtitle: "50g Stand-Up Pouch (12×20×2cm) | Unified Heritage Tin-Style Front (8×12cm) & Rear (10×14cm) Labels",
     category: "pouches",
     categoryName: "Ceylon Cinnamon Pouches",
     badge: "50g Window Pouch",
     rating: 4.98,
     reviewsCount: 118,
-    description: "Single-origin Sri Lankan Ceylon cinnamon powder sealed in an airtight 12cm × 20cm × 2cm (50g / 1.76oz) resealable stand-up window pouch. Ideal for daily espresso lattes, baking, or refilling your True Bark Cylinder Tin.",
+    description: "Single-origin Sri Lankan Ceylon cinnamon powder sealed in an airtight 12cm × 20cm × 2cm (50g / 1.76oz) resealable stand-up window pouch with our signature Sri Lankan heritage woodcut label design. Ideal for daily espresso lattes, baking, or refilling your True Bark Cylinder Tin.",
     weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
     coumarin: "< 0.004% (Lab Certified)",
     origin: "Southern Coast, Sri Lanka",
     image: "assets/images/Ceylon_Cinnamon_Pouch_50g_Square.jpg",
     gallery: [
       "assets/images/Ceylon_Cinnamon_Pouch_50g_Square.jpg",
-      "assets/images/Ceylon_Cinnamon_Pouch_50g_UHD.jpg",
+      "assets/images/Ceylon_Cinnamon_Pouch_50g_Gold_Square.jpg",
       "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_50g.jpg",
       "assets/labels/Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_50g.jpg",
+      "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_50g_Gold.jpg",
+      "assets/labels/Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_50g_Gold.jpg",
       "assets/labels/Flat_Pouch_Label_Ceylon_Cinnamon_50g_UHD.jpg",
       "assets/labels/Back_Pouch_Label_Ceylon_Cinnamon_50g_UHD.jpg"
     ],
     variants: [
-      { id: "cinnamon-pouch-50g", name: "50g Window Pouch (12×20×2cm)", price: 12.00, subPrice: 10.20 },
+      { id: "cinnamon-pouch-50g", name: "50g Window Pouch — Artisan Kraft (12×20×2cm)", price: 12.00, subPrice: 10.20 },
+      { id: "cinnamon-pouch-50g-gold", name: "50g Window Pouch — Dark Gold Edition (12×20×2cm)", price: 12.00, subPrice: 10.20 },
       { id: "cinnamon-pouch-50g-3pack", name: "3-Pack 50g Pouches (150g)", price: 32.00, subPrice: 27.20 }
     ],
     defaultVariantIndex: 0
