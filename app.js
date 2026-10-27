@@ -105,16 +105,16 @@ const PRODUCTS = [
     weight: "Net Wt 100g (3.5oz) | 15×24×3cm Pouch",
     coumarin: "< 0.004% (Lab Certified)",
     origin: "Matara & Galle Highlands, Sri Lanka",
-    image: "assets/images/Ceylon_Cinnamon_Pouch_100g_Square.jpg",
+    image: "assets/images/Ceylon_Cinnamon_Pouch_100g_Square.jpg?v=tin2026",
     gallery: [
-      "assets/images/Ceylon_Cinnamon_Pouch_100g_Square.jpg",
-      "assets/images/Ceylon_Cinnamon_Pouch_100g_Gold_Square.jpg",
-      "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_100g.jpg",
-      "assets/labels/Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_100g.jpg",
-      "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_Gold.jpg",
-      "assets/labels/Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_Gold.jpg",
-      "assets/labels/Flat_Pouch_Label_Ceylon_Cinnamon_100g_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_Ceylon_Cinnamon_100g_UHD.jpg"
+      "assets/images/Ceylon_Cinnamon_Pouch_100g_Square.jpg?v=tin2026",
+      "assets/images/Ceylon_Cinnamon_Pouch_100g_Gold_Square.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_100g.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_100g.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_Gold.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_Gold.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Flat_Pouch_Label_Ceylon_Cinnamon_100g_UHD.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Back_Pouch_Label_Ceylon_Cinnamon_100g_UHD.jpg?v=tin2026"
     ],
     variants: [
       { id: "cinnamon-pouch-100g", name: "100g Window Pouch — Artisan Kraft (15×24×3cm)", price: 18.00, subPrice: 15.30 },
@@ -137,16 +137,16 @@ const PRODUCTS = [
     weight: "Net Wt 50g (1.76oz) | 12×20×2cm Pouch",
     coumarin: "< 0.004% (Lab Certified)",
     origin: "Southern Coast, Sri Lanka",
-    image: "assets/images/Ceylon_Cinnamon_Pouch_50g_Square.jpg",
+    image: "assets/images/Ceylon_Cinnamon_Pouch_50g_Square.jpg?v=tin2026",
     gallery: [
-      "assets/images/Ceylon_Cinnamon_Pouch_50g_Square.jpg",
-      "assets/images/Ceylon_Cinnamon_Pouch_50g_Gold_Square.jpg",
-      "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_50g.jpg",
-      "assets/labels/Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_50g.jpg",
-      "assets/labels/Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_50g_Gold.jpg",
-      "assets/labels/Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_50g_Gold.jpg",
-      "assets/labels/Flat_Pouch_Label_Ceylon_Cinnamon_50g_UHD.jpg",
-      "assets/labels/Back_Pouch_Label_Ceylon_Cinnamon_50g_UHD.jpg"
+      "assets/images/Ceylon_Cinnamon_Pouch_50g_Square.jpg?v=tin2026",
+      "assets/images/Ceylon_Cinnamon_Pouch_50g_Gold_Square.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_50g.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_50g.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Official_Front_Sticker_8x12cm_Ceylon_Cinnamon_50g_Gold.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Official_Behind_Sticker_10x14cm_Ceylon_Cinnamon_50g_Gold.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Flat_Pouch_Label_Ceylon_Cinnamon_50g_UHD.jpg?v=tin2026",
+      "assets/labels/TinHeritage_Back_Pouch_Label_Ceylon_Cinnamon_50g_UHD.jpg?v=tin2026"
     ],
     variants: [
       { id: "cinnamon-pouch-50g", name: "50g Window Pouch — Artisan Kraft (12×20×2cm)", price: 12.00, subPrice: 10.20 },
