@@ -1055,7 +1055,7 @@ function setupEventListeners() {
 }
 
 // =============================================================================
-// Cinnamon Chronicles / Story Showcase Controller
+// True Bark Field Journal / Story Showcase Controller
 // =============================================================================
 let currentStoryIndex = 0;
 const totalStoryChapters = 6;
@@ -1064,6 +1064,7 @@ function selectStoryChapter(idx) {
   currentStoryIndex = idx;
   const tabs = document.querySelectorAll(".story-chapter-tab");
   const panels = document.querySelectorAll(".story-slide-panel");
+  const dots = document.querySelectorAll("#story-slider-dots .dot, .slider-dots .dot");
 
   tabs.forEach((tab, i) => {
     const isActive = i === idx;
@@ -1073,6 +1074,12 @@ function selectStoryChapter(idx) {
 
   panels.forEach((panel, i) => {
     panel.classList.toggle("active", i === idx);
+  });
+
+  dots.forEach((dot, i) => {
+    const isActive = i === idx;
+    dot.classList.toggle("active", isActive);
+    dot.setAttribute("aria-current", isActive ? "step" : "false");
   });
 }
 
