@@ -230,14 +230,16 @@
   <header>
     <div>
       <h1 class="brand-title">TRUE BARK — Packaging Label &amp; Dieline Studio</h1>
-      <p class="brand-sub">Factory CAD Dielines: 73mm × 120mm Composite Can (245×119mm Wrap) • Pouch Front (8×12cm) • Pouch Behind (10×14cm)</p>
+      <p class="brand-sub">Factory CAD Dielines: 73×120mm Can (245×119mm Wrap) • Pouch Front (8×12cm) &amp; Behind (10×14cm) • 5g Alu-Foil Sachet (52×115mm)</p>
     </div>
     <div class="header-actions no-print">
       <a class="btn btn-outline" href="index.html">← Back to Storefront</a>
       <button class="btn btn-outline" onclick="toggleDielines()">Toggle Trim &amp; Bleed Guides</button>
+      <a class="btn btn-primary" href="assets/labels/TrueBark_5g_Sachet_Label_52x115mm_Official_Spec.pdf" download="TrueBark_5g_Sachet_Label_52x115mm_Official_Spec.pdf">⬇ Download 5g Sachet PDF (52×115mm)</a>
+      <a class="btn btn-outline" href="assets/labels/TinHeritage_Supplier_Sachet_52x115mm_Complete_Spec_Sheet_UHD.jpg" download>Download Sachet Spec Sheet (UHD)</a>
       <a class="btn btn-outline" href="assets/labels/TinHeritage_Supplier_Tin_Complete_Spec_Sheet_UHD.jpg?v=tin2026" download>Download Tin Spec Sheet (UHD)</a>
-      <a class="btn btn-outline" href="assets/labels/Supplier_Pouch_Line_Complete_Spec_Sheet_UHD.jpg" download>Download Pouch Line Spec Sheet (UHD)</a>
-      <button class="btn btn-primary" onclick="window.print()">Print / Save PDF Dielines</button>
+      <a class="btn btn-outline" href="assets/labels/Supplier_Pouch_Line_Complete_Spec_Sheet_UHD.jpg" download>Download Pouch Spec Sheet (UHD)</a>
+      <button class="btn btn-outline" onclick="window.print()">Print / Save Page PDF</button>
     </div>
   </header>
 
@@ -249,6 +251,10 @@
         <div class="res-value">245×119mm (Print: 235×114mm | 5mm Bot | 10mm Paste)</div>
       </div>
       <div class="calc-result">
+        <div class="res-label">5g Alu-Foil Barista Sachet (Stick)</div>
+        <div class="res-value">52×115mm Web (Folded: 22×115mm | $50 / 5,000 pcs)</div>
+      </div>
+      <div class="calc-result">
         <div class="res-label">Pouch Front Sticker</div>
         <div class="res-value">Width 8 cm × Height 12 cm (80×120mm)</div>
       </div>
@@ -257,12 +263,8 @@
         <div class="res-value">Width 10 cm × Height 14 cm (100×140mm)</div>
       </div>
       <div class="calc-result">
-        <div class="res-label">100g Stand-Up Pouch Size</div>
-        <div class="res-value">15 cm × 24 cm × 3 cm (150×240×30mm)</div>
-      </div>
-      <div class="calc-result">
-        <div class="res-label">50g Stand-Up Pouch Size</div>
-        <div class="res-value">12 cm × 20 cm × 2 cm (120×200×20mm)</div>
+        <div class="res-label">100g &amp; 50g Stand-Up Pouches</div>
+        <div class="res-value">100g: 15×24×3cm • 50g: 12×20×2cm</div>
       </div>
     </section>
 
@@ -473,6 +475,120 @@
         </div>
       </article>
     </div>
+
+    <!-- PART III: 5G ALU-FOIL BARISTA STICK SACHET LINE (52MM × 115MM) & BATCH ECONOMICS -->
+    <section id="sachet-52x115-section" style="margin-top: 3rem;">
+      <!-- Interactive 5g Sachet VFFS Dieline & Batch Cost Calculator -->
+      <div class="calc-panel no-print" style="border-color: var(--gold); background: linear-gradient(135deg, rgba(34,21,14,0.95) 0%, rgba(24,15,10,0.98) 100%);">
+        <div class="calc-group">
+          <label for="sachetWebW">Unfolded Flat Web Width (mm)</label>
+          <input type="number" id="sachetWebW" value="52" min="35" max="90" oninput="updateSachetCalc()">
+        </div>
+        <div class="calc-group">
+          <label for="sachetLength">Finished Stick Length (mm)</label>
+          <input type="number" id="sachetLength" value="115" min="70" max="160" oninput="updateSachetCalc()">
+        </div>
+        <div class="calc-group">
+          <label for="sachetBatchQty">Batch Quantity (Sachets MOQ)</label>
+          <input type="number" id="sachetBatchQty" value="5000" step="500" min="500" max="100000" oninput="updateSachetCalc()">
+        </div>
+        <div class="calc-group">
+          <label for="sachetCostLKR">Print Cost / Sachet (Rs LKR)</label>
+          <input type="number" id="sachetCostLKR" value="3.00" step="0.25" min="0.5" max="25" oninput="updateSachetCalc()">
+        </div>
+        <div class="calc-result">
+          <div class="res-label">Folded Stick &amp; Active Print Zone</div>
+          <div class="res-value" id="sachetDielineOut">22×115mm Stick (Print: 44×100mm)</div>
+        </div>
+        <div class="calc-result">
+          <div class="res-label">Batch Print Cost &amp; Cinnamon Required</div>
+          <div class="res-value" id="sachetBatchOut">$50.00 USD (Rs 15,000) • 25.0 kg</div>
+        </div>
+      </div>
+
+      <!-- Master 4-Panel Sachet Spec Sheet Card -->
+      <article class="card" style="margin-bottom: 2.5rem; border: 2px solid var(--gold);">
+        <div class="card-header" style="flex-wrap:wrap; gap:0.75rem;">
+          <div>
+            <h2 class="card-title">6. 5g Alu-Foil Barista Stick Sachet (52mm × 115mm) — Unfolded VFFS Web, CAD Dieline, 3D Stick &amp; Verified Batch Spec Sheet</h2>
+            <p style="font-size:0.84rem; color:var(--stone); margin-top:0.2rem;">
+              Unfolded Flat Roll Web: <strong>52mm × 115mm</strong> (2760×1248 px @ 609.6 DPI) • Folded Stick Face: <strong>22mm × 115mm</strong> • Verified Quote: <strong>5,000 pcs @ Rs 3.00 = Rs 15,000 ($50 USD)</strong> • Batch Fill: <strong>25 kg (5,000 × 5g)</strong>
+            </p>
+          </div>
+          <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
+            <span class="badge">52mm × 115mm Alu-Foil Pack</span>
+            <a class="btn btn-primary no-print" style="padding:0.45rem 0.95rem; font-size:0.82rem;" href="assets/labels/TrueBark_5g_Sachet_Label_52x115mm_Official_Spec.pdf" download="TrueBark_5g_Sachet_Label_52x115mm_Official_Spec.pdf">⬇ Download Official 3-Page PDF</a>
+            <a class="btn btn-outline no-print" style="padding:0.45rem 0.85rem; font-size:0.8rem;" href="assets/labels/TinHeritage_Supplier_Sachet_52x115mm_Complete_Spec_Sheet_UHD.jpg" download="Supplier_Sachet_52x115mm_Complete_Spec_Sheet_UHD.jpg">⬇ Master Spec Sheet (UHD)</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="label-preview-wrap">
+            <img src="assets/labels/TinHeritage_Supplier_Sachet_52x115mm_Complete_Spec_Sheet_UHD.jpg" alt="True Bark 5g Alu-Foil Barista Sachet 52x115mm Complete Supplier and Owner Specification Sheet">
+          </div>
+          <div class="spec-list">
+            <div><strong>Unfolded Web Dieline:</strong> 52 mm (W) × 115 mm (L) [2760×1248 px @ 609.6 DPI]</div>
+            <div><strong>Folded Stick Size:</strong> 22 mm Face × 115 mm Length (44mm Wrap + 8mm Fin Seal)</div>
+            <div><strong>Heat-Seal Allowances:</strong> 2× 4mm Rear Fin-Seal Margins + 2× 7.5mm End Crimp Jaws</div>
+            <div><strong>Batch Production (5,000 MOQ):</strong> Rs 3.00/pc = Rs 15,000 ($50 USD) • 25 kg Cinnamon (5,000 × 5g)</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Side-by-Side: 52x115mm CAD Dieline Sheet & Full-Bleed Foil / Unfolded Roll Plates -->
+      <div class="grid-2">
+        <article class="card">
+          <div class="card-header" style="flex-wrap:wrap; gap:0.5rem;">
+            <div>
+              <h2 class="card-title">6A. Factory CAD Dieline Blueprint — 52mm × 115mm VFFS Stick Pack</h2>
+              <span style="font-size:0.76rem; color:var(--stone);">Unfolded 115×52mm Web + Folded 22×115mm Stick View + Verified Supplier Specs</span>
+            </div>
+            <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+              <a class="btn btn-primary no-print" style="padding:0.35rem 0.72rem; font-size:0.75rem;" href="assets/labels/Sachet_CAD_Dieline_52x115mm_UHD.jpg" download="Sachet_CAD_Dieline_52x115mm_UHD.jpg">⬇ CAD Dieline (UHD)</a>
+              <a class="btn btn-outline no-print" style="padding:0.35rem 0.72rem; font-size:0.75rem;" href="assets/labels/TrueBark_5g_Sachet_Label_52x115mm_Official_Spec.pdf" target="_blank">Open PDF Proof</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="label-preview-wrap">
+              <img src="assets/labels/Sachet_CAD_Dieline_52x115mm_UHD.jpg" alt="5g Alu-Foil Barista Sachet 52x115mm Factory CAD Dieline Blueprint">
+              <div class="dieline-overlay"></div>
+            </div>
+            <div class="spec-list">
+              <div><strong>Active Print Zone:</strong> 100 mm (L) × 44 mm (W) [Inside Seal Margins]</div>
+              <div><strong>Front Display Panel:</strong> 22 mm × 100 mm (Center Sculpted Gold Foil Logo)</div>
+              <div><strong>Rear Panels A &amp; B:</strong> 2× 11 mm × 100 mm (Nutrition, 5g Net Wt, Barcode &amp; Eye-Mark)</div>
+              <div><strong>Laminate Structure:</strong> Food-Grade PET / Alu-Foil / Paper-PE Barrier</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-header" style="flex-wrap:wrap; gap:0.5rem;">
+            <div>
+              <h2 class="card-title">6B. Press-Ready 52mm × 115mm Plates — Front Foil &amp; Unfolded Web Wrap</h2>
+              <span style="font-size:0.76rem; color:var(--stone);">609.6 DPI Press Plates: Full-Bleed Front Artwork + Complete VFFS Roll-Stock Web</span>
+            </div>
+            <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+              <a class="btn btn-primary no-print" style="padding:0.35rem 0.72rem; font-size:0.75rem;" href="assets/labels/Official_Sachet_Label_52x115mm_Front_Foil_UHD.jpg" download="Official_Sachet_Label_52x115mm_Front_Foil_UHD.jpg">⬇ Front Foil Plate</a>
+              <a class="btn btn-primary no-print" style="padding:0.35rem 0.72rem; font-size:0.75rem;" href="assets/labels/Official_Sachet_Roll_Wrap_52x115mm_Full_Web_UHD.jpg" download="Official_Sachet_Roll_Wrap_52x115mm_Full_Web_UHD.jpg">⬇ Unfolded Web Wrap</a>
+            </div>
+          </div>
+          <div class="card-body" style="display:flex; flex-direction:column; gap:1rem;">
+            <div>
+              <div style="font-size:0.76rem; font-weight:700; color:var(--gold-light); text-transform:uppercase; margin-bottom:0.35rem;">1. Full-Bleed Sachet Front Foil Artwork Plate (115mm × 52mm @ 609.6 DPI)</div>
+              <div class="label-preview-wrap">
+                <img src="assets/labels/Official_Sachet_Label_52x115mm_Front_Foil_UHD.jpg" alt="Official 52x115mm Sachet Front Foil Artwork Plate">
+              </div>
+            </div>
+            <div>
+              <div style="font-size:0.76rem; font-weight:700; color:var(--gold-light); text-transform:uppercase; margin-bottom:0.35rem;">2. Unfolded VFFS Roll-Stock Flat Web Label (Front + Rear Panels + 4mm Fin &amp; 7.5mm Crimp Seals)</div>
+              <div class="label-preview-wrap">
+                <img src="assets/labels/Official_Sachet_Roll_Wrap_52x115mm_Full_Web_UHD.jpg" alt="Official 52x115mm Unfolded VFFS Web Roll Wrap">
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <script>
@@ -491,11 +607,38 @@
       document.getElementById('bleedSizeOut').textContent = `${printW} mm (W) × ${printH} mm (H) [No-Text: ${botStrip}mm Bot, ${pasteW}mm Right]`;
     }
 
+    function updateSachetCalc() {
+      const webW = parseFloat(document.getElementById('sachetWebW').value) || 52;
+      const len = parseFloat(document.getElementById('sachetLength').value) || 115;
+      const qty = parseInt(document.getElementById('sachetBatchQty').value) || 5000;
+      const lkrPerUnit = parseFloat(document.getElementById('sachetCostLKR').value) || 3.00;
+
+      const finSealTotal = 8; // 2x 4mm
+      const crimpTotal = 15;  // 2x 7.5mm
+      const printW = Math.max(10, Math.round(webW - finSealTotal));
+      const foldedW = Math.round(printW / 2);
+      const printL = Math.max(20, Math.round(len - crimpTotal));
+
+      const totalLKR = qty * lkrPerUnit;
+      const totalUSD = totalLKR / 300.0;
+      const totalKg = (qty * 5) / 1000.0;
+
+      const dielineElem = document.getElementById('sachetDielineOut');
+      const batchElem = document.getElementById('sachetBatchOut');
+      if (dielineElem) {
+        dielineElem.textContent = `${foldedW}×${len}mm Stick (Print: ${printW}×${printL}mm)`;
+      }
+      if (batchElem) {
+        batchElem.textContent = `$${totalUSD.toFixed(2)} USD (Rs ${totalLKR.toLocaleString()}) • ${totalKg.toFixed(1)} kg`;
+      }
+    }
+
     function toggleDielines() {
       document.querySelectorAll('.dieline-overlay').forEach(el => el.classList.toggle('active'));
     }
 
     updateDielineCalc();
+    updateSachetCalc();
   </script>
 </body>
 </html>

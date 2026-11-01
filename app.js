@@ -30,9 +30,8 @@ const PRODUCTS = [
       "assets/images/gold-tin-square.jpg"
     ],
     variants: [
-      { id: "gold-tin-125mm", name: "100g Cylinder Tin (73×120mm)", price: 24.00, subPrice: 20.40 },
-      { id: "gold-tin-duo", name: "2-Pack Cylinder Tins (200g)", price: 44.00, subPrice: 37.40 },
-      { id: "gold-tin-single", name: "Collector Squat Tin (140g)", price: 28.00, subPrice: 23.80 }
+      { id: "gold-tin-125mm", name: "100g Gold Cylinder Tin (73×120mm)", price: 19.00, subPrice: 16.15 },
+      { id: "gold-tin-duo", name: "2-Pack Gold Tins (200g)", price: 39.00, subPrice: 33.15 }
     ],
     defaultVariantIndex: 0
   },
@@ -59,9 +58,8 @@ const PRODUCTS = [
       "assets/images/brown-tin-square.jpg"
     ],
     variants: [
-      { id: "brown-tin-125mm", name: "100g Kraft Cylinder (73×120mm)", price: 22.00, subPrice: 18.70 },
-      { id: "brown-tin-refill", name: "2-Pack Kraft Cylinders (200g)", price: 40.00, subPrice: 34.00 },
-      { id: "brown-tin-single", name: "Sample Squat Tin (140g)", price: 24.00, subPrice: 20.40 }
+      { id: "brown-tin-125mm", name: "100g Kraft Cylinder Tin (73×120mm)", price: 17.00, subPrice: 14.45 },
+      { id: "brown-tin-refill", name: "2-Pack Kraft Tins (200g)", price: 37.00, subPrice: 31.45 }
     ],
     defaultVariantIndex: 0
   },
@@ -87,8 +85,7 @@ const PRODUCTS = [
       "assets/labels/Label_2_CAD_Dieline_245x119mm_UHD.jpg"
     ],
     variants: [
-      { id: "tall-125mm-set", name: "Twin 100g Cylinder Duo (2x 100g)", price: 42.00, subPrice: 35.70 },
-      { id: "twin-set", name: "Collector Squat Duo (2x 140g)", price: 49.00, subPrice: 41.65 }
+      { id: "tall-125mm-set", name: "Twin Reserve Duo (1 Gold + 1 Kraft)", price: 39.00, subPrice: 33.15 }
     ],
     defaultVariantIndex: 0
   },
@@ -158,24 +155,24 @@ const PRODUCTS = [
   {
     id: "true-bark-sugar-mix",
     name: "Ceylon Cinnamon — 5g Barista Sticks",
-    subtitle: "5g Single-Serve Barista Sticks | Premium & Authentic Hand-Harvested",
+    subtitle: "5g Single-Serve Alu-Foil Sticks (52×115mm Web / 22×115mm Stick) | Hand-Harvested Alba & C5",
     category: "sticks",
     categoryName: "Single-Serve Sticks",
-    badge: "Barista Favorite",
+    badge: "5g Barista Stick (52×115mm)",
     rating: 4.98,
     reviewsCount: 184,
-    description: "Formulated for specialty coffee lovers. Micro-milled pure Ceylon cinnamon in airtight 5g single-serve packets. Melts into espresso crema, lattes, or oatmeal without astringent sediment.",
-    weight: "5g per stick (Net Wt 125g / 250g)",
+    description: "Formulated for specialty coffee lovers. Micro-milled pure Ceylon cinnamon sealed in 52mm × 115mm nitrogen-flushed Alu-foil paper pack sticks (22mm × 115mm folded). Melts into espresso crema, lattes, or oatmeal without astringent sediment.",
+    weight: "5g per stick (52×115mm Alu-Foil Pack | Net Wt 50g / 125g / 250g)",
     coumarin: "< 0.004% (Lab Certified)",
     origin: "Southern Coast, Sri Lanka",
     image: "assets/images/sugar-mix-square.jpg",
     gallery: [
       "assets/images/sugar-mix-square.jpg",
-      "assets/images/cinnamon-stick-detail.jpg",
+      "assets/labels/TinHeritage_Supplier_Sachet_52x115mm_Complete_Spec_Sheet_UHD.jpg",
+      "assets/labels/Sachet_CAD_Dieline_52x115mm_UHD.jpg",
+      "assets/labels/Official_Sachet_Roll_Wrap_52x115mm_Full_Web_UHD.jpg",
+      "assets/labels/Official_Sachet_Label_52x115mm_Front_Foil_UHD.jpg",
       "assets/images/sachet-supplier-ortho.jpg",
-      "assets/images/story-05-barista-crema-science.jpg",
-      "assets/images/story-03-dawn-peeling-craft.jpg",
-      "assets/images/story-06-coumarin-wellness.jpg",
       "assets/images/sugar-mix-sachets.jpg"
     ],
     variants: [
